@@ -1,4 +1,10 @@
 class EventsController < ApplicationController
+
+  def index
+    @events = Event.where(tags: params[:tags])
+
+  end
+
   def new
   end
 
@@ -6,8 +12,5 @@ class EventsController < ApplicationController
   end
 
   def show
-  end
-
-  def index
   end
 end
