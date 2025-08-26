@@ -1,15 +1,41 @@
 <div class="row justify-content-center">
   <div class="col-sm-8 my-3">
+
     <%= form_with url: events_path, method: :get, class: "d-flex mx-3 gap-3" do %>
-      <%= check_box_tag "tags[]", "Nature", class: "btn-check", id:"tag_nature" %>
-      <%= label_tag "tag_nature", "Nature", class: "btn btn-outline-success" %>
+      <% Event::TAGS.each do |tag| %>
+        <%= check_box_tag "tags[]", tag, class: "btn-check", id:"tag_#{tag}" %>
+        <%= label_tag "tag_#{tag}", tag, class: "btn btn-outline-warning" %>
+      <% end %>
+        <%= submit_tag "Rechercher", name: "", class: "btn btn-primary" %>
+    <% end %>
 
-      <%= check_box_tag "tags[]", "Festif", class: "btn-check", id:"tag_festif" %>
-      <%= label_tag "tag_festif", "Festif", class: "btn btn-outline-danger" %>
+    <%# <%= form_with url: events_path, method: :get, class: "d-flex mx-3 gap-3" do %>
+      <%# <%= check_box_tag "tags[]", "Nature", class: "btn-check", id:"tag_nature" %>
+      <%# <%= label_tag "tag_nature", "Nature", class: "btn btn-outline-success" %>
 
-      <%= check_box_tag "tags[]", "Creatif", class: "btn-check", id:"tag_creatif" %>
-      <%= label_tag "tag_creatif", "Creatif", class: "btn btn-outline-warning" %>
-      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-   <% end %>
-  </div>
+      <%# <%= check_box_tag "tags[]", "Festif", class: "btn-check", id:"tag_festif" %>
+      <%# <%= label_tag "tag_festif", "Festif", class: "btn btn-outline-danger" %>
+
+      <%# <%= check_box_tag "tags[]", "Creatif", class: "btn-check", id:"tag_creatif" %>
+      <%# <%= label_tag "tag_creatif", "Creatif", class: "btn btn-outline-warning" %>
+
+      <%# <%= check_box_tag "tags[]", "Foodies", class: "btn-check", id:"tag_foodies" %>
+      <%# <%= label_tag "tag_foodies", "Foodies", class: "btn btn-outline-info" %>
+
+      <%# <%= check_box_tag "tags[]", "Culturel", class: "btn-check", id:"tag_culturel" %>
+      <%# <%= label_tag "tag_culturel", "Culturel", class: "btn btn-outline-secondary" %>
+  <%# </div> %>
+
+      <%# <%= check_box_tag "tags[]", "Gratuit", class: "btn-check", id:"tag_gratuit" %>
+      <%# <%= label_tag "tag_gratuit", "Gratuit", class: "btn btn-outline-warning" %>
+
+      <%# <%= check_box_tag "tags[]", "Entre 0 et 40 euros", class: "btn-check", id:"tag_middle" %>
+      <%# <%= label_tag "tag_middle", "Entre 0 et 40 euros", class: "btn btn-outline-warning" %>
+
+      <%# <%= check_box_tag "tags[]", "Plus de 40 euros", class: "btn-check", id:"tag_expensive" %>
+      <%# <%= label_tag "tag_expensive", "Plus de 40 euros", class: "btn btn-outline-warning" %>
+    <%# <div class="justify-content-center align-items-center col-sm-5 mt-4"> %>
+      <%# <%= submit_tag "Rechercher", name: "", class: "btn btn-primary" %>
+   <%# <% end %>
+    </div>
 </div>
