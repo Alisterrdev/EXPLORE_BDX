@@ -1,2 +1,15 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="row justify-content-center">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: events_path, method: :get, class: "d-flex mx-3 gap-3" do %>
+      <%= check_box_tag "tags[]", "Nature", class: "btn-check", id:"tag_nature" %>
+      <%= label_tag "tag_nature", "Nature", class: "btn btn-outline-success" %>
+
+      <%= check_box_tag "tags[]", "Festif", class: "btn-check", id:"tag_festif" %>
+      <%= label_tag "tag_festif", "Festif", class: "btn btn-outline-danger" %>
+
+      <%= check_box_tag "tags[]", "Creatif", class: "btn-check", id:"tag_creatif" %>
+      <%= label_tag "tag_creatif", "Creatif", class: "btn btn-outline-warning" %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+   <% end %>
+  </div>
+</div>
