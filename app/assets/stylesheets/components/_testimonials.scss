@@ -1,0 +1,85 @@
+$accent-red: #F5CAC3;
+$text-dark: #111;
+$text-muted: #555;
+
+.testimonials {
+  padding: 40px 20px;
+
+  &__title {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #84A59D;
+  }
+
+  &__slider {
+    display: flex;       // met les témoignages sur une ligne
+    gap: 20px;           // espace entre chaque témoignage
+    overflow-x: auto;    // scroll horizontal si trop large
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+
+    &::-webkit-scrollbar {
+      display: none;     // cacher la scrollbar sur Webkit
+    }
+  }
+
+  .testimonial {
+    flex: 0 0 500px;       // largeur fixe par témoignage
+    display: flex;          // ligne horizontale avatar + contenu
+    gap: 15px;
+    border: 2px solid $accent-red; // liseré rouge
+    border-radius: 12px;
+    padding: 15px;
+    scroll-snap-align: start;
+    background-color: transparent;
+
+    &__avatar {
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;
+
+      .avatar-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    &__content {
+      flex: 1;
+    }
+
+    &__name {
+      font-weight: 600;
+      color: $text-dark;
+      display: block;
+    }
+
+    &__role {
+      font-size: 0.85rem;
+      color: $text-muted;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    &__text {
+      font-size: 0.95rem;
+      color: $text-muted;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .testimonial {
+      flex: 0 0 80%;
+      flex-direction: column; // avatar au-dessus du texte sur mobile
+      align-items: center;
+      text-align: center;
+    }
+
+    &__slider {
+      gap: 15px;
+    }
+  }
+}
