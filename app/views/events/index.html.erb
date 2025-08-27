@@ -1,4 +1,4 @@
-<h1>coucou</h1>
+<h1>Les evenements pour toi :</h1>
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-sm-8">
@@ -8,6 +8,7 @@
             <h4><%= event.name %></h4>
             <p><%= event.description %></p>
             <p><%= event.tags %></p>
+            <p><%= link_to "En savoir plus", event_path(event), class: "btn btn-warning" %>
           <% end %>
         <% else %>
           <em>Désolé, aucun événement n'a été trouvé.</em>
