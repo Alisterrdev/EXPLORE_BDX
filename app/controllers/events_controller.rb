@@ -1,9 +1,8 @@
 class EventsController < ApplicationController
 
   def index
-    # commenter pour tester la localisation
-    # @events = Event.where(tags: params[:tags])
-    @events = Event.all
+    @events = Event.where(tags: params[:tags])
+
     @markers = @events.geocoded.map do |event|
       {
         lat: event.latitude,
