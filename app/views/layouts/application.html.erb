@@ -3,15 +3,17 @@
   <head>
     <title>ExploreBdx</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles.scss">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <%= javascript_importmap_tags %>
+  </head>
+  
+  <body>
     <%= render "pages/header" %>
+     <%= yield %>
     <%= render "pages/footer" %>
-
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
   </body>
-</html>

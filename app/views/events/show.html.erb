@@ -1,0 +1,29 @@
+<h1><%= @event.name %><h1>
+<br>
+<%= image_tag @event.image, alt: @event.name, class: "event-image w-25 p-3" %>
+<p><%= @event.date %></p>
+<p><%= @event.address %></p>
+
+<h3><%= @event.description %></h3>
+
+<h2><%= @event.details %>
+<>
+
+<p><%= link_to "#{@event.tags}", event_path(:tags), class: "btn btn-warning" %></p>
+
+<h2>Les autres qui pourraient vous intéresser</h2>
+
+<div class= "row justify-content-center">
+<div id="events">
+        <% if @events.any? %>
+          <% @events.each do |event| %>
+            <h4><%= link_to "#{event.name}", event_path(event) %></h4>
+
+            <%= image_tag event.image, alt: event.name, class: "event-image w-25 h-25 p-3" %>
+            <p><%= event.description %></p>
+            <p><%= event.tags %></p>
+          <% end %>
+            <% else %>
+              <em>Désolé, aucun événement n'a été trouvé.</em>
+        <% end %>
+</div>
