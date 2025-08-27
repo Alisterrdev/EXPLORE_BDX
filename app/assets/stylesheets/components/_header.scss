@@ -1,0 +1,42 @@
+/* CSS */
+body {
+  font-family: Arial, sans-serif;
+  border-bottom: none;
+}
+
+.header {
+  background-color: #f9f0e6; /* beige clair */
+  padding: 10px 20px;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centre le logo */
+  position: relative;
+}
+
+.logo {
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.logo span {
+  display: block;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.user-icon {
+  position: absolute;
+  right: 20px; /* coin droit */
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
