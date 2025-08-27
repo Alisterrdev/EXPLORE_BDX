@@ -21,5 +21,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    @event = Event.find(params[:id])
+    @events = Event.where(tags: @event.tags)
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_08_27_091535) do
+ActiveRecord::Schema[7.1].define(version: 2025_08_27_105956) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,6 +33,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_08_27_091535) do
     t.datetime "updated_at", null: false
     t.float "longitude"
     t.float "latitude"
+    t.text "details"
   end
 
   create_table "events_registrations", force: :cascade do |t|
