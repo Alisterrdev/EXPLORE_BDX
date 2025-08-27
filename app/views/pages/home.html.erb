@@ -1,3 +1,14 @@
+<section class="hero">
+    <img src="<%= asset_path('bordeaux.jpeg') %>" alt="Bordeaux" class="hero__image">
+  <div class="hero__card">
+    <h2 class="hero__title">Explore BDX, outil à découvrir</h2>
+    <p class="hero__text">
+      L'outil qui permet de trouver en un clin d'œil une activité qui répond à tes envies !
+    </p>
+    <button class="hero__button">C’EST PARTI !</button>
+  </div>
+</section>
+
 <div class="row justify-content-center">
   <div class="col-sm-8 my-3">
 
@@ -39,3 +50,73 @@
    <%# <% end %>
     </div>
 </div>
+
+<section class="choose-date">
+  <div class="container">
+    <h2 class="choose-date__title">Choisis ta date</h2>
+    <p class="choose-date__subtitle">Sélectionne le moment qui correspond à tes disponibilités.</p>
+    <p class="choose-date__subtitle--extra">Tu peux choisir le début et la fin de ton expérience.</p>
+
+    <form class="choose-date__form">
+      <div class="choose-date__fields">
+        <div class="choose-date__field">
+          <label for="start_date">Date de début</label>
+          <input type="date" id="start_date" name="start_date" placeholder="Sélectionne une date">
+        </div>
+
+        <div class="choose-date__field">
+          <label for="end_date">Date de fin</label>
+          <input type="date" id="end_date" name="end_date" placeholder="Sélectionne une date">
+        </div>
+      </div>
+
+      <button type="submit" class="choose-date__cta">Trouve mon expérience</button>
+    </form>
+  </div>
+</section>
+
+
+
+<section class="testimonials">
+  <div class="container">
+    <h2 class="testimonials__title">Ce que nos utilisateurs disent de nous</h2>
+
+    <div class="testimonials__slider">
+      <!-- Témoignage 1 -->
+      <div class="testimonial">
+        <div class="testimonial__avatar">
+          <img src="/assets/alexia.jpg" alt="Alice Dupont" class="avatar-img">
+        </div>
+        <div class="testimonial__content">
+          <span class="testimonial__name">Alice Dupont</span>
+          <span class="testimonial__role">Designer UX</span>
+          <p class="testimonial__text">Ceci est un exemple de témoignage horizontal avec avatar et liseré rouge. Le texte est inclus à droite de l’avatar.</p>
+        </div>
+      </div>
+
+      <!-- Témoignage 2 -->
+      <div class="testimonial">
+        <div class="testimonial__avatar">
+          <img src="/assets/alexia.jpg" alt="Julien Martin" class="avatar-img">
+        </div>
+        <div class="testimonial__content">
+          <span class="testimonial__name">Julien Martin</span>
+          <span class="testimonial__role">Product Manager</span>
+          <p class="testimonial__text">Un deuxième témoignage pour tester l’affichage horizontal. Le liseré rouge englobe tout le bloc.</p>
+        </div>
+      </div>
+
+      <!-- Témoignage 3 -->
+      <div class="testimonial">
+        <div class="testimonial__avatar">
+          <img src="/assets/alexia.jpg" alt="Sophie Leroy" class="avatar-img">
+        </div>
+        <div class="testimonial__content">
+          <span class="testimonial__name">Sophie Leroy</span>
+          <span class="testimonial__role">Développeuse Front-end</span>
+          <p class="testimonial__text">Troisième exemple. Tout est aligné horizontalement : avatar à gauche, texte à droite, et liseré rouge autour.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
