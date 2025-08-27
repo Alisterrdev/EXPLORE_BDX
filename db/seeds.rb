@@ -44,7 +44,7 @@ puts "Après nettoyage, nombre d'évenements : #{Event.count}"
 
 Event.create(
   name: "BDC fait son show !",
-  address: "Quai des Queyries, Bordeaux",
+  address: "Quai des Queyries, Bordeaux, France",
   date: "26 août 2025",
   description: "Après une année passée à répéter, semmêler les pieds et se relever avec le sourire, les danseurs de BDC montent enfin sur scène. Le spectacle de fin dannée, cest loccasion de voir les plus petits, les grands, les passionnés et même les “je danse pour le fun” partager la même énergie. Au menu : des chorégraphies décalées, des costumes qui accrochent la lumière et un final surprise dont personne ne sortira indifférent. Dès 20h",
   # tags: "Creatif" "Plus de 40 euros",
@@ -53,7 +53,7 @@ Event.create(
 
 Event.create(
   name: "Bal des pompiers !",
-  address: "Pey Berland, Bordeaux",
+  address: "Pey Berland, Bordeaux, France",
   date: "28 août 2025",
   description: "Après une année passée à répéter, semmêler les pieds et se relever avec le sourire, les danseurs de BDC montent enfin sur scène. Le spectacle de fin dannée, cest loccasion de voir les plus petits, les grands, les passionnés et même les “je danse pour le fun” partager la même énergie. Au menu : des chorégraphies décalées, des costumes qui accrochent la lumière et un final surprise dont personne ne sortira indifférent. Dès 20h",
   # tags: ["Festif", "Gratuit"],,
@@ -62,7 +62,7 @@ Event.create(
 
 Event.create(
   name: "DJ Set et détente chez Calicéo",
-  address: "8 Rue Jean Pommiès, 33520 Bruges, Bordeaux",
+  address: "8 Rue Jean Pommiès, 33520 Bruges, Bordeaux, France",
   date: "29 août 2025",
   description: "Imaginez les bassins de Calicéo Bordeaux transformés en dancefloor aquatique. Les jeudis 21 et 28 août, les Soirées Bulles dÉté mêlent détente et musique : DJ set en live, jeux de lumières colorées, vapeurs du hammam et cascades deau. Une façon décalée de prolonger lété, que vous veniez entre amis ou pour souffler en solo.",
   # tags: ["Festif", "Creatif", "Entre 0 et 40 euros"],
@@ -71,7 +71,7 @@ Event.create(
 
 Event.create(
   name: "Balade nocturne au parc floral",
-  address: "Parc Floral, Bordeaux",
+  address: "Parc Floral, Bordeaux, France",
   date: "27 août 2025",
   description: "À la tombée de la nuit, rejoignez-nous pour une promenade guidée dans les allées illuminées du parc floral. L'occasion parfaite de découvrir la faune et la flore locales sous un autre angle.",
   tags: "Nature"
@@ -79,7 +79,7 @@ Event.create(
 
 Event.create(
   name: "Apéro jazz au bord de la Garonne",
-  address: "Hangar Darwin, Bordeaux",
+  address: "Hangar Darwin, Bordeaux, France",
   date: "29 août 2025",
   description: "Un moment chill avec vue sur le fleuve, un verre à la main et une playlist jazz en live. Ambiance décontractée garantie.",
   tags: "Chill"
@@ -87,7 +87,7 @@ Event.create(
 
 Event.create(
   name: "Marché gourmand des quais",
-  address: "Quais de Bordeaux, Bordeaux",
+  address: "Quais de Bordeaux, Bordeaux, France",
   date: "30 août 2025",
   description: "Un rassemblement de food trucks, producteurs locaux et artisans du goût. Venez goûter, flâner, et remplir votre panier !",
   tags: Event::TAGS.sample
@@ -95,7 +95,7 @@ Event.create(
 
 Event.create(
   name: "Nuit des arts de la rue",
-  address: "Place Saint-Michel, Bordeaux",
+  address: "Place Saint-Michel, Bordeaux, France",
   date: "31 août 2025",
   description: "Des jongleurs, des conteurs, des échassiers et des musiciens prennent d'assaut les rues pour un soir magique à ciel ouvert.",
   tags: "Culturel"
@@ -103,7 +103,7 @@ Event.create(
 
 Event.create(
   name: "Festival Écume Electronique",
-  address: "Base sous-marine, Bordeaux",
+  address: "Base sous-marine, Bordeaux, France",
   date: "1er septembre 2025",
   description: "Un festival électro dans un lieu unique. DJs internationaux, installations lumineuses et vibes festives toute la nuit.",
   tags: "Festif"
@@ -135,7 +135,7 @@ Event.create(
 
 Event.create(
   name: "Fête de la bière artisanale",
-  address: "Cour Mably, Bordeaux",
+  address: "Cour Mably, Bordeaux, France",
   date: "5 septembre 2025",
   description: "Dégustations, brassage en direct, concerts et street food. Le paradis des amateurs de houblon !",
   tags: "Foodies"
@@ -143,7 +143,7 @@ Event.create(
 
 Event.create(
   name: "Improvisation théâtrale sous les étoiles",
-  address: "Parc Rivière, Bordeaux",
+  address: "Parc Rivière, Bordeaux, France",
   date: "6 septembre 2025",
   description: "Un spectacle unique où rien n’est écrit d’avance. Rires et surprises garantis dans un cadre verdoyant.",
   tags: "Culturel"
@@ -151,7 +151,7 @@ Event.create(
 
 Event.create(
   name: "Danse libre au miroir d'eau",
-  address: "Place de la Bourse, Bordeaux",
+  address: "Place de la Bourse, Bordeaux, France",
   date: "7 septembre 2025",
   description: "Rejoignez un cercle de danse spontanée, pieds nus sur le miroir d’eau. Musique live et liberté de mouvement au programme.",
   tags: "Creatif"
@@ -159,7 +159,7 @@ Event.create(
 
 Event.create(
   name: "Sunset yoga et smoothies",
-  address: "Quai des Marques, Bordeaux",
+  address: "Quai des Marques, Bordeaux, France",
   date: "8 septembre 2025",
   description: "Une session de yoga face au coucher de soleil, suivie de smoothies frais et bio. Apportez votre tapis !",
   tags: "Chill"
@@ -167,7 +167,7 @@ Event.create(
 
 Event.create(
   name: "Soirée salsa en plein air",
-  address: "Place des Quinconces, Bordeaux",
+  address: "Place des Quinconces, Bordeaux, France",
   date: "9 septembre 2025",
   description: "Ambiance caliente sous les étoiles avec initiation gratuite, danse libre et musique cubaine en live.",
   tags: "Festif"
@@ -175,7 +175,7 @@ Event.create(
 
 Event.create(
   name: "Marche méditative au lever du jour",
-  address: "Parc Bordelais, Bordeaux",
+  address: "Parc Bordelais, Bordeaux, France",
   date: "10 septembre 2025",
   description: "Une expérience de reconnexion à soi dans le silence du matin. Respiration, pas lents et contemplation.",
   tags: "Nature"

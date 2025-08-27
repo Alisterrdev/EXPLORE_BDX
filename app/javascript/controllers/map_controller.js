@@ -17,6 +17,10 @@ export default class extends Controller {
 
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
+
+    this.map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl }))
+    // j'ai rajouté cette ligne 
   }
 
   #addMarkersToMap() {
