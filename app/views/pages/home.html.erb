@@ -1,13 +1,53 @@
-<div class="row justify-content-center">
-  <div class="col-sm-8 my-3">
+<section class="hero">
+    <img src="<%= asset_path('bordeaux.jpg') %>" alt="Bordeaux" class="hero__image">
 
-    <%= form_with url: events_path, method: :get, class: "d-flex mx-3 gap-3" do %>
-      <% Event::TAGS.each do |tag| %>
-        <%= check_box_tag "tags[]", tag, class: "btn-check", id:"tag_#{tag}" %>
-        <%= label_tag "tag_#{tag}", tag, class: "btn btn-outline-warning" %>
-      <% end %>
-        <%= submit_tag "Rechercher", name: "", class: "btn btn-primary" %>
+  <div class="hero__card">
+    <h2 class="hero__title">Explore BDX, outil à découvrir</h2>
+    <p class="hero__text">
+      L'outil qui permet de trouver en un clin d'œil une activité qui répond à tes envies !
+    </p>
+    <button class="hero__button">C’EST PARTI !</button>
+  </div>
+</section>
+
+<%# Liste de tes humeurs avec image associée %>
+<% moods = {
+  "Nature"   => "moods/nature.webp",
+  "Créatif"  => "moods/creatif.webp",
+  "Festif"   => "moods/festif.jpg",
+  "Foodies"  => "moods/foodies.jpg",
+  "Culturel" => "moods/culturel.avif",
+  "Chill"    => "moods/chill.avif"
+} %>
+
+<%= form_with url: events_path, method: :get, class: "mood-form" do %>
+  <div class="mood-grid">
+    <% moods.each do |tag, img| %>
+      <% id = "tag_#{tag.parameterize}" %>
+
+      <!-- checkbox cachée -->
+      <input type="checkbox"
+             name="tags[]"
+             value="<%= tag %>"
+             id="<%= id %>"
+             class="mood-check">
+
+      <!-- carte cliquable -->
+      <label for="<%= id %>"
+             class="mood-card"
+             style="--photo: url('<%= asset_path(img) %>')">
+        <span class="mood-card__photo" aria-hidden="true"></span>
+        <span class="mood-card__title"><%= tag %></span>
+      </label>
     <% end %>
+  </div>
+
+  <div class="mood-actions">
+    <%= submit_tag "Rechercher", name: "", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+
 
     <%# <%= form_with url: events_path, method: :get, class: "d-flex mx-3 gap-3" do %>
       <%# <%= check_box_tag "tags[]", "Nature", class: "btn-check", id:"tag_nature" %>
