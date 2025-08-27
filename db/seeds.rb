@@ -47,7 +47,7 @@ Event.create(
   address: "Quai des Queyries, Bordeaux, France",
   date: "26 août 2025",
   details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Après une année passée à répéter, semmêler les pieds et se relever avec le sourire, les danseurs de BDC montent enfin sur scène. Le spectacle de fin dannée, cest loccasion de voir les plus petits, les grands, les passionnés et même les “je danse pour le fun” partager la même énergie. Au menu : des chorégraphies décalées, des costumes qui accrochent la lumière et un final surprise dont personne ne sortira indifférent. Dès 20h",
   # tags: "Creatif" "Plus de 40 euros",
   tags: Event::TAGS.sample
@@ -58,9 +58,9 @@ Event.create(
   address: "Pey Berland, Bordeaux, France",
   date: "28 août 2025",
   details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Après une année passée à répéter, semmêler les pieds et se relever avec le sourire, les danseurs de BDC montent enfin sur scène. Le spectacle de fin dannée, cest loccasion de voir les plus petits, les grands, les passionnés et même les “je danse pour le fun” partager la même énergie. Au menu : des chorégraphies décalées, des costumes qui accrochent la lumière et un final surprise dont personne ne sortira indifférent. Dès 20h",
-  # tags: ["Festif", "Gratuit"],,
+  # tags: ["Festif", "Gratuit"],
   tags: "Festif"
 )
 
@@ -69,7 +69,7 @@ Event.create(
   address: "8 Rue Jean Pommiès, 33520 Bruges, Bordeaux, France",
   date: "29 août 2025",
   details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Imaginez les bassins de Calicéo Bordeaux transformés en dancefloor aquatique. Les jeudis 21 et 28 août, les Soirées Bulles dÉté mêlent détente et musique : DJ set en live, jeux de lumières colorées, vapeurs du hammam et cascades deau. Une façon décalée de prolonger lété, que vous veniez entre amis ou pour souffler en solo.",
   # tags: ["Festif", "Creatif", "Entre 0 et 40 euros"],
   tags: "Creatif"
@@ -80,7 +80,7 @@ Event.create(
   address: "Parc Floral, Bordeaux, France",
   date: "27 août 2025",
   details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "À la tombée de la nuit, rejoignez-nous pour une promenade guidée dans les allées illuminées du parc floral. L'occasion parfaite de découvrir la faune et la flore locales sous un autre angle.",
   tags: "Nature"
 )
@@ -90,7 +90,7 @@ Event.create(
   address: "Hangar Darwin, Bordeaux, France",
   date: "29 août 2025",
   details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Un moment chill avec vue sur le fleuve, un verre à la main et une playlist jazz en live. Ambiance décontractée garantie.",
   tags: "Chill"
 )
@@ -100,7 +100,7 @@ Event.create(
   address: "Quais de Bordeaux, Bordeaux, France",
   date: "30 août 2025",
   details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Un rassemblement de food trucks, producteurs locaux et artisans du goût. Venez goûter, flâner, et remplir votre panier !",
   tags: Event::TAGS.sample
 )
@@ -110,7 +110,7 @@ Event.create(
   address: "Place Saint-Michel, Bordeaux, France",
   date: "31 août 2025",
   details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Des jongleurs, des conteurs, des échassiers et des musiciens prennent d'assaut les rues pour un soir magique à ciel ouvert.",
   tags: "Culturel"
 )
@@ -120,7 +120,7 @@ Event.create(
   address: "Base sous-marine, Bordeaux, France",
   date: "1er septembre 2025",
   details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Un festival électro dans un lieu unique. DJs internationaux, installations lumineuses et vibes festives toute la nuit.",
   tags: "Festif"
 )
@@ -130,7 +130,7 @@ Event.create(
   address: "Espace 29, 33000 Bordeaux, France",
   date: "2 septembre 2025",
   details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Exprimez-vous sans contrainte ! Un atelier où pinceaux, couleurs et émotions s'entremêlent. Aucune compétence requise.",
   tags: "Creatif"
 )
@@ -140,7 +140,7 @@ Event.create(
   address: "Jardin Public, 33000 Bordeaux, France",
   date: "3 septembre 2025",
   details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Un midi tout doux dans l'herbe avec des musiciens acoustiques, des paniers pique-nique locaux et une ambiance détendue.",
   tags: "Chill"
 )
@@ -151,7 +151,7 @@ Event.create(
   date: "4 septembre 2025",
   description: "Une promenade forestière ponctuée d'histoires racontées par des conteurs passionnés. Une immersion nature & légendes.",
   details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   tags: "Nature"
 )
 
