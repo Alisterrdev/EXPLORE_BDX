@@ -7,11 +7,153 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+# 10 latitudes entre 44.7876737782253 et 44.860225750269116
+CORDONATES_LAT = [
+  44.7876737782253,
+  44.79652857205071,
+  44.80538336587612,
+  44.81423815970153,
+  44.82309295352694,
+  44.83194774735235,
+  44.84080254117776,
+  44.84965733500317,
+  44.85851212882859,
+  44.860225750269116
+]
+
+# 10 longitudes entre -0.6772759625754721 et -0.5044430287804741
+CORDONATES_LONG = [
+  -0.6772759625754721,
+  -0.6582506343941971,
+  -0.6392253062129221,
+  -0.6201999780316471,
+  -0.6011746498503721,
+  -0.5821493216690971,
+  -0.5631239934878221,
+  -0.5440986653065471,
+  -0.5250733371252721,
+  -0.5044430287804741
+]
+
+
 puts "Avant nettoyage, nombre d'évenements : #{Event.count}"
 
 Event.destroy_all
 
 puts "Après nettoyage, nombre d'évenements : #{Event.count}"
+
+Event.create(
+  name: "BDC fait son show !",
+  address: "Quai des Queyries, Bordeaux, France",
+  date: "26 août 2025",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  description: "Après une année passée à répéter, semmêler les pieds et se relever avec le sourire, les danseurs de BDC montent enfin sur scène. Le spectacle de fin dannée, cest loccasion de voir les plus petits, les grands, les passionnés et même les “je danse pour le fun” partager la même énergie. Au menu : des chorégraphies décalées, des costumes qui accrochent la lumière et un final surprise dont personne ne sortira indifférent. Dès 20h",
+  # tags: "Creatif" "Plus de 40 euros",
+  tags: Event::TAGS.sample
+)
+
+Event.create(
+  name: "Bal des pompiers !",
+  address: "Pey Berland, Bordeaux, France",
+  date: "28 août 2025",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  description: "Après une année passée à répéter, semmêler les pieds et se relever avec le sourire, les danseurs de BDC montent enfin sur scène. Le spectacle de fin dannée, cest loccasion de voir les plus petits, les grands, les passionnés et même les “je danse pour le fun” partager la même énergie. Au menu : des chorégraphies décalées, des costumes qui accrochent la lumière et un final surprise dont personne ne sortira indifférent. Dès 20h",
+  # tags: ["Festif", "Gratuit"],,
+  tags: "Festif"
+)
+
+Event.create(
+  name: "DJ Set et détente chez Calicéo",
+  address: "8 Rue Jean Pommiès, 33520 Bruges, Bordeaux, France",
+  date: "29 août 2025",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  description: "Imaginez les bassins de Calicéo Bordeaux transformés en dancefloor aquatique. Les jeudis 21 et 28 août, les Soirées Bulles dÉté mêlent détente et musique : DJ set en live, jeux de lumières colorées, vapeurs du hammam et cascades deau. Une façon décalée de prolonger lété, que vous veniez entre amis ou pour souffler en solo.",
+  # tags: ["Festif", "Creatif", "Entre 0 et 40 euros"],
+  tags: "Creatif"
+)
+
+Event.create(
+  name: "Balade nocturne au parc floral",
+  address: "Parc Floral, Bordeaux, France",
+  date: "27 août 2025",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  description: "À la tombée de la nuit, rejoignez-nous pour une promenade guidée dans les allées illuminées du parc floral. L'occasion parfaite de découvrir la faune et la flore locales sous un autre angle.",
+  tags: "Nature"
+)
+
+Event.create(
+  name: "Apéro jazz au bord de la Garonne",
+  address: "Hangar Darwin, Bordeaux, France",
+  date: "29 août 2025",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  description: "Un moment chill avec vue sur le fleuve, un verre à la main et une playlist jazz en live. Ambiance décontractée garantie.",
+  tags: "Chill"
+)
+
+Event.create(
+  name: "Marché gourmand des quais",
+  address: "Quais de Bordeaux, Bordeaux, France",
+  date: "30 août 2025",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  description: "Un rassemblement de food trucks, producteurs locaux et artisans du goût. Venez goûter, flâner, et remplir votre panier !",
+  tags: Event::TAGS.sample
+)
+
+Event.create(
+  name: "Nuit des arts de la rue",
+  address: "Place Saint-Michel, Bordeaux, France",
+  date: "31 août 2025",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  description: "Des jongleurs, des conteurs, des échassiers et des musiciens prennent d'assaut les rues pour un soir magique à ciel ouvert.",
+  tags: "Culturel"
+)
+
+Event.create(
+  name: "Festival Écume Electronique",
+  address: "Base sous-marine, Bordeaux, France",
+  date: "1er septembre 2025",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  description: "Un festival électro dans un lieu unique. DJs internationaux, installations lumineuses et vibes festives toute la nuit.",
+  tags: "Festif"
+)
+
+Event.create(
+  name: "Atelier peinture intuitive",
+  address: "Espace 29, 33000 Bordeaux, France",
+  date: "2 septembre 2025",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  description: "Exprimez-vous sans contrainte ! Un atelier où pinceaux, couleurs et émotions s'entremêlent. Aucune compétence requise.",
+  tags: "Creatif"
+)
+
+Event.create(
+  name: "Pique-nique musical au Jardin Public",
+  address: "Jardin Public, 33000 Bordeaux, France",
+  date: "3 septembre 2025",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  description: "Un midi tout doux dans l'herbe avec des musiciens acoustiques, des paniers pique-nique locaux et une ambiance détendue.",
+  tags: "Chill"
+)
+
+Event.create(
+  name: "Randonnée contée au bois de Bordeaux",
+  address: "Bois de Bordeaux, 33000 Bordeaux, France",
+  date: "4 septembre 2025",
+  description: "Une promenade forestière ponctuée d'histoires racontées par des conteurs passionnés. Une immersion nature & légendes.",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",,
+  tags: "Nature"
+)
 
 Event.create(
   name: "Fête des couleurs indiennes",
@@ -20,9 +162,7 @@ Event.create(
   description: "Plongez dans l'ambiance vibrante des festivals indiens.",
   details: "Pour célébrer l'esprit des fêtes traditionnelles indiennes, participez à une journée colorée de danses, de musiques et de repas typiques. Découvrez des marchés artisanaux, des ateliers de danse Bollywood et bien plus.",
   tags: "Festif",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  latitude: "44.8417",
-  longitude: "-0.5745"
+  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Event.create(
@@ -32,9 +172,7 @@ Event.create(
   description: "Un marché dédié aux créateurs locaux où se mêlent art, artisanat et design.",
   details: "Venez rencontrer les créateurs locaux : bijoux, vêtements, objets décoratifs, et bien d'autres. Ce marché est aussi l'occasion de découvrir des ateliers créatifs et de participer à des démonstrations de savoir-faire.",
   tags: "Creatif",
-  image: "https://images.unsplash.com/photo-1566636741346-7bc0510fdaa5?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  latitude: "44.8500",
-  longitude: "-0.5728"
+  image: "https://images.unsplash.com/photo-1566636741346-7bc0510fdaa5?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Event.create(
@@ -44,9 +182,7 @@ Event.create(
   description: "Un événement qui célèbre la cuisine hexagonale sous toutes ses formes.",
   details: "Venez goûter aux spécialités des régions françaises avec des chefs locaux. Au programme : dégustations, ateliers culinaires, et conférences autour de la culture gastronomique française.",
   tags: "Foodies",
-  image: "https://plus.unsplash.com/premium_photo-1687975124229-e3ae49ea2c20?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  latitude: "44.8381",
-  longitude: "-0.5720"
+  image: "https://plus.unsplash.com/premium_photo-1687975124229-e3ae49ea2c20?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Event.create(
@@ -56,9 +192,7 @@ Event.create(
   description: "Un week-end d'aventure et de nature, entre montagnes et paysages spectaculaires.",
   details: "Accompagné par un guide expert, partez en randonnée pour découvrir les panoramas à couper le souffle du parc national. Au programme : marche, bivouac, et découverte de la faune et flore montagnarde.",
   tags: "Nature",
-  image: "https://images.unsplash.com/photo-1667063134108-4eb9d1f7a6e7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  latitude: "42.7853",
-  longitude: "0.4148"
+  image: "https://images.unsplash.com/photo-1667063134108-4eb9d1f7a6e7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Event.create(
@@ -68,9 +202,7 @@ Event.create(
   description: "Revivez les classiques du cinéma muet avec une performance musicale en live.",
   details: "Profitez d'un moment unique où des musiciens interpréteront la bande-son en direct pendant la projection de films muets comme *Le Cabinet du Dr. Caligari* et *Nosferatu*.",
   tags: "Culturel",
-  image: "https://images.unsplash.com/photo-1710988486897-e933e4b0f72c?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  latitude: "44.8432",
-  longitude: "-0.5735"
+  image: "https://images.unsplash.com/photo-1710988486897-e933e4b0f72c?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Event.create(
@@ -80,9 +212,7 @@ Event.create(
   description: "Commencez votre dimanche avec une séance de yoga en plein air suivie d'un brunch bio.",
   details: "Un moment détente et bien-être : pratiquez le yoga au cœur du parc avec un professeur expérimenté, puis régalez-vous avec un brunch healthy composé de produits locaux et bio.",
   tags: "Chill",
-  image: "https://images.unsplash.com/photo-1608405059861-b21a68ae76a2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  latitude: "44.8695",
-  longitude: "-0.5678"
+  image: "https://images.unsplash.com/photo-1608405059861-b21a68ae76a2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Event.create(
@@ -92,21 +222,86 @@ Event.create(
   description: "Une exposition unique sur la diversité humaine à travers le regard de grands photographes.",
   details: "Parcourez des images saisissantes capturées aux quatre coins du monde. L'exposition explore les histoires de vie, les émotions et les cultures à travers les portraits pris par des photographes du monde entier.",
   tags: "Culturel",
-  image: "https://images.unsplash.com/photo-1647709825916-200da934eff0?q=80&w=1231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  latitude: "44.8396",
-  longitude: "-0.5770"
+  image: "https://images.unsplash.com/photo-1647709825916-200da934eff0?q=80&w=1231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Event.create(
   name: "Fête de la bière artisanale",
+  address: "Cour Mably, Bordeaux, France",
+  date: "5 septembre 2025",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1647709825916-200da934eff0?q=80&w=1231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description: "Dégustations, brassage en direct, concerts et street food. Le paradis des amateurs de houblon !",
+  tags: "Foodies"
+)
+
+Event.create(
+  name: "Improvisation théâtrale sous les étoiles",
+  address: "Parc Rivière, Bordeaux, France",
+  date: "6 septembre 2025",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1647709825916-200da934eff0?q=80&w=1231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description: "Un spectacle unique où rien n’est écrit d’avance. Rires et surprises garantis dans un cadre verdoyant.",
+  tags: "Culturel"
+)
+
+Event.create(
+  name: "Danse libre au miroir d'eau",
+  address: "Place de la Bourse, Bordeaux, France",
+  date: "7 septembre 2025",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1647709825916-200da934eff0?q=80&w=1231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description: "Rejoignez un cercle de danse spontanée, pieds nus sur le miroir d’eau. Musique live et liberté de mouvement au programme.",
+  tags: "Creatif"
+)
+
+Event.create(
+  name: "Sunset yoga et smoothies",
+  address: "Quai des Marques, Bordeaux, France",
+  date: "8 septembre 2025",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1647709825916-200da934eff0?q=80&w=1231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description: "Une session de yoga face au coucher de soleil, suivie de smoothies frais et bio. Apportez votre tapis !",
+  tags: "Chill"
+)
+
+Event.create(
+  name: "Soirée salsa en plein air",
+  address: "Place des Quinconces, Bordeaux, France",
+  date: "9 septembre 2025",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1647709825916-200da934eff0?q=80&w=1231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description: "Ambiance caliente sous les étoiles avec initiation gratuite, danse libre et musique cubaine en live.",
+  tags: "Festif"
+)
+
+Event.create(
+  name: "Marche méditative au lever du jour",
+  address: "Parc Bordelais, Bordeaux, France",
+  date: "10 septembre 2025",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1647709825916-200da934eff0?q=80&w=1231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description: "Une expérience de reconnexion à soi dans le silence du matin. Respiration, pas lents et contemplation.",
+  tags: "Nature"
+)
+
+Event.create(
+  name: "Atelier de cuisine du monde",
+  address: "Maison de quartier Bastide, 33000 Bordeaux, France",
+  date: "11 septembre 2025",
+  details: "lorem ipsum",
+  image: "https://images.unsplash.com/photo-1647709825916-200da934eff0?q=80&w=1231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description: "Préparez et dégustez des recettes venues d'ailleurs dans une ambiance conviviale. Venez avec vos papilles !",
+  tags: "Foodies"
+)
+
+Event.create(
   address: "Place du Parlement, Bordeaux",
   date: "20 novembre 2025",
   description: "Un événement pour découvrir la bière artisanale locale et internationale.",
   details: "Venez rencontrer des brasseurs passionnés, découvrir leurs créations et participer à des dégustations. Vous pourrez aussi assister à des ateliers sur la fabrication de la bière.",
   tags: "Festif",
-  image: "https://images.unsplash.com/photo-1600788886242-5c96aabe3757?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  latitude: "44.8371",
-  longitude: "-0.5779"
+  image: "https://images.unsplash.com/photo-1600788886242-5c96aabe3757?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Event.create(
@@ -116,9 +311,7 @@ Event.create(
   description: "Apprenez à cuisiner des plats végétariens savoureux et équilibrés.",
   details: "Un chef vous guidera dans la préparation de recettes végétariennes simples, mais gourmandes. Parfait pour ceux qui veulent explorer la cuisine végétarienne tout en découvrant des ingrédients de saison.",
   tags: "Foodies",
-  image: "https://images.unsplash.com/photo-1615366105533-5b8f3255ea5d?q=80&w=1167&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  latitude: "44.8400",
-  longitude: "-0.5741"
+  image: "https://images.unsplash.com/photo-1615366105533-5b8f3255ea5d?q=80&w=1167&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Event.create(
@@ -128,9 +321,7 @@ Event.create(
   description: "Un marché pour les amoureux de livres anciens et d'objets vintage.",
   details: "Parcourez les étals de livres d'occasion, de vinyles rares et d'objets rétro. L'occasion de dénicher des trésors tout en discutant avec les passionnés qui les vendent.",
   tags: "Creatif",
-  image: "https://images.unsplash.com/photo-1631888722728-1578b7ba6dee?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  latitude: "44.8633",
-  longitude: "-0.5689"
+  image: "https://images.unsplash.com/photo-1631888722728-1578b7ba6dee?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Event.create(
@@ -140,9 +331,7 @@ Event.create(
   description: "Initiez-vous à l'art de la sérigraphie et créez vos propres affiches.",
   details: "Un atelier interactif où vous apprendrez les bases de la sérigraphie tout en créant vos propres œuvres imprimées sur différents supports. Repartez avec votre poster personnalisé.",
   tags: "Creatif",
-  image: "https://images.unsplash.com/photo-1663433541063-ddab084d1126?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  latitude: "44.8399",
-  longitude: "-0.5723"
+  image: "https://images.unsplash.com/photo-1663433541063-ddab084d1126?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Event.create(
@@ -152,9 +341,7 @@ Event.create(
   description: "Une soirée immersive autour des contes et légendes du vin et des terroirs.",
   details: "Venez écouter des histoires fascinantes et mystérieuses autour du vin, racontées par des conteurs passionnés. Une expérience à la fois éducative et divertissante dans un cadre unique.",
   tags: "Culturel",
-  image: "https://plus.unsplash.com/premium_photo-1682308189385-38a9b49f6027?q=80&w=1315&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  latitude: "44.8602",
-  longitude: "-0.5743"
+  image: "https://plus.unsplash.com/premium_photo-1682308189385-38a9b49f6027?q=80&w=1315&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Event.create(
@@ -164,9 +351,7 @@ Event.create(
   description: "Un marché de Noël réunissant les créations artisanales locales pour offrir un Noël unique.",
   details: "Des artisans locaux exposent leurs œuvres et créations pour vos cadeaux de fin d'année. Décoration, mode, bijoux, et bien d'autres produits faits main pour un Noël original et solidaire.",
   tags: "Creatif",
-  image: "https://images.unsplash.com/photo-1512663251984-863560ec3985?q=80&w=1122&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  latitude: "44.8395",
-  longitude: "-0.5729"
+  image: "https://images.unsplash.com/photo-1512663251984-863560ec3985?q=80&w=1122&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Event.create(
@@ -176,8 +361,7 @@ Event.create(
   description: "Un concert de Noël avec des chants et instruments du monde entier.",
   details: "Ce concert spécial Noël vous invite à découvrir des musiques de Noël traditionnelles des quatre coins du monde. Une soirée féérique et solennelle pour célébrer les fêtes en musique.",
   tags: "Festif",
-  image: "https://images.unsplash.com/photo-1700931676493-1ea7739bd6aa?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  latitude: "44.8577",
-  longitude: "-0.5742"
+  image: "https://images.unsplash.com/photo-1700931676493-1ea7739bd6aa?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
+
 puts "Après création, nombre d'évenements : #{Event.count}"
