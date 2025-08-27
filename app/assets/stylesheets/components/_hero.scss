@@ -1,0 +1,53 @@
+.hero {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  margin: 0;
+  padding-top: 0;
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__card {
+    position: absolute;
+    top: 50%;
+    right: 5%; // :index_vers_la_droite: alignée vers la droite
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9); // blanc translucide
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    text-align: left; // texte aligné à gauche pour plus de lisibilité
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  &__title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #B8860B; // doré (Goldenrod)
+  }
+  &__text {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  &__button {
+    background: #B8860B; // doré foncé
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    &:hover {
+      background: #8B6914; // doré plus foncé au hover
+    }
+  }
+  body {
+  margin: 0;
+  padding: 0;
+}
+}
