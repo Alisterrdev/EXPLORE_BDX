@@ -1,7 +1,12 @@
 class EventsController < ApplicationController
 
   def index
-    @events = Event.where(tags: params[:tags])
+    events_filtered_by_tag = Event.where(tags: params[:tags])
+    if current_user
+      @events = events_filtered_by_tag.near(current_user.address, 10)
+    else
+      @events = events_filtered_by_tag
+    end
 
     @markers = @events.geocoded.map do |event|
       {
