@@ -11,7 +11,7 @@
 
 <% moods = {
   "Nature"   => "moods/nature.jpg",
-  "Créatif"  => "moods/creatif.jpg",
+  "Creatif"  => "moods/creatif.jpg",
   "Festif"   => "moods/festif.jpg",
   "Foodies"  => "moods/foodies.jpg",
   "Culturel" => "moods/culturel.jpg",
@@ -35,7 +35,7 @@
       <% moods.each do |tag, img| %>
         <% id = "tag_#{tag.parameterize}" %>
         <input type="checkbox"
-               name="tags[]"
+               name="tags"
                value="<%= tag %>"
                id="<%= id %>"
                class="mood-check">
@@ -71,12 +71,46 @@
       <% end %>
     </div>
   </section>
+    <section class="localisation">
+      <div class="container">
+        <h2 class="localisation__title">Choisis ta localisation</h2>
 
+        <div style="text-align: center;">
+          <input type="range" name="location" min="10" max="30" step="10" value="20" class="localisation__range">
+          <div class="localisation__labels">
+            <span>10 km</span>
+            <span>20 km</span>
+            <span>30 km</span>
+          </div>
+
+      </div>
+    </div>
+    </section>
+    <section class="choose-date">
+  <div class="container">
+    <h2 class="choose-date__title">Choisis ta date</h2>
+    <p class="choose-date__subtitle">Sélectionne le moment qui correspond à tes disponibilités.</p>
+    <p class="choose-date__subtitle--extra">Tu peux choisir le début et la fin de ton expérience.</p>
+
+    <div class="choose-date__form">
+      <div class="choose-date__fields">
+        <div class="choose-date__field">
+          <label for="start_date">Date de début</label>
+          <input type="date" id="start_date" name="start_date" placeholder="Sélectionne une date">
+        </div>
+
+        <div class="choose-date__field">
+          <label for="end_date">Date de fin</label>
+          <input type="date" id="end_date" name="end_date" placeholder="Sélectionne une date">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   <!-- SUBMIT -->
   <div class="filters-actions">
     <%= submit_tag "Rechercher", name: "", class: "btn btn-primary" %>
   </div>
-
 <% end %>
 
 
@@ -114,48 +148,6 @@
     </div>
 </div>
 
-
-<section class="localisation">
-  <div class="container">
-    <h2 class="localisation__title">Choisis ta localisation</h2>
-
-    <div style="text-align: center;">
-      <input type="range" min="10" max="30" step="10" value="20" class="localisation__range">
-      <div class="localisation__labels">
-        <span>10 km</span>
-        <span>20 km</span>
-        <span>30 km</span>
-      </div>
-
-  </div>
-</div>
-</section>
-
-
-
-<section class="choose-date">
-  <div class="container">
-    <h2 class="choose-date__title">Choisis ta date</h2>
-    <p class="choose-date__subtitle">Sélectionne le moment qui correspond à tes disponibilités.</p>
-    <p class="choose-date__subtitle--extra">Tu peux choisir le début et la fin de ton expérience.</p>
-
-    <form class="choose-date__form">
-      <div class="choose-date__fields">
-        <div class="choose-date__field">
-          <label for="start_date">Date de début</label>
-          <input type="date" id="start_date" name="start_date" placeholder="Sélectionne une date">
-        </div>
-
-        <div class="choose-date__field">
-          <label for="end_date">Date de fin</label>
-          <input type="date" id="end_date" name="end_date" placeholder="Sélectionne une date">
-        </div>
-      </div>
-
-      <button type="submit" class="choose-date__cta">Trouve mon expérience</button>
-    </form>
-  </div>
-</section>
 
 
 <section class="testimonials">

@@ -4,6 +4,14 @@
 .mood-subtitle{ text-align: left; color: #6b6b6b; margin-bottom: 1.2rem; }
 
 /* Carrousel */
+.mood-grid {
+  //display: grid;
+  //grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  justify-items: center;
+  display: flex;
+  flex-direction: row;
+}
 .mood-carousel { position: relative; padding: 0 44px; }
 .mood-track {
   display: flex;
@@ -20,10 +28,14 @@
 .mood-check { position: absolute; opacity: 0; pointer-events: none; }
 
 .mood-card {
-  all: unset; /* neutralise Bootstrap/label par défaut */
-  flex: 0 0 260px;                 /* largeur fixe = une ligne */
-  display: flex; flex-direction: column; align-items: center; gap: 12px;
-  text-align: center; cursor: pointer; scroll-snap-align: start;
+  all: unset;                 /* reset bootstrap */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  text-align: center;
+  width: 320px;               /* ajuste à 300–340 selon goût */
 }
 .mood-card__photo {
   width: 100%; aspect-ratio: 4/3;
