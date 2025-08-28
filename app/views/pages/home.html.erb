@@ -13,14 +13,13 @@
   <div class="col-sm-8 my-3">
 
 
-<%# Liste de tes humeurs avec image associée %>
 <% moods = {
-  "Nature"   => "moods/nature.webp",
-  "Créatif"  => "moods/creatif.webp",
+  "Nature"   => "moods/nature.jpg",
+  "Créatif"  => "moods/creatif.jpg",
   "Festif"   => "moods/festif.jpg",
   "Foodies"  => "moods/foodies.jpg",
-  "Culturel" => "moods/culturel.avif",
-  "Chill"    => "moods/chill.avif"
+  "Culturel" => "moods/culturel.jpg",
+  "Chill"    => "moods/chill.jpg"
 } %>
 
 <%= form_with url: events_path, method: :get, class: "mood-form" do %>
@@ -28,14 +27,12 @@
     <% moods.each do |tag, img| %>
       <% id = "tag_#{tag.parameterize}" %>
 
-      <!-- checkbox cachée -->
       <input type="checkbox"
              name="tags[]"
              value="<%= tag %>"
              id="<%= id %>"
              class="mood-check">
 
-      <!-- carte cliquable -->
       <label for="<%= id %>"
              class="mood-card"
              style="--photo: url('<%= asset_path(img) %>')">
