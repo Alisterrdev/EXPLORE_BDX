@@ -1,0 +1,69 @@
+.localisation {
+  padding: 2rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {  // ici le &__title compile en .localisation__title
+    color: #84A59D;  // couleur du titre
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .localisation__title {
+  color: #84A59D;
+  text-align: left;
+}
+
+  &__slider-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // centre le slider et les labels horizontalement
+  }
+
+  &__range {
+    width: 150px;  // largeur du slider
+    margin: 1rem 0;
+
+    // Curseur Chrome/Safari
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 25px;
+      height: 25px;
+      background: #84A59D;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    // Curseur Firefox
+    &::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      background: #84A59D;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    // Barre du slider
+    &::-webkit-slider-runnable-track {
+      height: 6px;
+      background: #ccc;
+      border-radius: 3px;
+    }
+    &::-moz-range-track {
+      height: 6px;
+      background: #ccc;
+      border-radius: 3px;
+    }
+  }
+
+  &__labels {
+    display: flex;
+    justify-content: space-between;
+    width: 150px; // même largeur que le slider
+    margin: 0;
+  }
+}

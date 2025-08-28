@@ -1,0 +1,6 @@
+<% current_user.favorites.each do |favorite| %>
+  <%= favorite.event.name %>
+  <%= favorite.event.date %>
+  <%= favorite.event.address %>
+  <%= favorite.event.tags %>
+<% end %>

@@ -51,6 +51,25 @@
     </div>
 </div>
 
+
+<section class="localisation">
+  <div class="container">
+    <h2 class="localisation__title">Choisis ta localisation</h2>
+
+    <div style="text-align: center;">
+      <input type="range" min="10" max="30" step="10" value="20" class="localisation__range">
+      <div class="localisation__labels">
+        <span>10 km</span>
+        <span>20 km</span>
+        <span>30 km</span>
+      </div>
+
+  </div>
+</div>
+</section>
+
+
+
 <section class="choose-date">
   <div class="container">
     <h2 class="choose-date__title">Choisis ta date</h2>
@@ -76,7 +95,6 @@
 </section>
 
 
-
 <section class="testimonials">
   <div class="container">
     <h2 class="testimonials__title">Ce que nos utilisateurs disent de nous</h2>
@@ -85,7 +103,7 @@
       <!-- Témoignage 1 -->
       <div class="testimonial">
         <div class="testimonial__avatar">
-          <img src="/assets/alexia.jpg" alt="Alice Dupont" class="avatar-img">
+          <%= image_tag("alexia.jpg", alt:"Alice Dupont", class:"avatar-img") %>
         </div>
         <div class="testimonial__content">
           <span class="testimonial__name">Alice Dupont</span>
