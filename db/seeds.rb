@@ -34,13 +34,23 @@ CORDONATES_LONG = [
   -0.5250733371252721,
   -0.5044430287804741
 ]
+puts "Avant nettoyage, nombre de users : #{User.count}"
 
+User.destroy_all
+
+puts "Après nettoyage, nombre de users : #{User.count}"
 
 puts "Avant nettoyage, nombre d'évenements : #{Event.count}"
 
 Event.destroy_all
 
 puts "Après nettoyage, nombre d'évenements : #{Event.count}"
+
+User.create(
+  email: "test@test.com",
+  password: "123456",
+  address: "107 Cr Balguerie Stuttenberg, 33300 Bordeaux, France"
+)
 
 Event.create(
   name: "BDC fait son show !",
@@ -365,3 +375,5 @@ Event.create(
 )
 
 puts "Après création, nombre d'évenements : #{Event.count}"
+
+puts "Après création, nombre de users : #{User.count}"
