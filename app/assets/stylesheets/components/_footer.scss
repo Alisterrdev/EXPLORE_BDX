@@ -1,41 +1,38 @@
+/* Le body occupe toute la hauteur et pousse le footer en bas */
+html, body { height: 100%; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Le contenu prend tout l’espace restant */
+main { flex: 1; }
+
+/* Footer collé en bas du document (PAS fixed) */
 .footer {
-  background-color: #f9f0e6; /* beige clair */
+  /* supprime position: fixed; left/right/bottom; width 100% */
+  position: static;         /* ou rien du tout */
+  width: 100%;
+  background-color: #f9f0e6;
   padding: 16px 24px;
   font-size: 14px;
-  border-top: 1px solid #e0d8d2;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
 }
+
+/* conteneur centré comme le reste */
 .footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-.footer-left {
-  color: #222;
-}
-.footer-right a {
-  margin-left: 24px;
-  text-decoration: none;
-  color: #222;
-  transition: color 0.2s ease;
-}
-.footer-right a:hover {
-  color: #9E7A2C;
-}
-/* Responsive */
+
+/* responsive identique à avant */
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .footer-right {
-    margin-top: 10px;
-  }
-  .footer-right a {
-    margin: 0 12px;
-  }
+  .footer-container { flex-direction: column; text-align: center; }
+  .footer-right { margin-top: 10px; }
+  .footer-right a { margin: 0 12px; }
 }

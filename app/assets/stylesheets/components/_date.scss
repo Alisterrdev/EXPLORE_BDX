@@ -10,7 +10,9 @@
     font-size: 2rem;
     margin-bottom: 30px;
     color: #84A59D;
-
+    max-width: 1100px;
+    margin: 0 auto 32px;
+    padding: 0 24px;
 
   }
 
@@ -21,6 +23,9 @@
     color: #000; // noir
     margin-bottom: 8px;
     text-align: left;
+    max-width: 1100px;
+    margin: 0 auto 32px;
+    padding: 0 24px;
   }
 
   &__form {

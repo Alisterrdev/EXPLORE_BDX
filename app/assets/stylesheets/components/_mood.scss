@@ -1,7 +1,24 @@
 /* Conteneur et titres Mood */
-.mood-section { max-width: 1100px; margin: 0 auto 32px; padding: 0 24px; }
-.mood-title   { text-align: left; font-size: 2.2rem; color: #84A59D; margin-bottom: .35rem; }
-.mood-subtitle{ text-align: left; color: #6b6b6b; margin-bottom: 1.2rem; }
+.filters-title-mood  {
+    color: #84A59D;  // couleur du titre
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto 32px;
+    padding: 0 24px;
+    margin-top: 1.5rem;
+  }
+.filters-subtitle-moods{
+  text-align: left;
+  color: #6B6B6B;
+  margin-bottom: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto 32px;
+  padding: 0 24px;
+}
+
+.mood-section { max-width: 1100px; margin: 0 auto 32px; padding: 0 24px;
 
 /* Carrousel */
 .mood-grid {
@@ -35,7 +52,8 @@
   gap: 12px;
   cursor: pointer;
   text-align: center;
-  width: 320px;               /* ajuste à 300–340 selon goût */
+  width: 320px;
+ /* ajuste à 300–340 selon goût */
 }
 .mood-card__photo {
   width: 100%; aspect-ratio: 4/3;
@@ -61,3 +79,5 @@
 .mood-nav--next { right: 6px; }
 
 @media (max-width: 480px) { .mood-card { flex-basis: 220px; } }
+
+}
