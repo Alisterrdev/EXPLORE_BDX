@@ -7,7 +7,7 @@
     </div>
     <div class="event-hero__content">
       <h1 class="event-title"><%= @event.name %></h1>
-      <p class="event-subtitle">Concert • Gipsy Jazz</p> <!-- texte statique -->
+      <p class="event-subtitle"><%= @event.tags %></p> <!-- texte statique -->
 
       <div class="event-card">
         <p><strong>📍 Lieu :</strong> <%= @event.address %></p>
@@ -15,7 +15,7 @@
         <p><strong>⏰ Heure :</strong> 20h00</p> <!-- texte statique -->
       </div>
 
-      <%# <p><%= link_to "Ca m'intéresse", favorites_path, class: "btn btn-success" %></p> %>
+      <%# <p><%= link_to "Ca m'intéresse", favorites_path, class: "btn btn-success" %></p>
       <%# <%= link_to "Ajouter un favori", event_favorites_path(@event), data: { turbo_method: :post } %>
   <%= link_to event_favorites_path(@event), method: :post, data: { turbo_method: :post }, class: "fa-solid fa-heart" do %>
 

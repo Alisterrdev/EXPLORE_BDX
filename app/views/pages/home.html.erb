@@ -150,7 +150,6 @@
 <section class="testimonials">
   <div class="container">
     <h2 class="testimonials__title">Ce que nos utilisateurs disent de nous</h2>
-
     <div class="testimonials__slider">
       <!-- Témoignage 1 -->
       <div class="testimonial">
@@ -163,11 +162,10 @@
           <p class="testimonial__text">"L’interface est claire et rapide, ça change tout. Les résultats sont vraiment pertinents, on sent qu’il y a une vraie sélection derrière."</p>
         </div>
       </div>
-
       <!-- Témoignage 2 -->
       <div class="testimonial">
         <div class="testimonial__avatar">
-          <img src="/assets/alexia.jpg" alt="Alexia Pierens" class="avatar-img">
+          <%= image_tag("alexia.jpg", alt:"Alexia Pierens", class:"avatar-img") %>
         </div>
         <div class="testimonial__content">
           <span class="testimonial__name">Alexia Pierens</span>
@@ -175,11 +173,10 @@
           <p class="testimonial__text">“J’ai redécouvert Bordeaux grâce aux pépites locales recommandées. Ça m’a fait sortir de ma routine restos-bars pour tester des trucs vraiment uniques.”</p>
         </div>
       </div>
-
       <!-- Témoignage 3 -->
       <div class="testimonial">
         <div class="testimonial__avatar">
-          <img src="/assets/aurelien.jpg" alt="Aurélien Ellena" class="avatar-img">
+          <%= image_tag("aurelien", alt:"Aurélien Ellena", class:"avatar-img") %>
         </div>
         <div class="testimonial__content">
           <span class="testimonial__name">Aurélien Ellena</span>
@@ -190,4 +187,3 @@
     </div>
   </div>
 </section>
-
