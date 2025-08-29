@@ -10,4 +10,120 @@
     margin-bottom: 20px
 }
 
+.event-title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        color: #84A59D;
+      }
+
+.card-img {
+  width: 25%;
+  height: 25%;
+  height: auto;
+  display: block;
+}
+
+
+  @media (max-width: 768px) {
+    .event-suggestions .event-card {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  .event-suggestions {
+    margin-bottom: 3rem;
+    text-align: left;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #567c67;
+    }
+
+    .event-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-left: 0;
+      margin-right: 0;
+}
+    }
+
+.event-card {
+  background: #fff;
+  border-radius: 0.0rem;
+  padding: 1rem;
+  text-align: center;
+  width: 220px; /* taille fixe pour les cards */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  img.event-card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0.0rem;
+    margin-bottom: 0.5rem; // espace entre image et titre
+    display: block;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem 0; // espace entre titre et description
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    background: #f4b63a;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: auto;
+    transition: background 0.2s;
+
+    &:hover {
+      background: darken(#567c67, 10%);
+    }
+  }
+}
+
+
+
+  /* RESPONSIVE HERO */
+  @media (max-width: 768px) {
+    .event-hero {
+      flex-direction: column;
+      text-align: center;
+
+      &__content {
+        flex: none;
+      }
+    }
+  }
+
+  /* RESPONSIVE CARDS */
+  @media (max-width: 768px) {
+    .event-suggestions .event-card {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+
+
 @import "home";

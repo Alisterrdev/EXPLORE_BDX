@@ -16,13 +16,7 @@
     <div class="event-cards">
       <% if @events.any? %>
         <% @events.each do |event| %>
-          <div class="event-card">
-            <%= image_tag event.image || "placeholder.jpg", alt: event.name, class: "event-card-image" %>
-            <h3><%= event.name %></h3>
-            <p><%= event.date %></p>
-            <p><%= event.description %></p>
-            <a href="<%= event_path(event) %>" class="btn-secondary">En savoir plus</a>
-          </div>
+          <%= render "events/show-card", event: event %>
         <% end %>
       <% else %>
         <em>Désolé, aucun événement n'a été trouvé.</em>
