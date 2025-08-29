@@ -9,7 +9,7 @@ document.addEventListener("turbo:load", () => {
   document.querySelectorAll("[data-carousel]").forEach((carousel) => {
     const track = carousel.querySelector("[data-track]");
     const card = track.querySelector(".mood-card");
-    const step = card ? card.getBoundingClientRect().width + 22 : 260; // 22 = gap
+    const step = card ? card.getBoundingClientRect().width + 24 : 320; // 22 = gap
 
     carousel.querySelectorAll(".mood-nav").forEach((btn) => {
       btn.addEventListener("click", () => {
