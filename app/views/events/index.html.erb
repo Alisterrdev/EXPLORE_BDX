@@ -1,5 +1,6 @@
 <section class="event-suggestions">
-<h2>Les événements autour de toi</h2>
+
+<h2 class="title-map">Les événements autour de toi</h2>
 <div class="container">
   <div style="width: 100%; height: 600px;"
   data-controller="map"
@@ -12,7 +13,7 @@
 </div>
 
   <section class="event-suggestions">
-    <h2>Les  événements qui pourraient vous intéresser autour de vous</h2>
+    <h2 class="title-suggestion">Les  événements qui pourraient vous intéresser autour de vous</h2>
     <div class="event-cards">
       <% if @events.any? %>
         <% @events.each do |event| %>
