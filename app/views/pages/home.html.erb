@@ -9,16 +9,113 @@
   </div>
 </section>
 
-<div class="row justify-content-center">
-  <div class="col-sm-8 my-3">
+<% moods = {
+  "Nature"   => "moods/nature.jpg",
+  "Creatif"  => "moods/creatif.jpg",
+  "Festif"   => "moods/festif.jpg",
+  "Foodies"  => "moods/foodies.jpg",
+  "Culturel" => "moods/culturel.jpg",
+  "Chill"    => "moods/chill.jpg"
+} %>
 
-    <%= form_with url: events_path, method: :get, class: "d-flex mx-3 gap-3" do %>
-      <% Event::TAGS.each do |tag| %>
-        <%= check_box_tag "tags[]", tag, class: "btn-check", id:"tag_#{tag}" %>
-        <%= label_tag "tag_#{tag}", tag, class: "btn btn-outline-warning" %>
+<% budgets = {
+  "Gratuit"               => "budget/Gratuit.jpg",
+  "Entre_0_et_40_euros"   => "budget/Entre_0_et_40_euros.jpg",
+  "Plus_de_40_euros"      => "budget/Plus_de_40_euros.jpg"
+} %>
+
+<%= form_with url: events_path, method: :get, class: "filters-form" do %>
+
+  <!-- MOODS -->
+  <section class="mood-section">
+    <h3 class="filters-title">Choisis ton mood</h3>
+    <p class="filters-subtitle">“Sélectionne ton humeur du moment, on adapte nos suggestions.”</p>
+
+    <div class="mood-grid">
+      <% moods.each do |tag, img| %>
+        <% id = "tag_#{tag.parameterize}" %>
+        <input type="checkbox"
+               name="tags"
+               value="<%= tag %>"
+               id="<%= id %>"
+               class="mood-check">
+
+        <label for="<%= id %>" class="mood-card" style="--photo: url('<%= asset_path(img) %>')">
+          <span class="mood-card__photo"></span>
+          <span class="mood-card__title"><%= tag %></span>
+        </label>
       <% end %>
-        <%= submit_tag "Rechercher", name: "", class: "btn btn-primary" %>
-    <% end %>
+    </div>
+  </section>
+
+  <!-- BUDGET -->
+  <section class="budget-section">
+    <h3 class="filters-title">Choisis ton budget</h3>
+    <p class="filters-subtitle">“Ton portefeuille aussi a son mot à dire 😉.”</p>
+
+    <div class="budget-grid">
+      <% budgets.each do |label, img| %>
+        <% id = "budget_#{label.parameterize}" %>
+        <input type="radio"
+               name="budget"
+               value="<%= label %>"
+               id="<%= id %>"
+               class="budget-input">
+
+        <label for="<%= id %>" class="budget-card">
+          <%= image_tag img, class: "budget-card__photo", alt: label %>
+          <span class="budget-card__title">
+            <%= label.gsub("_", " ").gsub("euros","€") %>
+          </span>
+        </label>
+      <% end %>
+    </div>
+  </section>
+    <section class="localisation">
+      <div class="container">
+        <h2 class="localisation__title">Choisis ta localisation</h2>
+
+        <div style="text-align: center;">
+          <input type="range" name="location" min="10" max="30" step="10" value="20" class="localisation__range">
+          <div class="localisation__labels">
+            <span>10 km</span>
+            <span>20 km</span>
+            <span>30 km</span>
+          </div>
+
+      </div>
+    </div>
+    </section>
+    <section class="choose-date">
+  <div class="container">
+    <h2 class="choose-date__title">Choisis ta date</h2>
+    <p class="choose-date__subtitle">Sélectionne le moment qui correspond à tes disponibilités.</p>
+    <p class="choose-date__subtitle--extra">Tu peux choisir le début et la fin de ton expérience.</p>
+
+    <div class="choose-date__form">
+      <div class="choose-date__fields">
+        <div class="choose-date__field">
+          <label for="start_date">Date de début</label>
+          <input type="date" id="start_date" name="start_date" placeholder="Sélectionne une date">
+        </div>
+
+        <div class="choose-date__field">
+          <label for="end_date">Date de fin</label>
+          <input type="date" id="end_date" name="end_date" placeholder="Sélectionne une date">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- SUBMIT -->
+  <div class="filters-actions">
+    <%= submit_tag "Rechercher", name: "", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+
+
+
 
     <%# <%= form_with url: events_path, method: :get, class: "d-flex mx-3 gap-3" do %>
       <%# <%= check_box_tag "tags[]", "Nature", class: "btn-check", id:"tag_nature" %>
@@ -50,50 +147,6 @@
    <%# <% end %>
     </div>
 </div>
-
-
-<section class="localisation">
-  <div class="container">
-    <h2 class="localisation__title">Choisis ta localisation</h2>
-
-    <div style="text-align: center;">
-      <input type="range" min="10" max="30" step="10" value="20" class="localisation__range">
-      <div class="localisation__labels">
-        <span>10 km</span>
-        <span>20 km</span>
-        <span>30 km</span>
-      </div>
-
-  </div>
-</div>
-</section>
-
-
-
-<section class="choose-date">
-  <div class="container">
-    <h2 class="choose-date__title">Choisis ta date</h2>
-    <p class="choose-date__subtitle">Sélectionne le moment qui correspond à tes disponibilités.</p>
-    <p class="choose-date__subtitle--extra">Tu peux choisir le début et la fin de ton expérience.</p>
-
-    <form class="choose-date__form">
-      <div class="choose-date__fields">
-        <div class="choose-date__field">
-          <label for="start_date">Date de début</label>
-          <input type="date" id="start_date" name="start_date" placeholder="Sélectionne une date">
-        </div>
-
-        <div class="choose-date__field">
-          <label for="end_date">Date de fin</label>
-          <input type="date" id="end_date" name="end_date" placeholder="Sélectionne une date">
-        </div>
-      </div>
-
-      <button type="submit" class="choose-date__cta">Trouve mon expérience</button>
-    </form>
-  </div>
-</section>
-
 
 <section class="testimonials">
   <div class="container">

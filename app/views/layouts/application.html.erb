@@ -13,10 +13,10 @@
   </head>
 
   <body>
-    <%= render "pages/header" %>
-    <%= render "pages/footer" %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+     <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
+     <%= render "pages/header" %>
+     <%= render "pages/footer" %>
+     <%= yield %>
 
-    <%= yield %>
   </body>

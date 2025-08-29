@@ -1,0 +1,63 @@
+/* Conteneur et titres Mood */
+.mood-section { max-width: 1100px; margin: 0 auto 32px; padding: 0 24px; }
+.mood-title   { text-align: left; font-size: 2.2rem; color: #84A59D; margin-bottom: .35rem; }
+.mood-subtitle{ text-align: left; color: #6b6b6b; margin-bottom: 1.2rem; }
+
+/* Carrousel */
+.mood-grid {
+  //display: grid;
+  //grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  justify-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.mood-carousel { position: relative; padding: 0 44px; }
+.mood-track {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+.mood-track::-webkit-scrollbar { display: none; }
+
+/* Cartes */
+.mood-check { position: absolute; opacity: 0; pointer-events: none; }
+
+.mood-card {
+  all: unset;                 /* reset bootstrap */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  text-align: center;
+  width: 320px;               /* ajuste à 300–340 selon goût */
+}
+.mood-card__photo {
+  width: 100%; aspect-ratio: 4/3;
+  border-radius: 16px;
+  background: var(--photo) center/cover no-repeat;
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+  outline: 2px solid rgba(0,0,0,.08);
+  transition: transform .25s, box-shadow .25s, outline-color .25s;
+}
+.mood-card__title { font-weight: 800; font-size: 18px; color:#1f1f1f; }
+.mood-card:hover .mood-card__photo { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0,0,0,.16); outline-color: rgba(0,0,0,.14); }
+.mood-check:checked + .mood-card .mood-card__photo { outline-color:#b8860b; outline-width:3px; }
+
+/* Flèches */
+.mood-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 36px; height: 36px; border-radius: 999px; border: none;
+  background: rgba(0,0,0,.06); box-shadow: 0 2px 10px rgba(0,0,0,.12);
+  font-size: 22px; display: grid; place-items: center; cursor: pointer;
+}
+.mood-nav:hover { background: rgba(0,0,0,.12); }
+.mood-nav--prev { left: 6px; }
+.mood-nav--next { right: 6px; }
+
+@media (max-width: 480px) { .mood-card { flex-basis: 220px; } }
