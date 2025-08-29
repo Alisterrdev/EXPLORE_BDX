@@ -1,5 +1,13 @@
 // Import page-specific CSS files here.
 
+.title-map {
+  margin-bottom: 1.5rem;
+    max-width: 1100px;
+    margin-left: 100px;
+    padding: 0 8px;
+    margin-top: 24px;
+}
+
 .events {
     background: rgba(255, 255, 255, 0.9);
     padding: 1rem 1rem 1rem 1rem;
@@ -32,6 +40,13 @@
       max-width: 300px;
     }
   }
+
+  .title-suggestion {
+  margin-bottom: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto 24px;
+    padding: 0 24px;
+}
 
   .event-suggestions {
     margin-bottom: 3rem;
