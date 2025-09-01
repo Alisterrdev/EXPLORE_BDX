@@ -26,11 +26,13 @@
 
   <!-- CARD superposée -->
   <div class="hero__card">
-    <h2 class="hero__title">Explore BDX, outil à découvrir</h2>
+    <h2 class="hero__title">Explore BDX.
+    <strong>Trouver</strong>, choisir, <strong>sortir.</strong></h2>
     <p class="hero__text">
-      L'outil qui permet de trouver en un clin d'œil une activité qui répond à tes envies !
+      L’outil qui trouve vos sorties en un clic.
     </p>
-    <button class="hero__button">C’EST PARTI !</button>
+    <button class="hero__button">Je me lance.</button>
+
   </div>
 
   <!-- JS désactivé → force l'image -->
@@ -119,8 +121,8 @@
 <%= form_with url: events_path, method: :get, class: "filters-form" do %>
 
   <!-- MOODS -->
-    <h2 class="filters-title-mood">Choisis ton mood</h2>
-    <p class="filters-subtitle-moods">“Sélectionne ton humeur du moment, on adapte nos suggestions.”</p>
+    <h2 class="filters-title-mood">Ton mood</h2>
+    <p class="filters-subtitle">On adapte les suggestions à ton humeur</p>
 <section class="mood-section">
     <div class="mood-grid">
       <% moods.each do |tag, img| %>
@@ -140,8 +142,8 @@
   </section>
 
   <!-- BUDGET -->
-    <h2 class="filters-title-budget">Choisis ton budget</h2>
-    <p class="filters-subtitle-budget">“Ton portefeuille aussi a son mot à dire 😉.”</p>
+    <h2 class="filters-title-budget">Ton budget</h2>
+    <p class="filters-subtitle">Ton portefeuille aussi a son mot à dire 😉</p>
   <section class="budget-section">
     <div class="budget-grid">
       <% budgets.each do |label, img| %>
@@ -162,7 +164,8 @@
     </div>
   </section>
 
-    <h2 class="localisation__title">Choisis ta localisation</h2>
+    <h2 class="localisation__title">Ta localisation</h2>
+    <p class="filters-subtitle">On te propose les spots près de toi</p>
     <section class="localisation">
       <div class="container">
         <div style="text-align: center;">
@@ -178,10 +181,8 @@
     </section>
     <section class="choose-date">
   <div class="container">
-    <h2 class="choose-date__title">Choisis ta date</h2>
-    <p class="choose-date__subtitle">Sélectionne le moment qui correspond à tes disponibilités.</p>
-    <p class="choose-date__subtitle--extra">Tu peux choisir le début et la fin de ton expérience.</p>
-
+    <h2 class="choose-date__title">Ta date</h2>
+    <p class="filters-subtitle">Sélectionne ton moment</p>
     <div class="choose-date__form">
       <div class="choose-date__fields">
         <div class="choose-date__field">

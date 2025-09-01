@@ -1,9 +1,20 @@
 .filters-actions {
-  text-align: center; /* pour centrer le bouton */
+  text-align: center;
+}
+
+.filters-subtitle{
+  text-align: left;
+  color: black;
+  margin-bottom: 1.2rem;
+  max-width: 1100px;
+  margin: 0 auto 32px;
+  padding: 0 24px;
+  font-size: 20px;
+  line-height: 1.4;
 }
 
 .btn-custom {
-  background-color: #b77f00;
+  background-color: #fb8500;
   color: white;
   font-weight: bold;
   text-transform: uppercase;
@@ -17,12 +28,33 @@
 }
 
 .btn-custom:hover {
-  background-color: #996600;
+  background-color: #fb8500;
 }
 
 .section-title {
-  color: #84A59D;
+  color: #fb8500;
   text-align: left;
-  font-size: 2rem;
+  font-size: 3.38rem;
   margin-bottom: 1.5rem;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+}
+
+.step-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #FF7A00;
+  margin-bottom: 8px;
+}
+
+.step-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #222;
+  line-height: 1.4;
 }

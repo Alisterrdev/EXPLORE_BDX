@@ -1,0 +1,11 @@
+.heart-icon {
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.heart-icon.filled {
+  color: red;
+  transform: scale(1.2);
+}
