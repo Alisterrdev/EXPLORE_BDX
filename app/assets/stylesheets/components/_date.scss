@@ -7,37 +7,36 @@
 
   &__title {
     text-align: left;
-    font-size: 2rem;
+    font-size: 3.38rem;
     margin-bottom: 30px;
-    color: #84A59D;
+    color:#fb8500;
     max-width: 1100px;
     margin: 0 auto 32px;
     padding: 0 24px;
-
+    margin-bottom: 0.5rem;
   }
-
 
   &__subtitle,
   &__subtitle--extra {
-    font-size: 16px;
-    color: #000; // noir
-    margin-bottom: 8px;
-    text-align: left;
-    max-width: 1100px;
-    margin: 0 auto 32px;
-    padding: 0 24px;
+  text-align: left;
+  color: black;
+  margin-bottom: 1.2rem;
+  max-width: 1100px;
+  margin: 0 auto 32px;
+  padding: 0 24px;
+  font-size: 16px;
   }
 
   &__form {
     display: flex;
     flex-direction: column;
-    align-items: center; // centre les champs + bouton
+    align-items: center;
     margin-top: 20px;
   }
 
   &__fields {
     display: flex;
-    gap: 20px; // espace entre les deux champs
+    gap: 20px;
     margin-bottom: 20px;
     flex-wrap: wrap;
     justify-content: center;
@@ -58,7 +57,7 @@
   }
 
   &__cta {
-    background-color: #B88E2F;
+    background-color: #fb8500;
     color: #fff;
     padding: 12px 24px;
     border: none;
@@ -68,7 +67,7 @@
     transition: background 0.3s ease;
 
     &:hover {
-      background-color: #B88E2F;
+      background-color: #fb8500;
       opacity: 0.5;
     }
   }
