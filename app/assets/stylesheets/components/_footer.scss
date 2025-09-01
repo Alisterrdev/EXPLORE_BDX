@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Wrapper qui prend toute la hauteur de la page */
 .site-wrapper {
   display: flex;
@@ -20,13 +21,41 @@
   /* plus de position: fixed */
 }
 
+=======
+/* Le body occupe toute la hauteur et pousse le footer en bas */
+html, body { height: 100%; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Le contenu prend tout l’espace restant */
+main { flex: 1; }
+
+/* Footer collé en bas du document (PAS fixed) */
+.footer {
+  /* supprime position: fixed; left/right/bottom; width 100% */
+  position: static;         /* ou rien du tout */
+  width: 100%;
+  background-color: #f9f0e6;
+  padding: 16px 24px;
+  font-size: 14px;
+}
+
+/* conteneur centré comme le reste */
+>>>>>>> a081bf46d175e87423a1554c72fb4c159a3ceb48
 .footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
 
+<<<<<<< HEAD
 .footer-left {
   color: #222;
 }
@@ -43,15 +72,11 @@
 }
 
 /* Responsive */
+=======
+/* responsive identique à avant */
+>>>>>>> a081bf46d175e87423a1554c72fb4c159a3ceb48
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .footer-right {
-    margin-top: 10px;
-  }
-  .footer-right a {
-    margin: 0 12px;
-  }
+  .footer-container { flex-direction: column; text-align: center; }
+  .footer-right { margin-top: 10px; }
+  .footer-right a { margin: 0 12px; }
 }

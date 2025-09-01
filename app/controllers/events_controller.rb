@@ -7,7 +7,7 @@ class EventsController < ApplicationController
     #events_filtered_by_mood = Event.where(tags: params[:tags])
     #events_filtered_by_tag = events_filtered_by_mood .where(tags: params[:budget])
     #http://[::1]:3000/events?location=20&start_date=2025-08-29&end_date=2025-08-31
-    events_filtered_by_date = Event.where 
+    events_filtered_by_date = Event.where
     if current_user
       @events = events_filtered_by_tag.near(current_user.address, params[:location].to_i)
     else
