@@ -1,14 +1,15 @@
-/* Titre aligné comme le reste */
 .localisation__title {
-  color: #84A59D;
+  color: #fb8500;
   text-align: left;
-  font-size: 2rem;
+  font-size: 3.38rem;
   max-width: 1100px;
   padding: 0 24px;
   margin: 1.5rem auto 1rem;
+  margin-bottom: 0.5rem;
 }
 
-/* Évite que le parent pousse le slider à droite si c'est un flex ailleurs */
+
+
 .localisation .container { display: block; }
 
 /* Le div qui contient slider + labels (celui avec style="text-align:center;") */
@@ -18,7 +19,7 @@
   text-align: center;        /* ton inline est ok, on l’assume ici aussi */
 }
 
-/* === SLIDER === */
+/* SLIDER */
 .localisation__range {
   -webkit-appearance: none;
   appearance: none;
@@ -27,7 +28,7 @@
   border-radius: 3px;
   outline: none;
   margin: 1rem 0;
-  background: linear-gradient(to right, #84A59D 50%, #ccc 50%); /* fixe à 50% */
+  background: linear-gradient(to right, #fb8500 50%, #ccc 50%); /* fixe à 50% */
   transition: background 0.2s ease;
 }
 
@@ -35,7 +36,7 @@
 .localisation__range::-webkit-slider-runnable-track {
   height: 6px;
   border-radius: 3px;
-  background: linear-gradient(to right, #84A59D 50%, #ccc 50%);
+  background: linear-gradient(to right, #fb8500 50%, #ccc 50%);
 }
 /* Chrome / Safari - pouce */
 .localisation__range::-webkit-slider-thumb {
@@ -66,7 +67,7 @@
   cursor: pointer;
 }
 
-/* === LABELS === */
+/* LABELS */
 .localisation__labels {
   display: flex;
   justify-content: space-between; /* 10 | 20 | 30 */
