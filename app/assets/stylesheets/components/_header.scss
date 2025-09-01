@@ -1,39 +1,39 @@
-body {
-  margin: 0;
-  font-family: Poppins, sans-serif;
-  height: auto;
-  overflow-x: hidden;
-}
-
 .header {
-  background-color: transparent;
-  border-bottom: 1px solid transparent;
-  padding: 10px 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  height: 80px;
+  padding: 0 20px;
 }
 
 .header-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
   max-width: 1200px;
   margin: 0 auto;
+  height: 100%;
+  position: relative;      /* référence pour le centrage absolu */
+  display: flex;
+  align-items: center;     /* centrage vertical */
 }
 
 .logo-img {
-  width: 60px;      // augmente ici
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);  /* centre V + H */
+  width: 120px;        /* ajuste la taille du logo */
+  height: auto;
 }
 
-.user-icon {
+.user-icon-img {
   position: absolute;
   right: 20px;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   border-radius: 50%;
+  width: 60px;
   padding: 5px;
   cursor: pointer;
-  background-color: transparent;
+  background: transparent;
 }
