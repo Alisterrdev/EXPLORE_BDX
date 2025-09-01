@@ -1,69 +1,76 @@
-.localisation {
-  padding: 2rem;
-
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__title {  // ici le &__title compile en .localisation__title
-    color: #84A59D;  // couleur du titre
-    text-align: left;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .localisation__title {
+/* Titre aligné comme le reste */
+.localisation__title {
   color: #84A59D;
   text-align: left;
+  font-size: 2rem;
+  max-width: 1100px;
+  padding: 0 24px;
+  margin: 1.5rem auto 1rem;
 }
 
-  &__slider-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center; // centre le slider et les labels horizontalement
-  }
+/* Évite que le parent pousse le slider à droite si c'est un flex ailleurs */
+.localisation .container { display: block; }
 
-  &__range {
-    width: 150px;  // largeur du slider
-    margin: 1rem 0;
+/* Le div qui contient slider + labels (celui avec style="text-align:center;") */
+.localisation .container > div {
+  max-width: 600px;          /* largeur de la réglette */
+  margin: 0 auto;            /* centre le bloc */
+  text-align: center;        /* ton inline est ok, on l’assume ici aussi */
+}
 
-    // Curseur Chrome/Safari
-    &::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 25px;
-      height: 25px;
-      background: #84A59D;
-      border-radius: 50%;
-      cursor: pointer;
-    }
+/* === SLIDER === */
+.localisation__range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  outline: none;
+  margin: 1rem 0;
+  background: linear-gradient(to right, #84A59D 50%, #ccc 50%); /* fixe à 50% */
+  transition: background 0.2s ease;
+}
 
-    // Curseur Firefox
-    &::-moz-range-thumb {
-      width: 25px;
-      height: 25px;
-      background: #84A59D;
-      border-radius: 50%;
-      cursor: pointer;
-    }
+/* Chrome / Safari - barre */
+.localisation__range::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right, #84A59D 50%, #ccc 50%);
+}
+/* Chrome / Safari - pouce */
+.localisation__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+  cursor: pointer;
+  margin-top: -9px; /* centre verticalement sur la piste */
+}
 
-    // Barre du slider
-    &::-webkit-slider-runnable-track {
-      height: 6px;
-      background: #ccc;
-      border-radius: 3px;
-    }
-    &::-moz-range-track {
-      height: 6px;
-      background: #ccc;
-      border-radius: 3px;
-    }
-  }
+/* Firefox - barre */
+.localisation__range::-moz-range-track {
+  height: 6px;
+  border-radius: 3px;
+  background: #ccc; /* pas de gradient dynamique sans JS */
+}
+/* Firefox - pouce */
+.localisation__range::-moz-range-thumb {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+  cursor: pointer;
+}
 
-  &__labels {
-    display: flex;
-    justify-content: space-between;
-    width: 150px; // même largeur que le slider
-    margin: 0;
-  }
+/* === LABELS === */
+.localisation__labels {
+  display: flex;
+  justify-content: space-between; /* 10 | 20 | 30 */
+  max-width: 600px;                /* égale à la réglette */
+  margin: .5rem auto 0;
+  font-weight: 500;
 }

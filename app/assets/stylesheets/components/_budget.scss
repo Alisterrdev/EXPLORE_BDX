@@ -1,4 +1,23 @@
 /* même largeur/alignment que le bloc mood */
+.filters-title-budget {
+   color: #84A59D;  // couleur du titre
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto 32px;
+    padding: 0 24px;
+}
+
+.filters-subtitle-budget{
+  text-align: left;
+  color: #6B6B6B;
+  margin-bottom: 1.5rem;
+   max-width: 1100px;
+  margin: 0 auto 32px;
+  padding: 0 24px;
+}
+
 .budget-section {
   max-width: 1100px;
   margin: 28px auto 40px;
@@ -38,11 +57,6 @@
   transition: transform .25s, box-shadow .25s, outline-color .25s;
 }
 
-.budget-card__title {
-  font-weight: 800;
-  color: #1f1f1f;
-  font-size: 18px;
-}
 
 .budget-card:hover .budget-card__photo {
   transform: translateY(-2px);
