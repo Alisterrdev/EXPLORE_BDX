@@ -52,95 +52,13 @@ User.create(
   address: "107 Cr Balguerie Stuttenberg, 33300 Bordeaux, France"
 )
 
-Event.create(
-  name: "BDC fait son show !",
-  address: "Quai des Queyries, Bordeaux, France",
-  date: Date.parse("26 aout 2025"),
-  details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  description: "Après une année passée à répéter, semmêler les pieds et se relever avec le sourire, les danseurs de BDC montent enfin sur scène. Le spectacle de fin dannée, cest loccasion de voir les plus petits, les grands, les passionnés et même les “je danse pour le fun” partager la même énergie. Au menu : des chorégraphies décalées, des costumes qui accrochent la lumière et un final surprise dont personne ne sortira indifférent. Dès 20h",
-  # tags: "Creatif" "Plus de 40 euros",
-  tags: Event::TAGS.sample
-)
-
-Event.create(
-  name: "Bal des pompiers !",
-  address: "Pey Berland, Bordeaux, France",
-  date: Date.parse("28 aout 2025"),
-  details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  description: "Après une année passée à répéter, semmêler les pieds et se relever avec le sourire, les danseurs de BDC montent enfin sur scène. Le spectacle de fin dannée, cest loccasion de voir les plus petits, les grands, les passionnés et même les “je danse pour le fun” partager la même énergie. Au menu : des chorégraphies décalées, des costumes qui accrochent la lumière et un final surprise dont personne ne sortira indifférent. Dès 20h",
-  # tags: ["Festif", "Gratuit"],
-  tags: "Festif"
-)
-
-Event.create(
-  name: "DJ Set et détente chez Calicéo",
-  address: "8 Rue Jean Pommiès, 33520 Bruges, Bordeaux, France",
-  date: Date.parse("29 aout 2025"),
-  details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  description: "Imaginez les bassins de Calicéo Bordeaux transformés en dancefloor aquatique. Les jeudis 21 et 28 aout, les Soirées Bulles dÉté mêlent détente et musique : DJ set en live, jeux de lumières colorées, vapeurs du hammam et cascades deau. Une façon décalée de prolonger lété, que vous veniez entre amis ou pour souffler en solo.",
-  # tags: ["Festif", "Creatif", "Entre 0 et 40 euros"],
-  tags: "Creatif"
-)
-
-Event.create(
-  name: "Balade nocturne au parc floral",
-  address: "Parc Floral, Bordeaux, France",
-  date: Date.parse("27 aout 2025"),
-  details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  description: "À la tombée de la nuit, rejoignez-nous pour une promenade guidée dans les allées illuminées du parc floral. L'occasion parfaite de découvrir la faune et la flore locales sous un autre angle.",
-  tags: "Nature"
-)
-
-Event.create(
-  name: "Apéro jazz au bord de la Garonne",
-  address: "Hangar Darwin, Bordeaux, France",
-  date: Date.parse("29 aout 2025"),
-  details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  description: "Un moment chill avec vue sur le fleuve, un verre à la main et une playlist jazz en live. Ambiance décontractée garantie.",
-  tags: "Chill"
-)
-
-Event.create(
-  name: "Marché gourmand des quais",
-  address: "Quais de Bordeaux, Bordeaux, France",
-  date: Date.parse("30 aout 2025"),
-  details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  description: "Un rassemblement de food trucks, producteurs locaux et artisans du goût. Venez goûter, flâner, et remplir votre panier !",
-  tags: "Foodies"
-)
-
-Event.create(
-  name: "Nuit des arts de la rue",
-  address: "Place Saint-Michel, Bordeaux, France",
-  date: Date.parse("30 aout 2025"),
-  details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  description: "Des jongleurs, des conteurs, des échassiers et des musiciens prennent d'assaut les rues pour un soir magique à ciel ouvert.",
-  tags: "Culturel"
-)
-
-Event.create(
-  name: "Festival Écume Electronique",
-  address: "Base sous-marine, Bordeaux, France",
-  date: Date.parse("1er septembre 2025"),
-  details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  description: "Un festival électro dans un lieu unique. DJs internationaux, installations lumineuses et vibes festives toute la nuit.",
-  tags: "Festif"
-)
 
 Event.create(
   name: "Atelier peinture intuitive",
   address: "Espace 29, 33000 Bordeaux, France",
   date: Date.parse("2 septembre 2025"),
-  details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  details: "Jonathan Parcelare est artiste-peintre ainsi qu'éducateur spécialisé, il décide de partager sa passion et laisser les curieux à s'exprimer sur la toile.",
+  image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=758&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Exprimez-vous sans contrainte ! Un atelier où pinceaux, couleurs et émotions s'entremêlent. Aucune compétence requise.",
   tags: "Creatif"
 )
@@ -150,7 +68,7 @@ Event.create(
   address: "Jardin Public, 33000 Bordeaux, France",
   date: Date.parse("6 septembre 2025"),
   details: "Venez vous joindre au groupe et partager un moment convivial avec les musiciens. Un moment à partager en famille ou entre amis sans modération.",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  image: "https://images.unsplash.com/photo-1592753054398-9fa298d40e85?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Un midi tout doux dans l'herbe avec des musiciens acoustiques, des paniers pique-nique locaux et une ambiance détendue.",
   tags: "Chill"
 )
@@ -161,13 +79,13 @@ Event.create(
   date: Date.parse("4 septembre 2025"),
   description: "Une promenade forestière ponctuée d'histoires racontées par des conteurs passionnés. Une immersion nature & légendes.",
   details: "Existant depuis cinq ans, plongez au coeur des nombreuses légendes bordelaises. Cet évènement revient pour faire rêver les petits comme les grands",
-  image: "https://images.unsplash.com/photo-1698810127193-0c8dc6b91c9f?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  image: "https://images.unsplash.com/photo-1506545733010-83bc7e37fcc2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   tags: "Nature"
 )
 
 Event.create(
   name: "Fête des couleurs indiennes",
-  address: "Place de la Victoire, Bordeaux",
+  address: "Place de la Victoire, 33000 Bordeaux, France",
   date: Date.parse("3 octobre 2025"),
   description: "Plongez dans l'ambiance vibrante des festivals indiens.",
   details: "Pour célébrer l'esprit des fêtes traditionnelles indiennes, participez à une journée colorée de danses, de musiques et de repas typiques. Découvrez des marchés artisanaux, des ateliers de danse Bollywood et bien plus.",
@@ -177,7 +95,7 @@ Event.create(
 
 Event.create(
   name: "Marché de créateurs locaux",
-  address: "Esplanade des Quinconces, Bordeaux",
+  address: "Esplanade des Quinconces, Bordeaux, France",
   date: Date.parse("10 octobre 2025"),
   description: "Un marché dédié aux créateurs locaux où se mêlent art, artisanat et design.",
   details: "Venez rencontrer les créateurs locaux : bijoux, vêtements, objets décoratifs, et bien d'autres. Ce marché est aussi l'occasion de découvrir des ateliers créatifs et de participer à des démonstrations de savoir-faire.",
@@ -187,7 +105,7 @@ Event.create(
 
 Event.create(
   name: "Festival de la gastronomie française",
-  address: "Place Pey Berland, Bordeaux",
+  address: "Place Pey Berland, Bordeaux, France",
   date: Date.parse("17 octobre 2025"),
   description: "Un événement qui célèbre la cuisine hexagonale sous toutes ses formes.",
   details: "Venez goûter aux spécialités des régions françaises avec des chefs locaux. Au programme : dégustations, ateliers culinaires, et conférences autour de la culture gastronomique française.",
@@ -197,7 +115,7 @@ Event.create(
 
 Event.create(
   name: "Randonnée au sommet des Pyrénées",
-  address: "Parc National des Pyrénées",
+  address: "Parc National des Pyrénées, France",
   date: Date.parse("25 octobre 2025"),
   description: "Un week-end d'aventure et de nature, entre montagnes et paysages spectaculaires.",
   details: "Accompagné par un guide expert, partez en randonnée pour découvrir les panoramas à couper le souffle du parc national. Au programme : marche, bivouac, et découverte de la faune et flore montagnarde.",
@@ -207,7 +125,7 @@ Event.create(
 
 Event.create(
   name: "Ciné-concert : Musique et cinéma muet",
-  address: "Cinéma Utopia, Bordeaux",
+  address: "Cinéma Utopia, Bordeaux, France",
   date: Date.parse("30 octobre 2025"),
   description: "Revivez les classiques du cinéma muet avec une performance musicale en live.",
   details: "Profitez d'un moment unique où des musiciens interpréteront la bande-son en direct pendant la projection de films muets comme *Le Cabinet du Dr. Caligari* et *Nosferatu*.",
@@ -217,7 +135,7 @@ Event.create(
 
 Event.create(
   name: "Yoga et brunch au parc",
-  address: "Parc Bordelais, Bordeaux",
+  address: "Parc Bordelais, Bordeaux, France",
   date: Date.parse("1er novembre 2025"),
   description: "Commencez votre dimanche avec une séance de yoga en plein air suivie d'un brunch bio.",
   details: "Un moment détente et bien-être : pratiquez le yoga au cœur du parc avec un professeur expérimenté, puis régalez-vous avec un brunch healthy composé de produits locaux et bio.",
@@ -227,7 +145,7 @@ Event.create(
 
 Event.create(
   name: "Exposition photographique : Les Visages du Monde",
-  address: "Musée des Beaux-Arts, Bordeaux",
+  address: "Musée des Beaux-Arts, Bordeaux, France",
   date: Date.parse("15 novembre 2025"),
   description: "Une exposition unique sur la diversité humaine à travers le regard de grands photographes.",
   details: "Parcourez des images saisissantes capturées aux quatre coins du monde. L'exposition explore les histoires de vie, les émotions et les cultures à travers les portraits pris par des photographes du monde entier.",
@@ -236,21 +154,11 @@ Event.create(
 )
 
 Event.create(
-  name: "Fête de la bière artisanale",
-  address: "Cour Mably, Bordeaux, France",
-  date: Date.parse("5 septembre 2025"),
-  details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1647709825916-200da934eff0?q=80&w=1231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  description: "Dégustations, brassage en direct, concerts et street food. Le paradis des amateurs de houblon !",
-  tags: "Foodies"
-)
-
-Event.create(
   name: "Improvisation théâtrale sous les étoiles",
   address: "Parc Rivière, Bordeaux, France",
   date: Date.parse("6 septembre 2025"),
-  details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1647709825916-200da934eff0?q=80&w=1231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  details: "En compagnie de Jérôme et de la troupe Cosmorire, attachez vos ceintures pour un voyage intergalactique improbable où sciences et humour se combinent à la perfection.",
+  image: "https://images.unsplash.com/photo-1611956425642-d5a8169abd63?q=80&w=1211&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Un spectacle unique où rien n’est écrit d’avance. Rires et surprises garantis dans un cadre verdoyant.",
   tags: "Culturel"
 )
@@ -259,8 +167,8 @@ Event.create(
   name: "Danse libre au miroir d'eau",
   address: "Place de la Bourse, Bordeaux, France",
   date: Date.parse("7 septembre 2025"),
-  details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1647709825916-200da934eff0?q=80&w=1231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  details: "Présents depuis de nombreuses années, le collectif DDE (Danse Des Eaux) revient encore plus fort avec un événement accès sur la découverte de soi par la danse ainsi que le tambour traditionnel malais.",
+  image: "https://images.unsplash.com/photo-1598976702854-b7130d73ca18?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Rejoignez un cercle de danse spontanée, pieds nus sur le miroir d’eau. Musique live et liberté de mouvement au programme.",
   tags: "Creatif"
 )
@@ -270,7 +178,7 @@ Event.create(
   address: "Quai des Marques, Bordeaux, France",
   date: Date.parse("8 septembre 2025"),
   details: "Débutants ou confirmés sont les bienvenus pour faire profiter de ce moment détente revigorant.",
-  image: "https://images.unsplash.com/photo-1647709825916-200da934eff0?q=80&w=1231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  image: "https://images.unsplash.com/photo-1611458181521-5fafe4a31995?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Une session de yoga face au coucher de soleil, suivie de smoothies frais et bio. Apportez votre tapis !",
   tags: "Chill"
 )
@@ -279,8 +187,8 @@ Event.create(
   name: "Soirée salsa en plein air",
   address: "Place des Quinconces, Bordeaux, France",
   date: Date.parse("9 septembre 2025"),
-  details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1647709825916-200da934eff0?q=80&w=1231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  details: "Juan et Linda vont vous aider à ambiancer votre soirée. Organisateurs emblématiques de l'événement, ils n'hésiteront pas à partager un petit verre en compagnie de leurs mouvements.",
+  image: "https://images.unsplash.com/photo-1575448913281-98e9e5d3f193?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Ambiance caliente sous les étoiles avec initiation gratuite, danse libre et musique cubaine en live.",
   tags: "Festif"
 )
@@ -289,8 +197,8 @@ Event.create(
   name: "Marche méditative au lever du jour",
   address: "Parc Bordelais, Bordeaux, France",
   date: Date.parse("10 septembre 2025"),
-  details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1647709825916-200da934eff0?q=80&w=1231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  details: "Accompagnez Veronique dans sa quête spirituelle du bien-être ultime et laisser la vous guider vers l'éveil de nouveaux sens.",
+  image: "https://images.unsplash.com/reserve/YEc7WB6ASDydBTw6GDlF_antalya-beach-lulu.jpg?q=80&w=1301&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Une expérience de reconnexion à soi dans le silence du matin. Respiration, pas lents et contemplation.",
   tags: "Nature"
 )
@@ -299,16 +207,16 @@ Event.create(
   name: "Atelier de cuisine du monde",
   address: "Maison de quartier Bastide, 33000 Bordeaux, France",
   date: Date.parse("11 septembre 2025"),
-  details: "lorem ipsum",
-  image: "https://images.unsplash.com/photo-1647709825916-200da934eff0?q=80&w=1231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  details: "Une cuisine riche, des épices savoureuses et une équipe aux petits oignons. Nos gourmets mettront à rude épreuve les talents culinaires de nos invités.",
+  image: "https://images.unsplash.com/photo-1661607775751-dc9efc8f3a9c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Préparez et dégustez des recettes venues d'ailleurs dans une ambiance conviviale. Venez avec vos papilles !",
   tags: "Foodies"
 )
 
 Event.create(
-  name: "Fête de la Bière",
+  name: "Fête de la Bière Artisanale",
   address: "Place du Parlement, Bordeaux",
-  date: Date.parse("20 novembre 2025"),
+  date: Date.parse("20 septembre 2025"),
   description: "Un événement pour découvrir la bière artisanale locale et internationale.",
   details: "Venez rencontrer des brasseurs passionnés, découvrir leurs créations et participer à des dégustations. Vous pourrez aussi assister à des ateliers sur la fabrication de la bière.",
   tags: "Festif",
@@ -377,12 +285,12 @@ Event.create(
 
 Event.create(
   name: "Demo Day",
-  address: "L'Engrenage, Bordeaux",
+  address: "L'Engrenage, Bordeaux, France",
   date: Date.parse("5 septembre 2025"),
   description: "Présentation finale de 9 semaines de dures labeurs pour les élèves du Wagon, préparez votre meilleure tenue la soirée va être longue.",
   details: "Dans une ambiance détendue et coniviviale, venez découvrir les projets tech du Wagon dans leurs locaux. Avant de partir pour une soirée de folie au coeur de l'Engrenage.",
   tags: "Festif",
-  image: "https://images.unsplash.com/photo-1700931676493-1ea7739bd6aa?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1112&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Event.create(
@@ -404,37 +312,6 @@ Event.create(
   tags: "Culturel",
   image: "https://www.bordeaux-tourisme.com/sites/bordeaux_tourisme/files/styles/sit_main_image/public/externals/f22840cf5b9f365f9bcaa505ec518134.jpg.webp?itok=pL_45h0g"
 )
-
-Event.create(
-  name: "Event 9",
-  address: "449 Route du Médoc, 33520 Bordeaux, France",
-  date: Date.parse("9 septembre 2025"),
-  description: "Station service fabuleuse, pour les 2C et les automobiles les plus rapides",
-  details: "Visites guidées classiques, présentant l’histoire et le patrimoine de la ville, visites insolites, ou en petit train, en tuk-tuk, mais aussi croisières fluviales… Trouvez la visite qui vous convient que vous soyez seul, en couple ou en famille.",
-  tags: "Culturel",
-  image: "https://www.bordeaux-tourisme.com/sites/bordeaux_tourisme/files/styles/sit_main_image/public/externals/f22840cf5b9f365f9bcaa505ec518134.jpg.webp?itok=pL_45h0g"
-)
-
-Event.create(
-  name: "Event 20",
-  address: "30 Rue du Général Malterre, 33160 Saint-Médard-en-Jalles, France",
-  date: Date.parse("9 septembre 2025"),
-  description: "Atelier LezaRaku vous accueille pour vous transporter dans une exposition autour de masques japonais faits en terre cuite. Laissez-vous transporter dans l'univers de Laura et Adrien, artisans locaux et créateurs de masques et rêveries.",
-  details: "Visites guidées classiques, présentant l’histoire et le patrimoine de la ville, visites insolites, ou en petit train, en tuk-tuk, mais aussi croisières fluviales… Trouvez la visite qui vous convient que vous soyez seul, en couple ou en famille.",
-  tags: "Culturel",
-  image: "https://www.bordeaux-tourisme.com/sites/bordeaux_tourisme/files/styles/sit_main_image/public/externals/f22840cf5b9f365f9bcaa505ec518134.jpg.webp?itok=pL_45h0g"
-)
-
-Event.create(
-  name: "Event 30",
-  address: "1 Pl. du Onze Novembre, 33480 Sainte-Hélène, France",
-  date: Date.parse("9 septembre 2025"),
-  description: "La mairie de Sainte-Hélène vous accueille pour la fête de la poire, venez déguster de délicieuses poires et découvrir les recettes associées à ce fruit d'exception. Les papilles des petits comme des grands seront émerveillées.",
-  details: "Visites guidées classiques, présentant l’histoire et le patrimoine de la ville, visites insolites, ou en petit train, en tuk-tuk, mais aussi croisières fluviales… Trouvez la visite qui vous convient que vous soyez seul, en couple ou en famille.",
-  tags: "Culturel",
-  image: "https://www.bordeaux-tourisme.com/sites/bordeaux_tourisme/files/styles/sit_main_image/public/externals/f22840cf5b9f365f9bcaa505ec518134.jpg.webp?itok=pL_45h0g"
-)
-
 
 puts "Après création, nombre d'évenements : #{Event.count}"
 
