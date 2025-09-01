@@ -1,17 +1,16 @@
-/* Conteneur et titres Mood */
 .filters-title-mood  {
-    color: #84A59D;  // couleur du titre
+    color: #fb8500;
     text-align: left;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    font-size: 3.38rem;
     max-width: 1100px;
     margin: 0 auto 32px;
     padding: 0 24px;
     margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 .filters-subtitle-moods{
   text-align: left;
-  color: #6B6B6B;
+  color: black;
   margin-bottom: 1.5rem;
   max-width: 1100px;
   margin: 0 auto 32px;
@@ -22,8 +21,6 @@
 
 /* Carrousel */
 .mood-grid {
-  //display: grid;
-  //grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   justify-items: center;
   display: flex;
@@ -45,7 +42,7 @@
 .mood-check { position: absolute; opacity: 0; pointer-events: none; }
 
 .mood-card {
-  all: unset;                 /* reset bootstrap */
+  all: unset;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,19 +50,18 @@
   cursor: pointer;
   text-align: center;
   width: 320px;
- /* ajuste à 300–340 selon goût */
 }
 .mood-card__photo {
   width: 100%; aspect-ratio: 4/3;
-  border-radius: 16px;
+  border-radius: 0px;
   background: var(--photo) center/cover no-repeat;
   box-shadow: 0 10px 24px rgba(0,0,0,.12);
   outline: 2px solid rgba(0,0,0,.08);
   transition: transform .25s, box-shadow .25s, outline-color .25s;
 }
-.mood-card__title { font-weight: 800; font-size: 18px; color:#1f1f1f; }
+.mood-card__title { font-weight: 400; font-size: 20px; color:#1f1f1f; }
 .mood-card:hover .mood-card__photo { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0,0,0,.16); outline-color: rgba(0,0,0,.14); }
-.mood-check:checked + .mood-card .mood-card__photo { outline-color:#b8860b; outline-width:3px; }
+.mood-check:checked + .mood-card .mood-card__photo { outline-color:#fb8500; outline-width:3px; }
 
 /* Flèches */
 .mood-nav {

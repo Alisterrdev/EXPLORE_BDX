@@ -1,19 +1,19 @@
-/* même largeur/alignment que le bloc mood */
 .filters-title-budget {
-   color: #84A59D;  // couleur du titre
+    color: #fb8500;
     text-align: left;
-    font-size: 2rem;
+    font-size: 3.38rem;
     margin-bottom: 1.5rem;
     max-width: 1100px;
     margin: 0 auto 32px;
     padding: 0 24px;
+    margin-bottom: 0.5rem;
 }
 
 .filters-subtitle-budget{
   text-align: left;
-  color: #6B6B6B;
+  color: black;
   margin-bottom: 1.5rem;
-   max-width: 1100px;
+  max-width: 1100px;
   margin: 0 auto 32px;
   padding: 0 24px;
 }
@@ -24,7 +24,6 @@
   padding: 0 24px;
 }
 
-/* grille 3 colonnes */
 .budget-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -32,26 +31,25 @@
   justify-items: center;
 }
 
-/* cacher le radio natif */
 .budget-input { position: absolute; opacity: 0; pointer-events: none; }
 
-/* carte budget */
 .budget-card {
-  all: unset;                 /* reset bootstrap */
+  all: unset;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
   cursor: pointer;
   text-align: center;
-  width: 320px;               /* ajuste à 300–340 selon goût */
+  width: 320px;
 }
 
 .budget-card__photo {
   width: 100%;
-  height: 240px;              /* même ratio que ta maquette */
+  height: 240px;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 0px;
   box-shadow: 0 10px 24px rgba(0,0,0,.12);
   outline: 2px solid rgba(0,0,0,.08);
   transition: transform .25s, box-shadow .25s, outline-color .25s;
@@ -64,11 +62,11 @@
   outline-color: rgba(0,0,0,.14);
 }
 
-/* état sélectionné = liseré doré */
+
 .budget-input:checked + .budget-card .budget-card__photo {
-  outline-color: #b8860b;
+  outline-color: #fb8500;
   outline-width: 3px;
 }
 
-/* responsive */
+
 @media (max-width: 992px) { .budget-grid { grid-template-columns: 1fr; } }
