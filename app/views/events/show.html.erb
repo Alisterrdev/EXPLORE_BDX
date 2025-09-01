@@ -17,7 +17,8 @@
 
       <%# <p><%= link_to "Ca m'intéresse", favorites_path, class: "btn btn-success" %></p>
       <%# <%= link_to "Ajouter un favori", event_favorites_path(@event), data: { turbo_method: :post } %>
-  <%= link_to event_favorites_path(@event), method: :post, data: { turbo_method: :post }, class: "fa-solid fa-heart" do %>
+<%= link_to event_favorites_path(@event), method: :post, data: { turbo_method: :post }, class: "favorite-link" do %>
+  <i class="heart-icon fa-regular fa-heart" style="color: red;"></i>
 
 
 <% end %>
