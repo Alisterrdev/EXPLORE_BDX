@@ -1,0 +1,103 @@
+
+/* ================= TITRE PRINCIPAL ================= */
+.event-show .event-title-wrapper {
+  display: flex;
+  align-items: center; // centre verticalement titre + cœur
+  gap: 0.5rem;
+}
+
+.event-show .event-title-wrapper__title {
+  text-align: left;
+  font-size: 60 rem;
+  margin-bottom: 1.5rem;
+  color: #fb8500;
+  padding: 0 24px;
+}
+
+.event-show .heart-icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.event-show .heart-icon.filled {
+  color: red;
+}
+
+/* ================= HERO ================= */
+.event-hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+/* Image grande */
+.event-hero__image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+/* Texte */
+.event-hero__content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.event-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #fb8500;
+  margin-bottom: 1rem;
+}
+
+.event-subtitle {
+  display: inline-block;
+  background: #fb8500;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.event-hero__content p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* CTA Favoris */
+.favorite-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.4rem;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  font-weight: 700;
+  color: #fb8500;
+  background: transparent;
+  cursor: pointer;
+  transition: border 0.2s, transform 0.2s;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.favorite-btn:hover,
+.favorite-btn.active {
+  border-color: #fb8500;
+}
+
+.heart-icon {
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+
+.heart-icon.filled {
+  color: red;
+}

@@ -1,5 +1,4 @@
 <section class="event-show">
-
   <!-- HERO -->
   <div class="event-hero">
     <div class="event-hero__image">
@@ -8,29 +7,24 @@
     <div class="event-hero__content">
       <h1 class="event-title"><%= @event.name %></h1>
       <p class="event-subtitle"><%= @event.tags %></p> <!-- texte statique -->
-
-      <div class="event-card">
-        <p><strong>📍 Lieu :</strong> <%= @event.address %></p>
+        <p><strong>📍Lieu :</strong> <%= @event.address %></p>
         <p><strong>📅 Date :</strong> <%= @event.date %></p>
-        <p><strong>⏰ Heure :</strong> 20h00</p> <!-- texte statique -->
+        <p><strong>🕦 Heure :</strong> 20h00</p> <!-- texte statique -->
       </div>
-
       <%# <p><%= link_to "Ca m'intéresse", favorites_path, class: "btn btn-success" %></p>
       <%# <%= link_to "Ajouter un favori", event_favorites_path(@event), data: { turbo_method: :post } %>
 <%= link_to event_favorites_path(@event), method: :post, data: { turbo_method: :post }, class: "favorite-link" do %>
   <i class="heart-icon fa-regular fa-heart" style="color: red;"></i>
-
-
 <% end %>
     </div>
   </div>
+
 
   <!-- DESCRIPTION / GALERY -->
   <section class="event-description">
     <h2>À propos de l’événement</h2>
     <p><%= @event.description %></p>
     <p><%= @event.details %><p>
-
 <section class="gallery-block">
   <div class="gallery-text">
     <h2>Mais encore ?</h2>
@@ -41,7 +35,6 @@
       <h3>Une expérience à vivre</h3>
         <p>Le BDX Street Arts cherche à surprendre le public là où on ne l’attend pas, pour faire vibrer la ville et créer un lien vivant avec ses habitants. Le festival invite chacun à s’immerger dans les créations, à participer aux ateliers et à partager une expérience culturelle unique, hors des sentiers battus.</p>
   </div>
-
   <div class="gallery-images">
     <div class="image-container image-1">
       <%= image_tag "image1.jpg", alt: "Description 1" %>
@@ -56,20 +49,19 @@
       <%= image_tag "image4.jpg", alt: "Description 4" %>
     </div>
   </div>
-
 </section>
 
 
   <!-- AUTRES EVENTS -->
   <section class="event-suggestions">
     <h2>Les autres événements qui pourraient vous intéresser</h2>
-    <div class="event-cards">
+    <div class="event-cards-show">
       <% if @events.any? %>
         <% @events.each do |event| %>
           <div class="event-card">
             <%= image_tag event.image || "placeholder.jpg", alt: event.name, class: "event-card-image" %>
             <h3><%= event.name %></h3>
-            <p><%= event.date %></p>
+            <p><%= I18n.l(event.date) %></p>
             <p><%= event.description %></p>
             <a href="<%= event_path(event) %>" class="btn-secondary">En savoir plus</a>
           </div>
@@ -79,5 +71,4 @@
       <% end %>
     </div>
   </section>
-
 </section>
