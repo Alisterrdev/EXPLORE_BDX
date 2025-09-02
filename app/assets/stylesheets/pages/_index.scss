@@ -9,7 +9,7 @@
 }
 
 .events {
-    background: rgb(255, 255, 255);
+    background: #fff;
     padding: 1rem 1rem 1rem 1rem;
     border-radius: 0px;
     max-width: 100%;
@@ -138,6 +138,203 @@
       max-width: 300px;
     }
   }
+
+#map-container {
+  position: relative;  /* Make sure this has a relative position to contain the absolute/relative positioning of the card */
+  width: 100%;
+  height: 100vh;  /* Set map container height to full screen */
+}
+
+#map {
+  width: 100%;
+  height: 100%;  /* The map will fill the container */
+  background-color: lightgray;  /* Placeholder for map */
+}
+
+#map-event-card .rounded-rect {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 50px -25px black;
+}
+
+#map-event-card .flex-center {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#map-event-card .flex-center.left {
+    left: 0px;
+}
+
+#map-event-card .flex-center.right {
+    right: 0px;
+}
+
+#map-event-card .sidebar-content {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    color: gray;
+}
+
+#map-event-card .sidebar-toggle {
+    position: absolute;
+    width: 1.3em;
+    height: 1.3em;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#map-event-card .sidebar-toggle.left {
+    right: -1.5em;
+}
+
+#map-event-card .sidebar-toggle.right {
+    left: -1.5em;
+}
+
+#map-event-card .sidebar-toggle:hover {
+    color: #0aa1cf;
+    cursor: pointer;
+}
+
+#map-event-card .sidebar {
+    transition: transform 1s;
+    z-index: 1;
+    width: 300px;
+    height: 100%;
+}
+
+/*
+  The sidebar styling has them "expanded" by default,
+  we use CSS transforms to push them offscreen.
+  The toggleSidebar() function removes this class
+  from the element in order to expand it.
+*/
+#map-event-card .left.collapsed {
+    transform: translateX(-295px);
+}
+
+#map-event-card .right.collapsed {
+    transform: translateX(295px);
+}
+
+    .rounded-rect {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 50px -25px black;
+    }
+
+    .flex-center {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex-center.left {
+        left: 0px;
+    }
+
+    .flex-center.right {
+        right: 0px;
+    }
+
+    .map-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+.map-wrapper {
+  display: flex;
+  height: 100%;
+}
+.map-display {
+  flex: 1;
+  transition: all 0.3s ease;
+}
+.event-sidebar {
+  width: 0;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: width 0.3s ease;
+  position: relative;
+  z-index: 1000;
+}
+.event-sidebar.active {
+  width: 300px;
+}
+.sidebar-content {
+  height: 100%;
+  overflow-y: auto;
+}
+.close-sidebar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+  border-radius: 50%;
+  background: white;
+  padding: 0px 10px;
+}
+.event-card-sidebar {
+  height: 600px;
+  position: relative;
+  width: 100%;
+}
+.event-header {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+  .event-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+  }
+}
+.event-content {
+  padding: 24px;
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+  }
+  p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+  }
+}
+.event-description {
+  margin-bottom: 12px;
+}
+.btn-secondary {
+    display: inline-block;
+    background: #f4b63a;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: auto;
+    transition: background 0.2s;
+    &:hover {
+      background: darken(#567c67, 10%);
+    }
+  }
+
+
 
 
 
