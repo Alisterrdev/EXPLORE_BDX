@@ -1,7 +1,7 @@
 class Event < ApplicationRecord
   geocoded_by :address
 
-  has_many_attached :file
+  has_many_attached :files
   has_many :events_registrations, dependent: :destroy
   has_many :users, through: :events_registrations, dependent: :destroy
   has_many :favorites
