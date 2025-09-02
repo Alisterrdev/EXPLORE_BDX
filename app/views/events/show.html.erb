@@ -7,9 +7,17 @@
     <div class="event-hero__content">
       <h1 class="event-title"><%= @event.name %></h1>
       <p class="event-subtitle"><%= @event.tags %></p> <!-- texte statique -->
+<<<<<<< HEAD
         <p><strong>📍Lieu :</strong> <%= @event.address %></p>
         <p><strong>📅 Date :</strong> <%= @event.date %></p>
         <p><strong>🕦 Heure :</strong> 20h00</p> <!-- texte statique -->
+=======
+
+      <div class="event-card">
+        <p><strong>📍 Lieu :</strong> <%= @event.address %></p>
+        <p><strong>📅 Date :</strong> <%= I18n.l(@event.date) %></p>
+        <p><strong>⏰ Heure :</strong> 20h00</p> <!-- texte statique -->
+>>>>>>> master
       </div>
       <%# <p><%= link_to "Ca m'intéresse", favorites_path, class: "btn btn-success" %></p>
       <%# <%= link_to "Ajouter un favori", event_favorites_path(@event), data: { turbo_method: :post } %>
@@ -36,6 +44,13 @@
         <p>Le BDX Street Arts cherche à surprendre le public là où on ne l’attend pas, pour faire vibrer la ville et créer un lien vivant avec ses habitants. Le festival invite chacun à s’immerger dans les créations, à participer aux ateliers et à partager une expérience culturelle unique, hors des sentiers battus.</p>
   </div>
   <div class="gallery-images">
+<% if @event.files.attached? %>
+<% @event.files.each_with_index do |file, index| %>
+    <div class="image-container image-<%= index + 1 %>">
+      <%= image_tag file, alt: "Description 1" %>
+    </div>
+<% end %>
+<% else %>
     <div class="image-container image-1">
       <%= image_tag "image1.jpg", alt: "Description 1" %>
     </div>
@@ -48,7 +63,12 @@
     <div class="image-container image-4">
       <%= image_tag "image4.jpg", alt: "Description 4" %>
     </div>
+<<<<<<< HEAD
   </div>
+=======
+<% end %>
+</div>
+>>>>>>> master
 </section>
 
 
