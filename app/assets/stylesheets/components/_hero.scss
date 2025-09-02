@@ -1,52 +1,73 @@
+/* Global (en dehors de .hero) */
+/* global */
+/* HERO – forcer l'ordre des calques */
 .hero {
   position: relative;
+  isolation: isolate;      /* crée un contexte d’empilement indépendant */
   height: 500px;
   overflow: hidden;
-  margin: 0;
-  padding-top: 0;
+}
 
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  &__card {
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translateY(-50%);
-    padding: 2rem;
-    border-radius: 0px;
-    max-width: 500px;
-    text-align: left;
-  }
-  &__title {
-    font-size: 3.8rem;
-    font-weight: regular;
-    margin-bottom: 1rem;
-    color: #fb8500;
-  }
-  &__text {
-    font-size: 1rem;
-    color: black;
-    margin-bottom: 1.5rem;
-  }
-  &__button {
-    background: #fb8500;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    &:hover {
-      background: #fb8500;
-    }
-  }
-  body {
-  margin: 0;
-  padding: 0;
+/* vidéo en fond */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0 !important;   /* derrière tout */
+  pointer-events: none;
 }
+
+/* voile par-dessus la vidéo (cliquable à travers) */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1 !important;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.20));
 }
+
+/* CARD au-dessus de tout */
+.hero__card {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  z-index: 10 !important;  /* > overlay et vidéo */
+  display: block;
+  opacity: 1;
+
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: O px;
+  max-width: 540px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Typo/couleurs */
+.hero__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #FB8500;          /* nouvelle couleur */
+}
+.hero__text {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+.hero__button {
+  display: inline-block;
+  background: #FB8500;     /* nouvelle couleur */
+  color: #fff;
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+.hero__button:hover { background: #e07200; } /* hover un poil plus sombre */
