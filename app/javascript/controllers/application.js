@@ -1,4 +1,5 @@
 import { Application } from "@hotwired/stimulus"
+// import "./favorites"
 
 const application = Application.start()
 
