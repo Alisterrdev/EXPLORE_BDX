@@ -24,12 +24,14 @@
   border-radius: 8px;
   cursor: pointer;
   display: inline-block;
-  transition: background-color 0.3s ease;
+
 }
 
 .btn-custom:hover {
-  background-color: #fb8500;
+  background-color: lighten(#fb8500, 10%);
+  color: white;
 }
+
 
 .section-title {
   color: #fb8500;

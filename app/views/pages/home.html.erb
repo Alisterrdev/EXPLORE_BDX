@@ -15,7 +15,7 @@
     loop
     playsinline
     preload="auto"
-    poster="<%= image_path('bordeaux.jpg') %>"
+    poster="<%= image_path('bordeaux.jpeg') %>"
     aria-hidden="true"
     style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;">
     <source src="<%= asset_path('bordeaux.mp4') %>" type="video/mp4">
@@ -26,7 +26,7 @@
 
   <!-- CARD superposée -->
   <div class="hero__card">
-    <h2 class="hero__title">Explore BDX.
+    <h2 class="hero__title">Explore Bordeaux.<br>
     <strong>Trouver</strong>, choisir, <strong>sortir.</strong></h2>
     <p class="hero__text">
       L’outil qui trouve vos sorties en un clic.
@@ -113,9 +113,9 @@
 } %>
 
 <% budgets = {
-  "Gratuit"               => "budget/Gratuit.jpg",
-  "Entre_0_et_40_euros"   => "budget/Entre_0_et_40_euros.jpg",
-  "Plus_de_40_euros"      => "budget/Plus_de_40_euros.jpg"
+  "Gratuit"               => "budget/Gratuit.png",
+  "Entre_0_et_40_euros"   => "budget/Entre_0_et_40_euros.png",
+  "Plus_de_40_euros"      => "budget/Plus_de_40_euros.png"
 } %>
 
 <%= form_with url: events_path, method: :get, class: "filters-form" do %>
