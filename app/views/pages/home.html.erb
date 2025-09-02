@@ -1,5 +1,30 @@
 <section class="hero">
-    <img src="<%= asset_path('bordeaux.jpeg') %>" alt="Bordeaux" class="hero__image">
+  <!-- Fallback image (invisible tant que la vidéo joue) -->
+  <img
+    src="<%= image_path('bordeaux.jpg') %>"
+    alt="Bordeaux"
+    class="hero__fallback"
+    aria-hidden="true"
+    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;z-index:0;pointer-events:none;">
+
+  <!-- Vidéo en arrière-plan du HERO -->
+  <video
+    class="hero__bg"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    poster="<%= image_path('bordeaux.jpg') %>"
+    aria-hidden="true"
+    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;">
+    <source src="<%= asset_path('bordeaux.mp4') %>" type="video/mp4">
+  </video>
+
+  <!-- Voile pour la lisibilité du texte -->
+  <div class="hero__overlay" aria-hidden="true"></div>
+
+  <!-- CARD superposée -->
   <div class="hero__card">
     <h2 class="hero__title">Explore BDX.
     <strong>Trouver</strong>, choisir, <strong>sortir.</strong></h2>
@@ -9,7 +34,74 @@
     <button class="hero__button">Je me lance.</button>
 
   </div>
+
+  <!-- JS désactivé → force l'image -->
+  <noscript>
+    <style>
+      .hero__bg{display:none!important}
+      .hero__fallback{display:block!important}
+    </style>
+  </noscript>
 </section>
+
+<script>
+  (function () {
+    var v = document.querySelector('.hero .hero__bg');
+    var img = document.querySelector('.hero .hero__fallback');
+    if (!v || !img) return;
+
+    function showFallback() {
+      v.style.display = 'none';
+      img.style.display = 'block';
+    }
+
+    // Fallback uniquement si vraie erreur de lecture
+    v.addEventListener('error', showFallback, { once: true });
+
+    // Booster autoplay post-login / Turbo / iOS
+    function tryPlay() {
+      // s'assurer des flags avant play()
+      v.muted = true;
+      v.autoplay = true;
+      v.playsInline = true;
+
+      var p = v.play && v.play();
+      if (p && p.catch) {
+        // si la policy bloque l'autoplay, bascule image
+        p.catch(showFallback);
+      }
+    }
+
+    // essais immédiats et quand la vidéo est prête
+    tryPlay();
+    v.addEventListener('canplay', tryPlay, { once: true });
+
+    // si la page redevient visible
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden && v.paused) tryPlay();
+    });
+
+    // compat Turbo/Hotwire
+    document.addEventListener('turbo:load', tryPlay);
+    document.addEventListener('turbo:render', tryPlay);
+    document.addEventListener('turbo:before-cache', function () {
+      try { v.pause(); v.currentTime = 0; } catch(e){}
+    });
+
+    // quelques relances dans la première seconde (réseaux lents)
+    var n = 0, id = setInterval(function () {
+      if (!v.paused || n++ >= 3) return clearInterval(id);
+      tryPlay();
+    }, 300);
+
+    // Assure la boucle si l'attribut loop est ignoré
+    v.addEventListener('ended', function () {
+      try { v.currentTime = 0; v.play(); } catch(e){}
+    });
+  })();
+</script>
+
+
 
 <% moods = {
   "Nature"   => "moods/nature.jpg",
