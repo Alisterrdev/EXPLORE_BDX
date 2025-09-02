@@ -1,1 +1,36 @@
- <%= render "events/show-card", event: event %>
+<div class="event-card-sidebar">
+  <div class="event-header">
+    <%= image_tag event.image || "placeholder.jpg", alt: event.name, class: "event-image" %>
+  </div>
+  <div class="event-content">
+    <h3 class="event-title"><%= event.name %></h3>
+    <div class="event-info">
+      <div class="">
+        <div class="">
+          <div class="">Lieu</div>
+          <div class="">
+            <%= event.address %></div>
+        </div>
+      </div>
+    </div>
+      <div class="">
+        <div class="">
+          <div class="">
+            Date
+            </div>
+          <div class="">
+            <%= event.date %>
+          </div>
+        </div>
+      </div>
+    <div class="event-description">
+      <h3 class="description-title">Description</h3>
+      <div class="description-text">
+        <%= event.description %>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <a href="<%= event_path(event) %>" class="btn-secondary">En savoir plus</a>
+  </div>
+</div>
