@@ -1,6 +1,6 @@
 <section class="event-suggestions">
 
-  <h2 class="title-map">Les événements autour de toi</h2>
+  <h2 class="title-map">Les événements près de chez toi en un click</h2>
   <div class="map-container">
     <div data-controller="map"
         data-map-markers-value="<%= @markers.to_json %>"
@@ -21,7 +21,7 @@
 
  </div>
    <section class="event-suggestions">
-    <h2>Les  événements qui pourraient vous intéresser autour de vous</h2>
+    <h2 class="title-map">Les événements dans le même genre</h2>
     <div class="event-cards">
       <% if @events.any? %>
         <% @events.each do |event| %>

@@ -2,10 +2,12 @@
 
 .title-map {
   margin-bottom: 1.5rem;
-    max-width: 1100px;
-    margin-left: 100px;
-    padding: 0 8px;
-    margin-top: 24px;
+  max-width: 1100px;
+  margin-left: 100px;
+  padding: 0 8px;
+  margin-top: 24px;
+  font-size: 300px;
+
 }
 
 .events {
@@ -19,7 +21,7 @@
 }
 
 .event-title {
-        font-size: 3.8rem;
+        font-size: 48px;
         font-weight: 700;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
@@ -52,10 +54,16 @@
     margin-bottom: 3rem;
     text-align: left;
 
+
     h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-      color: #567c67;
+      font-size: 48px;
+     // margin-bottom: 30px;
+      color: #fb8500;
+      margin-bottom: 1.5rem;
+      max-width: 1100px;
+      margin-left: 100px;
+      padding: 0 8px;
+      margin-top: 24px;
     }
 
     .event-cards {
@@ -67,6 +75,7 @@
       margin-right: 0;
 }
     }
+
 
 .event-card {
   background: #fff;
