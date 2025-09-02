@@ -11,9 +11,9 @@
       <p class="event-subtitle"><%= @event.tags %></p> <!-- texte statique -->
 
       <div class="event-card">
-        <p><strong>📍 Lieu :</strong> <%= @event.address %></p>
-        <p><strong>📅 Date :</strong> <%= @event.date %></p>
-        <p><strong>⏰ Heure :</strong> 20h00</p> <!-- texte statique -->
+        <p>📍 Lieu : <%= @event.address %></p>
+        <p>📅 Date : <%= @event.date %></p>
+        <p>⏰ Heure : 20h00</p> <!-- texte statique -->
       </div>
 
       <%# <p><%= link_to "Ca m'intéresse", favorites_path, class: "btn btn-success" %></p>
@@ -25,14 +25,12 @@
   </div>
 
   <!-- DESCRIPTION / GALERY -->
+<section class="gallery-block">
+  <div class="gallery-text">
   <section class="event-description">
     <h2>À propos de l’événement</h2>
     <p><%= @event.description %></p>
     <p><%= @event.details %><p>
-
-<section class="gallery-block">
-  <div class="gallery-text">
-    <h2>Mais encore ?</h2>
       <h3>Un événement international</h3>
         <p>Créé en 2025, le BDX Street Arts est un festival pluridisciplinaire célébrant les arts de rue sous toutes leurs formes – jonglerie, musique, danse, théâtre et arts visuels –, mettant en lumière les performances hybrides et surprenantes. </p>
       <h3>La ligne éditoriale</h3>
