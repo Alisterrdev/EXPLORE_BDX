@@ -43,6 +43,13 @@
   </div>
 
   <div class="gallery-images">
+<% if @event.files.attached? %>
+<% @event.files.each_with_index do |file, index| %>
+    <div class="image-container image-<%= index + 1 %>">
+      <%= image_tag file, alt: "Description 1" %>
+    </div>
+<% end %>
+<% else %>
     <div class="image-container image-1">
       <%= image_tag "image1.jpg", alt: "Description 1" %>
     </div>
@@ -55,8 +62,8 @@
     <div class="image-container image-4">
       <%= image_tag "image4.jpg", alt: "Description 4" %>
     </div>
-  </div>
-
+<% end %>
+</div>
 </section>
 
 

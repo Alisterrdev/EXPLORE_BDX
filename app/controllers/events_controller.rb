@@ -46,7 +46,8 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    @events = Event.where(tags: @event.tags)
+    @events = Event.where(tags: @event.tags).where.not(id: @event.id)
+
     # @favorite = Favorite.new
   end
 end

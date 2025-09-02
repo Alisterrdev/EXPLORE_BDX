@@ -273,15 +273,22 @@ Event.create(
   image: "https://images.unsplash.com/photo-1700931676493-1ea7739bd6aa?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
-Event.create(
+event = Event.create(
   name: "Demo Day",
   address: "L'Engrenage, 33000 Bordeaux, France",
   date: Date.parse("5 septembre 2025"),
   description: "Présentation finale de 9 semaines de dures labeurs pour les élèves du Wagon, préparez votre meilleure tenue la soirée va être longue.",
   details: "Dans une ambiance détendue et coniviviale, venez découvrir les projets tech du Wagon dans leurs locaux. Avant de partir pour une soirée de folie au coeur de l'Engrenage.",
   tags: "Festif",
-  image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1112&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1112&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 )
+
+4.times do |time|
+  file = "app/assets/images/mood-pic/#{event.tags.downcase}/#{event.name.split[0].downcase}/#{event.name.split[0].downcase}-#{time + 1}.jpg"
+  puts file
+  event.files.attach(io: File.open(file), filename: event.name, content_type: "image/jpg")
+end
+
 
 Event.create(
   name: "Grand destockage au Comptoir des Quartiers",
