@@ -11,4 +11,8 @@ class Event < ApplicationRecord
   TAGS = ["Festif", "Creatif", "Foodies", "Culturel", "Chill", "Nature", "Gratuit", "Entre_0_et_40_euros", "Plus_de_40_euros"]
   TAGS_MOOD = ["Festif", "Creatif", "Foodies", "Culturel", "Chill", "Nature", ]
   TAGS_BUDGET = ["Gratuit", "Entre_0_et_40_euros", "Plus_de_40_euros"]
+
+  def truncate(string, max)
+    string.length > max ? "#{string[0...max]}..." : string
+  end
 end

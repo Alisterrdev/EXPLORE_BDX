@@ -1,0 +1,60 @@
+.filters-actions {
+  text-align: center;
+}
+
+.filters-subtitle{
+  text-align: left;
+  color: black;
+  margin-bottom: 1.2rem;
+  max-width: 1100px;
+  margin: 0 auto 32px;
+  padding: 0 24px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.btn-custom {
+  background-color: #fb8500;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #fb8500;
+}
+
+.section-title {
+  color: #fb8500;
+  text-align: left;
+  font-size: 3.38rem;
+  margin-bottom: 1.5rem;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+}
+
+.step-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #FF7A00;
+  margin-bottom: 8px;
+}
+
+.step-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #222;
+  line-height: 1.4;
+}
