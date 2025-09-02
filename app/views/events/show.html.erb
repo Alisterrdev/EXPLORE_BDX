@@ -4,6 +4,7 @@
   <div class="event-hero">
     <div class="event-hero__image">
       <%= image_tag @event.image || "placeholder.jpeg", alt: @event.name %>
+
     </div>
     <div class="event-hero__content">
       <h1 class="event-title"><%= @event.name %></h1>
@@ -19,8 +20,6 @@
       <%# <%= link_to "Ajouter un favori", event_favorites_path(@event), data: { turbo_method: :post } %>
 <%= link_to event_favorites_path(@event), method: :post, data: { turbo_method: :post }, class: "favorite-link" do %>
   <i class="heart-icon fa-regular fa-heart" style="color: red;"></i>
-
-
 <% end %>
     </div>
   </div>
@@ -60,17 +59,6 @@
 </section>
 
 
-  <!-- INFOS PRATIQUES -->
-  <section class="event-infos">
-    <h2>Infos pratiques</h2>
-    <ul>
-      <li>📍 Adresse : <%= @event.address %> <a href="#">ici</a></li>
-      <li>🚇 Accès : Tram B - Station Victoire</li>
-      <li>♿ Accessibilité : PMR</li>
-      <li>💶 Tarif : 15€</li>
-    </ul>
-  </section>
-
   <!-- AUTRES EVENTS -->
   <section class="event-suggestions">
     <h2>Les autres événements qui pourraient vous intéresser</h2>
@@ -81,7 +69,7 @@
             <%= image_tag event.image || "placeholder.jpg", alt: event.name, class: "event-card-image" %>
             <h3><%= event.name %></h3>
             <p><%= event.date %></p>
-            <p><%= truncate(event.description, length: 50) %></p>
+            <p><%= event.description %></p>
             <a href="<%= event_path(event) %>" class="btn-secondary">En savoir plus</a>
           </div>
         <% end %>
