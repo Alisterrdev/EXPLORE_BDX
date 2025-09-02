@@ -57,7 +57,7 @@ Event.create(
   name: "Atelier peinture intuitive",
   address: "Espace 29, 33000 Bordeaux, France",
   date: Date.parse("2 septembre 2025"),
-  details: "Jonathan Parcelare est artiste-peintre ainsi qu'éducateur spécialisé, il décide de partager sa passion et laisser les curieux à s'exprimer sur la toile.",
+  details: "Jonathan Parcelare est artiste-peintre ainsi qu'éducateur spécialisé, il décide de partager sa passion et laisser les curieux s'exprimer sur la toile.",
   image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=758&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   description: "Exprimez-vous sans contrainte ! Un atelier où pinceaux, couleurs et émotions s'entremêlent. Aucune compétence requise.",
   tags: "Creatif"
@@ -95,7 +95,7 @@ Event.create(
 
 Event.create(
   name: "Marché de créateurs locaux",
-  address: "Esplanade des Quinconces, Bordeaux, France",
+  address: "Esplanade des Quinconces, 33000 Bordeaux, France",
   date: Date.parse("10 octobre 2025"),
   description: "Un marché dédié aux créateurs locaux où se mêlent art, artisanat et design.",
   details: "Venez rencontrer les créateurs locaux : bijoux, vêtements, objets décoratifs, et bien d'autres. Ce marché est aussi l'occasion de découvrir des ateliers créatifs et de participer à des démonstrations de savoir-faire.",
@@ -105,7 +105,7 @@ Event.create(
 
 Event.create(
   name: "Festival de la gastronomie française",
-  address: "Place Pey Berland, Bordeaux, France",
+  address: "Place Pey Berland, 33000 Bordeaux, France",
   date: Date.parse("17 octobre 2025"),
   description: "Un événement qui célèbre la cuisine hexagonale sous toutes ses formes.",
   details: "Venez goûter aux spécialités des régions françaises avec des chefs locaux. Au programme : dégustations, ateliers culinaires, et conférences autour de la culture gastronomique française.",
@@ -114,18 +114,8 @@ Event.create(
 )
 
 Event.create(
-  name: "Randonnée au sommet des Pyrénées",
-  address: "Parc National des Pyrénées, France",
-  date: Date.parse("25 octobre 2025"),
-  description: "Un week-end d'aventure et de nature, entre montagnes et paysages spectaculaires.",
-  details: "Accompagné par un guide expert, partez en randonnée pour découvrir les panoramas à couper le souffle du parc national. Au programme : marche, bivouac, et découverte de la faune et flore montagnarde.",
-  tags: "Nature",
-  image: "https://images.unsplash.com/photo-1667063134108-4eb9d1f7a6e7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-)
-
-Event.create(
   name: "Ciné-concert : Musique et cinéma muet",
-  address: "Cinéma Utopia, Bordeaux, France",
+  address: "Cinéma Utopia, 33000 Bordeaux, France",
   date: Date.parse("30 octobre 2025"),
   description: "Revivez les classiques du cinéma muet avec une performance musicale en live.",
   details: "Profitez d'un moment unique où des musiciens interpréteront la bande-son en direct pendant la projection de films muets comme *Le Cabinet du Dr. Caligari* et *Nosferatu*.",
@@ -135,7 +125,7 @@ Event.create(
 
 Event.create(
   name: "Yoga et brunch au parc",
-  address: "Parc Bordelais, Bordeaux, France",
+  address: "Parc Bordelais, 33000 Bordeaux, France",
   date: Date.parse("1er novembre 2025"),
   description: "Commencez votre dimanche avec une séance de yoga en plein air suivie d'un brunch bio.",
   details: "Un moment détente et bien-être : pratiquez le yoga au cœur du parc avec un professeur expérimenté, puis régalez-vous avec un brunch healthy composé de produits locaux et bio.",
@@ -145,7 +135,7 @@ Event.create(
 
 Event.create(
   name: "Exposition photographique : Les Visages du Monde",
-  address: "Musée des Beaux-Arts, Bordeaux, France",
+  address: "Musée des Beaux-Arts, 33000 Bordeaux, France",
   date: Date.parse("15 novembre 2025"),
   description: "Une exposition unique sur la diversité humaine à travers le regard de grands photographes.",
   details: "Parcourez des images saisissantes capturées aux quatre coins du monde. L'exposition explore les histoires de vie, les émotions et les cultures à travers les portraits pris par des photographes du monde entier.",
@@ -155,7 +145,7 @@ Event.create(
 
 Event.create(
   name: "Improvisation théâtrale sous les étoiles",
-  address: "Parc Rivière, Bordeaux, France",
+  address: "Parc Rivière, 33000 Bordeaux, France",
   date: Date.parse("6 septembre 2025"),
   details: "En compagnie de Jérôme et de la troupe Cosmorire, attachez vos ceintures pour un voyage intergalactique improbable où sciences et humour se combinent à la perfection.",
   image: "https://images.unsplash.com/photo-1611956425642-d5a8169abd63?q=80&w=1211&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -165,7 +155,7 @@ Event.create(
 
 Event.create(
   name: "Danse libre au miroir d'eau",
-  address: "Place de la Bourse, Bordeaux, France",
+  address: "Place de la Bourse, 33000 Bordeaux, France",
   date: Date.parse("7 septembre 2025"),
   details: "Présents depuis de nombreuses années, le collectif DDE (Danse Des Eaux) revient encore plus fort avec un événement accès sur la découverte de soi par la danse ainsi que le tambour traditionnel malais.",
   image: "https://images.unsplash.com/photo-1598976702854-b7130d73ca18?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -175,7 +165,7 @@ Event.create(
 
 Event.create(
   name: "Sunset yoga et smoothies",
-  address: "Quai des Marques, Bordeaux, France",
+  address: "Quai des Marques, 33300 Bordeaux, France",
   date: Date.parse("8 septembre 2025"),
   details: "Débutants ou confirmés sont les bienvenus pour faire profiter de ce moment détente revigorant.",
   image: "https://images.unsplash.com/photo-1611458181521-5fafe4a31995?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -185,7 +175,7 @@ Event.create(
 
 Event.create(
   name: "Soirée salsa en plein air",
-  address: "Place des Quinconces, Bordeaux, France",
+  address: "Place des Quinconces, 33000 Bordeaux, France",
   date: Date.parse("9 septembre 2025"),
   details: "Juan et Linda vont vous aider à ambiancer votre soirée. Organisateurs emblématiques de l'événement, ils n'hésiteront pas à partager un petit verre en compagnie de leurs mouvements.",
   image: "https://images.unsplash.com/photo-1575448913281-98e9e5d3f193?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -195,7 +185,7 @@ Event.create(
 
 Event.create(
   name: "Marche méditative au lever du jour",
-  address: "Parc Bordelais, Bordeaux, France",
+  address: "Parc Bordelais, 33000 Bordeaux, France",
   date: Date.parse("10 septembre 2025"),
   details: "Accompagnez Veronique dans sa quête spirituelle du bien-être ultime et laisser la vous guider vers l'éveil de nouveaux sens.",
   image: "https://images.unsplash.com/reserve/YEc7WB6ASDydBTw6GDlF_antalya-beach-lulu.jpg?q=80&w=1301&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -205,7 +195,7 @@ Event.create(
 
 Event.create(
   name: "Atelier de cuisine du monde",
-  address: "Maison de quartier Bastide, 33000 Bordeaux, France",
+  address: "13 All. Jean Giono, 33100 Bordeaux, France",
   date: Date.parse("11 septembre 2025"),
   details: "Une cuisine riche, des épices savoureuses et une équipe aux petits oignons. Nos gourmets mettront à rude épreuve les talents culinaires de nos invités.",
   image: "https://images.unsplash.com/photo-1661607775751-dc9efc8f3a9c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -215,7 +205,7 @@ Event.create(
 
 Event.create(
   name: "Fête de la Bière Artisanale",
-  address: "Place du Parlement, Bordeaux",
+  address: "Place du Parlement, 33000 Bordeaux, France",
   date: Date.parse("20 septembre 2025"),
   description: "Un événement pour découvrir la bière artisanale locale et internationale.",
   details: "Venez rencontrer des brasseurs passionnés, découvrir leurs créations et participer à des dégustations. Vous pourrez aussi assister à des ateliers sur la fabrication de la bière.",
@@ -225,7 +215,7 @@ Event.create(
 
 Event.create(
   name: "Cours de cuisine végétarienne",
-  address: "Le Comptoir Local, Bordeaux",
+  address: "Au Comptoir Local, 33240 Saint-André-de-Cubzac, France",
   date: Date.parse("28 novembre 2025"),
   description: "Apprenez à cuisiner des plats végétariens savoureux et équilibrés.",
   details: "Un chef vous guidera dans la préparation de recettes végétariennes simples, mais gourmandes. Parfait pour ceux qui veulent explorer la cuisine végétarienne tout en découvrant des ingrédients de saison.",
@@ -235,7 +225,7 @@ Event.create(
 
 Event.create(
   name: "Bourse aux livres et objets vintage",
-  address: "Halle des Chartrons, Bordeaux",
+  address: "Halle des Chartrons, 33300 Bordeaux, France",
   date: Date.parse("6 decembre 2025"),
   description: "Un marché pour les amoureux de livres anciens et d'objets vintage.",
   details: "Parcourez les étals de livres d'occasion, de vinyles rares et d'objets rétro. L'occasion de dénicher des trésors tout en discutant avec les passionnés qui les vendent.",
@@ -245,7 +235,7 @@ Event.create(
 
 Event.create(
   name: "Atelier de sérigraphie",
-  address: "La Maison de la Création, Bordeaux",
+  address: "La Maison de la Création, 33000 Bordeaux, France",
   date: Date.parse("12 decembre 2025"),
   description: "Initiez-vous à l'art de la sérigraphie et créez vos propres affiches.",
   details: "Un atelier interactif où vous apprendrez les bases de la sérigraphie tout en créant vos propres œuvres imprimées sur différents supports. Repartez avec votre poster personnalisé.",
@@ -255,7 +245,7 @@ Event.create(
 
 Event.create(
   name: "Soirée contes et légendes",
-  address: "La Cité du Vin, Bordeaux",
+  address: "La Cité du Vin, 33300 Bordeaux, France",
   date: Date.parse("18 decembre 2025"),
   description: "Une soirée immersive autour des contes et légendes du vin et des terroirs.",
   details: "Venez écouter des histoires fascinantes et mystérieuses autour du vin, racontées par des conteurs passionnés. Une expérience à la fois éducative et divertissante dans un cadre unique.",
@@ -265,7 +255,7 @@ Event.create(
 
 Event.create(
   name: "Marché de Noël des créateurs",
-  address: "Place des Grands Hommes, Bordeaux",
+  address: "Place des Grands Hommes, 33000 Bordeaux, France",
   date: Date.parse("22 decembre 2025"),
   description: "Un marché de Noël réunissant les créations artisanales locales pour offrir un Noël unique.",
   details: "Des artisans locaux exposent leurs œuvres et créations pour vos cadeaux de fin d'année. Décoration, mode, bijoux, et bien d'autres produits faits main pour un Noël original et solidaire.",
@@ -285,7 +275,7 @@ Event.create(
 
 Event.create(
   name: "Demo Day",
-  address: "L'Engrenage, Bordeaux, France",
+  address: "L'Engrenage, 33000 Bordeaux, France",
   date: Date.parse("5 septembre 2025"),
   description: "Présentation finale de 9 semaines de dures labeurs pour les élèves du Wagon, préparez votre meilleure tenue la soirée va être longue.",
   details: "Dans une ambiance détendue et coniviviale, venez découvrir les projets tech du Wagon dans leurs locaux. Avant de partir pour une soirée de folie au coeur de l'Engrenage.",
@@ -295,7 +285,7 @@ Event.create(
 
 Event.create(
   name: "Grand destockage au Comptoir des Quartiers",
-  address: "Le Comptoir des Quartiers – 1 rue Marc Gauthier, Villenave d'Ornon",
+  address: "Le Comptoir des Quartiers – 1 rue Marc Gauthier, 33130 Villenave d'Ornon, France",
   date: Date.parse("3 septembre 2025"),
   description: "Ce déstockage à Villenave d’Ornon n’a rien d’une braderie classique : ici, chaque édition réserve son lot de surprises. On y déniche des vêtements de marques neuves, des accessoires tendance, des bijoux stylés et même des sandales parfaites pour l’été.",
   details: "Avec des prix allant de 5 € à 50 € et des réductions jusqu’à -70 %, c’est le plan shopping idéal pour refaire sa garde-robe sans exploser son budget. Et comme les collections changent à chaque édition, impossible de repartir bredouille.",
