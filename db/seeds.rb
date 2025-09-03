@@ -207,8 +207,10 @@ event = Event.create(
   name: "Beer Fest Bordeaux",
   address: "Place du Parlement, 33000 Bordeaux, France",
   date: Date.parse("20 septembre 2025"),
-  description: "Un événement pour découvrir la bière artisanale locale et internationale.",
-  details: "Venez rencontrer des brasseurs passionnés, découvrir leurs créations et participer à des dégustations. Vous pourrez aussi assister à des ateliers sur la fabrication de la bière.",
+  description_title: "Le grand brassage",
+  description: "Pendant tout un week-end, partez à la rencontre de brasseurs venus d’ici et d’ailleurs et laissez-vous surprendre par la richesse de la bière artisanale. Blonde, ambrée ou IPA, chaque dégustation sera l’occasion de découvrir des saveurs nouvelles et des histoires passionnantes. Un moment unique pour explorer la diversité d’un savoir-faire authentique, porté par la passion et la créativité des artisans.",
+  details_title: "La soirée s’anime",
+  details: "Quand les verres se vident, la fête continue : concerts, ateliers de brassage et rencontres conviviales viendront rythmer la soirée. Venez partager un moment chaleureux autour de la bière, échanger avec d’autres passionnés et célébrer ensemble l’esprit festif et convivial de ce festival incontournable.",
   tags: "Festif",
   image: "https://images.unsplash.com/photo-1600788886242-5c96aabe3757?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   )
@@ -283,10 +285,13 @@ event = Event.create(
   name: "Demo Day",
   address: "L'Engrenage, 33000 Bordeaux, France",
   date: Date.parse("5 septembre 2025"),
+  description_title: "Le grand dévoilement",
   description: "Après 9 semaines intensives de travail et de créativité, les élèves du Wagon sont enfin prêts à vous dévoiler leurs projets tech.
           Rendez-vous dans les locaux du Wagon pour une soirée exceptionnelle, placée sous le signe de la convivialité et du partage.
           Vous découvrirez en avant-première les applications et solutions innovantes imaginées et développées par nos élèves – le fruit de leur passion, de leur persévérance et de leur esprit d’équipe.",
+  details_title: "La fête continue",
   details:"Après les démonstrations, place à la célébration : nous vous donnons rendez-vous au cœur de l’Engrenage, pour prolonger la fête autour de musique, de belles rencontres et de moments inoubliables. Une soirée unique pour s’inspirer, échanger et célébrer ensemble la créativité et l’audace des talents de demain.",
+
   tags: "Festif",
   image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1112&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 )
