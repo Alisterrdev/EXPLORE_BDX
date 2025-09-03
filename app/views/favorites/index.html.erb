@@ -1,6 +1,25 @@
-<% current_user.favorites.each do |favorite| %>
-  <%= favorite.event.name %>
-  <%= favorite.event.date %>
-  <%= favorite.event.address %>
-  <%= favorite.event.tags %>
-<% end %>
+<div class="favorites-page">
+  <h1 class="page-intro__title">Mes favoris</h1>
+
+  <section class="event-suggestions">
+    <div class="event-cards">
+      <% if current_user.favorites.any? %>
+        <% current_user.favorites.each do |favorite| %>
+          <div class="event-card">
+            <% if favorite.event.image.present? %>
+              <%= image_tag favorite.event.image, alt: favorite.event.name, class: "event-card-image" %>
+            <% else %>
+              <%= image_tag "placeholder.jpg", alt: favorite.event.name, class: "event-card-image" %>
+            <% end %>
+            <h3><%= favorite.event.name %></h3>
+            <p><%= I18n.l(favorite.event.date) %></p>
+            <p><%= favorite.event.address %></p>
+            <a href="<%= event_path(favorite.event) %>" class="btn-secondary">Voir l'événement</a>
+          </div>
+        <% end %>
+      <% else %>
+        <em>Désolé, aucun favori n'a été trouvé.</em>
+      <% end %>
+    </div>
+  </section>
+</div>
