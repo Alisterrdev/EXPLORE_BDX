@@ -1,26 +1,30 @@
+/* TITRE */
 .filters-title-budget {
   color: #fb8500;
   text-align: left;
   font-size: 3rem;
-  margin: 2rem auto 0.5rem;
-  max-width: 1100px;
-  padding: 0 24px;
-}
-
-.filters-subtitle-budget {
-  text-align: left;
-  color: black;
   margin: 0 auto 1.5rem;
   max-width: 1100px;
   padding: 0 24px;
 }
 
-.budget-section {
+/* SOUS-TITRE */
+.filters-subtitle {
+  text-align: left;
+  color: black;
+  margin: 0 auto 8px;   // réduit fortement l'espace sous le sous-titre
   max-width: 1100px;
-  margin: 28px auto 40px;
   padding: 0 24px;
 }
 
+/* SECTION BUDGET */
+.budget-section {
+  max-width: 1100px;
+  margin: 0 auto 80px;  // aucun espace au-dessus, 80px en dessous avant "Ta localisation"
+  padding: 0 24px;
+}
+
+/* GRID BOUTONS */
 .budget-grid {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -38,60 +42,61 @@
   }
 }
 
+/* INPUT RADIO CACHÉ */
 .budget-input {
   display: none;
-  position: absolute;   // hors flux
-  opacity: 0;           // invisible
+  position: absolute;
+  opacity: 0;
   width: 0;
   height: 0;
   margin: 0;
   padding: 0;
 }
 
-.budget-input:checked + .budget-card .budget-card__title {
-  background-color: #ff9500;   // couleur différente quand sélectionné
-  box-shadow: 0 0 0 3px #fb8500; // optionnel, effet contour
-}
-
+/* BOUTON (LABEL) */
 .budget-card {
   position: relative;
-  display: inline-flex;           // empile verticalement
+  display: flex;
   flex-direction: column;
-  align-items: center;            // centre horizontalement
-  justify-content: flex-start;    // commence en haut
-  width: fit-content;
-  height: fit-content;
-  background: transparent;
-  border: none;
-  outline: none;
+  align-items: center;
+  justify-content: center;   // centré verticalement
+  width: 160px;
+  height: 180px;
   cursor: pointer;
-  padding: 5px;                   // étend légèrement la zone cliquable
+  padding: 15px;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  /* Effet au survol */
+  &:hover .budget-card__title {
+    box-shadow: 0 0 0 1.5px black; // halo fin noir
+  }
 
   &__photo {
-    display: block;
-    width: 100px;                  // ajuste selon tes besoins
+    width: 100px;
     height: 100px;
     object-fit: cover;
-    pointer-events: none;          // clic passe au label
-    margin-bottom: 10px;           // espace entre image et titre
+    margin-bottom: 12px;
+    pointer-events: none;
   }
 
   &__title {
     background-color: #fb8500;
     color: white;
     font-weight: bold;
-    text-transform: lowercase;     // ou uppercase si tu veux
-    font-size: 16px;
-    padding: 10px 20px;
+    text-transform: lowercase;
+    font-size: 18px;
+    padding: 12px 24px;
     border-radius: 8px;
-    display: inline-block;
-    line-height: 1;
     white-space: nowrap;
     text-align: center;
-    transition: background 0.2s ease;
-
-    &:hover {
-      background-color: #ff9500;
-    }
+    transition: all 0.2s ease;
   }
+}
+
+/* ÉTAT SÉLECTIONNÉ */
+.budget-input:checked + .budget-card .budget-card__title {
+  background-color: #ff9500;
+  box-shadow: 0 0 0 2px black;   // halo noir plus marqué
+  transform: scale(1.05);        // zoom léger
 }
