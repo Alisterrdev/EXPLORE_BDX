@@ -1,0 +1,219 @@
+=> 
+[[32m#<Event:0x000073288f3a6968[0m
+  id: [34m[1m1403[0m,
+  name: [31m[1m"[0m[31mAtelier peinture intuitive[0m[31m[1m"[0m,
+  address:
+   [31m[1m"[0m[31mEspace 29, 33000 Bordeaux, France[0m[31m[1m"[0m,
+  description:
+   [31m[1m"[0m[31mExprimez-vous sans contrainte ! Un atelier où pinceaux, couleurs et émotions s'entremêlent. Aucune compétence requise.[0m[31m[1m"[0m,
+  tags: [31m[1m"[0m[31mCreatif[0m[31m[1m"[0m,
+  image:
+   [31m[1m"[0m[31mhttps://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=758&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0m[31m[1m"[0m,
+  created_at:
+   Wed, 03 Sep 2025 13:02:02.495842000 UTC +00:00,
+  updated_at:
+   Wed, 03 Sep 2025 13:02:02.495842000 UTC +00:00,
+  longitude: -[35m[1m0.570681[0m,
+  latitude: [35m[1m44.840116[0m,
+  details:
+   [31m[1m"[0m[31mJonathan Parcelare est artiste-peintre ainsi qu'éducateur spécialisé, il décide de partager sa passion et laisser les curieux s'exprimer sur la toile.[0m[31m[1m"[0m,
+  date: Tue, 02 Sep 2025,
+  details_title: [36m[1mnil[0m,
+  description_title: [36m[1mnil[0m[32m>[0m,
+ [32m#<Event:0x000073288c5421d0[0m
+  id: [34m[1m1404[0m,
+  name:
+   [31m[1m"[0m[31mGrand destockage au Comptoir des Quartiers[0m[31m[1m"[0m,
+  address:
+   [31m[1m"[0m[31mLe Comptoir des Quartiers – 1 rue Marc Gauthier, 33130 Villenave d'Ornon, France[0m[31m[1m"[0m,
+  description:
+   [31m[1m"[0m[31mCe déstockage à Villenave d’Ornon n’a rien d’une braderie classique : ici, chaque édition réserve son lot de surprises. On y déniche des vêtements de marques neuves, des accessoires tendance, des bijoux stylés et même des sandales parfaites pour l’été.[0m[31m[1m"[0m,
+  tags: [31m[1m"[0m[31mChill[0m[31m[1m"[0m,
+  image:
+   [31m[1m"[0m[31mhttps://images.unsplash.com/photo-1512663251984-863560ec3985?q=80&w=1122&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0m[31m[1m"[0m,
+  created_at:
+   Wed, 03 Sep 2025 13:02:02.567359000 UTC +00:00,
+  updated_at:
+   Wed, 03 Sep 2025 13:02:02.567359000 UTC +00:00,
+  longitude: -[35m[1m0.546925[0m,
+  latitude: [35m[1m44.774032[0m,
+  details:
+   [31m[1m"[0m[31mAvec des prix allant de 5 € à 50 € et des réductions jusqu’à -70 %, c’est le plan shopping idéal pour refaire sa garde-robe sans exploser son budget. Et comme les collections changent à chaque édition, impossible de repartir bredouille.[0m[31m[1m"[0m,
+  date: Wed, 03 Sep 2025,
+  details_title: [36m[1mnil[0m,
+  description_title: [36m[1mnil[0m[32m>[0m,
+ [32m#<Event:0x000073288c542090[0m
+  id: [34m[1m1405[0m,
+  name:
+   [31m[1m"[0m[31mRandonnée contée au bois de Bordeaux[0m[31m[1m"[0m,
+  address:
+   [31m[1m"[0m[31mBois de Bordeaux, 33000 Bordeaux, France[0m[31m[1m"[0m,
+  description:
+   [31m[1m"[0m[31mUne promenade forestière ponctuée d'histoires racontées par des conteurs passionnés. Une immersion nature & légendes.[0m[31m[1m"[0m,
+  tags: [31m[1m"[0m[31mNature[0m[31m[1m"[0m,
+  image:
+   [31m[1m"[0m[31mhttps://images.unsplash.com/photo-1506545733010-83bc7e37fcc2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0m[31m[1m"[0m,
+  created_at:
+   Wed, 03 Sep 2025 13:02:02.625940000 UTC +00:00,
+  updated_at:
+   Wed, 03 Sep 2025 13:02:02.625940000 UTC +00:00,
+  longitude: -[35m[1m0.570681[0m,
+  latitude: [35m[1m44.840116[0m,
+  details:
+   [31m[1m"[0m[31mExistant depuis cinq ans, plongez au coeur des nombreuses légendes bordelaises. Cet évènement revient pour faire rêver les petits comme les grands[0m[31m[1m"[0m,
+  date: Thu, 04 Sep 2025,
+  details_title: [36m[1mnil[0m,
+  description_title: [36m[1mnil[0m[32m>[0m,
+ [32m#<Event:0x000073288c541f50[0m
+  id: [34m[1m1406[0m,
+  name: [31m[1m"[0m[31mDemo Day[0m[31m[1m"[0m,
+  address:
+   [31m[1m"[0m[31mL'Engrenage, 33000 Bordeaux, France[0m[31m[1m"[0m,
+  description:
+   [31m[1m"[0m[31mAprès 9 semaines intensives de travail et de créativité, les élèves du Wagon sont enfin prêts à vous dévoiler leurs projets tech.\n          Rendez-vous dans les locaux du Wagon pour une soirée exceptionnelle, placée sous le signe de la convivialité et du partage.\n          Vous découvrirez en avant-première les applications et solutions innovantes imaginées et développées par nos élèves – le fruit de leur passion, de leur persévérance et de leur esprit d’équipe.[0m[31m[1m"[0m,
+  tags: [31m[1m"[0m[31mFestif[0m[31m[1m"[0m,
+  image:
+   [31m[1m"[0m[31mhttps://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1112&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0m[31m[1m"[0m,
+  created_at:
+   Wed, 03 Sep 2025 13:02:02.684385000 UTC +00:00,
+  updated_at:
+   Wed, 03 Sep 2025 13:02:09.268281000 UTC +00:00,
+  longitude: -[35m[1m0.570681[0m,
+  latitude: [35m[1m44.840116[0m,
+  details:
+   [31m[1m"[0m[31mAprès les démonstrations, place à la célébration : nous vous donnons rendez-vous au cœur de l’Engrenage, pour prolonger la fête autour de musique, de belles rencontres et de moments inoubliables. Une soirée unique pour s’inspirer, échanger et célébrer ensemble la créativité et l’audace des talents de demain.[0m[31m[1m"[0m,
+  date: Fri, 05 Sep 2025,
+  details_title: [31m[1m"[0m[31mLa fête continue[0m[31m[1m"[0m,
+  description_title:
+   [31m[1m"[0m[31mLe grand dévoilement[0m[31m[1m"[0m[32m>[0m,
+ [32m#<Event:0x000073288c541e10[0m
+  id: [34m[1m1407[0m,
+  name:
+   [31m[1m"[0m[31mPique-nique musical au Jardin Public[0m[31m[1m"[0m,
+  address:
+   [31m[1m"[0m[31mJardin Public, 33000 Bordeaux, France[0m[31m[1m"[0m,
+  description:
+   [31m[1m"[0m[31mUn midi tout doux dans l'herbe avec des musiciens acoustiques, des paniers pique-nique locaux et une ambiance détendue.[0m[31m[1m"[0m,
+  tags: [31m[1m"[0m[31mChill[0m[31m[1m"[0m,
+  image:
+   [31m[1m"[0m[31mhttps://images.unsplash.com/photo-1592753054398-9fa298d40e85?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0m[31m[1m"[0m,
+  created_at:
+   Wed, 03 Sep 2025 13:02:09.311953000 UTC +00:00,
+  updated_at:
+   Wed, 03 Sep 2025 13:02:09.311953000 UTC +00:00,
+  longitude: -[35m[1m0.573011[0m,
+  latitude: [35m[1m44.856443[0m,
+  details:
+   [31m[1m"[0m[31mVenez vous joindre au groupe et partager un moment convivial avec les musiciens. Un moment à partager en famille ou entre amis sans modération.[0m[31m[1m"[0m,
+  date: Sat, 06 Sep 2025,
+  details_title: [36m[1mnil[0m,
+  description_title: [36m[1mnil[0m[32m>[0m,
+ [32m#<Event:0x000073288c541cd0[0m
+  id: [34m[1m1408[0m,
+  name:
+   [31m[1m"[0m[31mImprovisation théâtrale sous les étoiles[0m[31m[1m"[0m,
+  address:
+   [31m[1m"[0m[31mParc Rivière, 33000 Bordeaux, France[0m[31m[1m"[0m,
+  description:
+   [31m[1m"[0m[31mUn spectacle unique où rien n’est écrit d’avance. Rires et surprises garantis dans un cadre verdoyant.[0m[31m[1m"[0m,
+  tags: [31m[1m"[0m[31mCulturel[0m[31m[1m"[0m,
+  image:
+   [31m[1m"[0m[31mhttps://images.unsplash.com/photo-1611956425642-d5a8169abd63?q=80&w=1211&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0m[31m[1m"[0m,
+  created_at:
+   Wed, 03 Sep 2025 13:02:09.410378000 UTC +00:00,
+  updated_at:
+   Wed, 03 Sep 2025 13:02:09.410378000 UTC +00:00,
+  longitude: -[35m[1m0.570681[0m,
+  latitude: [35m[1m44.840116[0m,
+  details:
+   [31m[1m"[0m[31mEn compagnie de Jérôme et de la troupe Cosmorire, attachez vos ceintures pour un voyage intergalactique improbable où sciences et humour se combinent à la perfection.[0m[31m[1m"[0m,
+  date: Sat, 06 Sep 2025,
+  details_title: [36m[1mnil[0m,
+  description_title: [36m[1mnil[0m[32m>[0m,
+ [32m#<Event:0x000073288c541b90[0m
+  id: [34m[1m1409[0m,
+  name:
+   [31m[1m"[0m[31mDanse libre au miroir d'eau[0m[31m[1m"[0m,
+  address:
+   [31m[1m"[0m[31mPlace de la Bourse, 33000 Bordeaux, France[0m[31m[1m"[0m,
+  description:
+   [31m[1m"[0m[31mRejoignez un cercle de danse spontanée, pieds nus sur le miroir d’eau. Musique live et liberté de mouvement au programme.[0m[31m[1m"[0m,
+  tags: [31m[1m"[0m[31mCreatif[0m[31m[1m"[0m,
+  image:
+   [31m[1m"[0m[31mhttps://images.unsplash.com/photo-1598976702854-b7130d73ca18?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0m[31m[1m"[0m,
+  created_at:
+   Wed, 03 Sep 2025 13:02:09.478246000 UTC +00:00,
+  updated_at:
+   Wed, 03 Sep 2025 13:02:09.478246000 UTC +00:00,
+  longitude: -[35m[1m0.570411[0m,
+  latitude: [35m[1m44.84137[0m,
+  details:
+   [31m[1m"[0m[31mPrésents depuis de nombreuses années, le collectif DDE (Danse Des Eaux) revient encore plus fort avec un événement accès sur la découverte de soi par la danse ainsi que le tambour traditionnel malais.[0m[31m[1m"[0m,
+  date: Sun, 07 Sep 2025,
+  details_title: [36m[1mnil[0m,
+  description_title: [36m[1mnil[0m[32m>[0m,
+ [32m#<Event:0x000073288c541a50[0m
+  id: [34m[1m1410[0m,
+  name: [31m[1m"[0m[31mSunset yoga et smoothies[0m[31m[1m"[0m,
+  address:
+   [31m[1m"[0m[31mQuai des Marques, 33300 Bordeaux, France[0m[31m[1m"[0m,
+  description:
+   [31m[1m"[0m[31mUne session de yoga face au coucher de soleil, suivie de smoothies frais et bio. Apportez votre tapis ![0m[31m[1m"[0m,
+  tags: [31m[1m"[0m[31mChill[0m[31m[1m"[0m,
+  image:
+   [31m[1m"[0m[31mhttps://images.unsplash.com/photo-1611458181521-5fafe4a31995?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0m[31m[1m"[0m,
+  created_at:
+   Wed, 03 Sep 2025 13:02:09.538723000 UTC +00:00,
+  updated_at:
+   Wed, 03 Sep 2025 13:02:09.538723000 UTC +00:00,
+  longitude: -[35m[1m0.567353[0m,
+  latitude: [35m[1m44.855695[0m,
+  details:
+   [31m[1m"[0m[31mDébutants ou confirmés sont les bienvenus pour faire profiter de ce moment détente revigorant.[0m[31m[1m"[0m,
+  date: Mon, 08 Sep 2025,
+  details_title: [36m[1mnil[0m,
+  description_title: [36m[1mnil[0m[32m>[0m,
+ [32m#<Event:0x000073288c541910[0m
+  id: [34m[1m1411[0m,
+  name: [31m[1m"[0m[31mSoirée salsa en plein air[0m[31m[1m"[0m,
+  address:
+   [31m[1m"[0m[31mPlace des Quinconces, 33000 Bordeaux, France[0m[31m[1m"[0m,
+  description:
+   [31m[1m"[0m[31mAmbiance caliente sous les étoiles avec initiation gratuite, danse libre et musique cubaine en live.[0m[31m[1m"[0m,
+  tags: [31m[1m"[0m[31mFestif[0m[31m[1m"[0m,
+  image:
+   [31m[1m"[0m[31mhttps://images.unsplash.com/photo-1575448913281-98e9e5d3f193?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D[0m[31m[1m"[0m,
+  created_at:
+   Wed, 03 Sep 2025 13:02:09.605096000 UTC +00:00,
+  updated_at:
+   Wed, 03 Sep 2025 13:02:09.605096000 UTC +00:00,
+  longitude: -[35m[1m0.575982[0m,
+  latitude: [35m[1m44.845446[0m,
+  details:
+   [31m[1m"[0m[31mJuan et Linda vont vous aider à ambiancer votre soirée. Organisateurs emblématiques de l'événement, ils n'hésiteront pas à partager un petit verre en compagnie de leurs mouvements.[0m[31m[1m"[0m,
+  date: Tue, 09 Sep 2025,
+  details_title: [36m[1mnil[0m,
+  description_title: [36m[1mnil[0m[32m>[0m,
+ [32m#<Event:0x000073288c5417d0[0m
+  id: [34m[1m1412[0m,
+  name:
+   [31m[1m"[0m[31mVisite guidée de la ville de Bordeaux[0m[31m[1m"[0m,
+  address:
+   [31m[1m"[0m[31mOffice du Tourisme de Bordeaux, 33000 Bordeaux, France[0m[31m[1m"[0m,
+  description:
+   [31m[1m"[0m[31mVisiteurs de passage à Bordeaux, simple curieux ou connaisseurs de la région, venez découvrir Bordeaux.[0m[31m[1m"[0m,
+  tags: [31m[1m"[0m[31mCulturel[0m[31m[1m"[0m,
+  image:
+   [31m[1m"[0m[31mhttps://www.bordeaux-tourisme.com/sites/bordeaux_tourisme/files/styles/sit_main_image/public/externals/f22840cf5b9f365f9bcaa505ec518134.jpg.webp?itok=pL_45h0g[0m[31m[1m"[0m,
+  created_at:
+   Wed, 03 Sep 2025 13:02:09.682004000 UTC +00:00,
+  updated_at:
+   Wed, 03 Sep 2025 13:02:09.682004000 UTC +00:00,
+  longitude: -[35m[1m0.570681[0m,
+  latitude: [35m[1m44.840116[0m,
+  details:
+   [31m[1m"[0m[31mVisites guidées classiques, présentant l’histoire et le patrimoine de la ville, visites insolites, ou en petit train, en tuk-tuk, mais aussi croisières fluviales… Trouvez la visite qui vous convient que vous soyez seul, en couple ou en famille.[0m[31m[1m"[0m,
+  date: Tue, 09 Sep 2025,
+  details_title: [36m[1mnil[0m,
+  description_title: [36m[1mnil[0m[32m>[0m,
+ [31m[1m"[0m[31m...[0m[31m[1m"[0m]
