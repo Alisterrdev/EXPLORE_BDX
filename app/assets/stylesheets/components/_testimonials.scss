@@ -17,10 +17,20 @@ $text-muted: #555;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-bottom: 10px;
+    animation: slide 20s linear infinite;
 
     &::-webkit-scrollbar {
       display: none;
     }
+
+  @keyframes slide {
+    0% {
+    transform: translateX(0);
+    }
+    100% {
+    transform: translateX(-50%); // ajuste selon le nombre de testimonials
+    }
+  }
   }
 
   .testimonial {

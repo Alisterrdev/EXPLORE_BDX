@@ -4,13 +4,13 @@
   font-size: 3.38rem;
   max-width: 1100px;
   padding: 0 24px;
-  margin: 1.5rem auto 1rem;
   margin-bottom: 0.5rem;
+  margin: 0 auto 1.5rem;
 }
 
-
-
-.localisation .container { display: block; }
+.localisation .container {
+  display: block;
+}
 
 /* Le div qui contient slider + labels (celui avec style="text-align:center;") */
 .localisation .container > div {
@@ -30,6 +30,7 @@
   margin: 1rem 0;
   background: linear-gradient(to right, #fb8500 50%, #ccc 50%); /* fixe à 50% */
   transition: background 0.2s ease;
+
 }
 
 /* Chrome / Safari - barre */
@@ -74,4 +75,5 @@
   max-width: 600px;                /* égale à la réglette */
   margin: .5rem auto 0;
   font-weight: 500;
+  margin: 0 auto 80px;
 }
