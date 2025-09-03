@@ -37,7 +37,7 @@ white-space: nowrap;
 
   .btn-secondary {
     display: inline-block;
-    background: #fb8500 !important;
+    background: #fb8500;
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
@@ -47,7 +47,7 @@ white-space: nowrap;
     transition: background 0.2s;
 
     &:hover {
-      background: darken(#FB8500, 10%) !important;
+      background: darken(#FB8500, 10%);
     }
   }
 }
