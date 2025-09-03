@@ -117,7 +117,7 @@
   aspect-ratio: 16 / 10;  /* ratio proche du visuel (ajuste 16/9 ou 4/3 si tu préfères) */
   overflow: hidden;
   border-radius: 0;       /* angles droits comme sur le visuel */
-  background: #ddd;       /* gris de fond si l’image tarde à charger */
+  background: #ffffff;       /* gris de fond si l’image tarde à charger */
   transition: transform 0.3s;
 }
 
