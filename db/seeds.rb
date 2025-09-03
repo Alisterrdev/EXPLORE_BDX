@@ -277,8 +277,10 @@ event = Event.create(
   name: "Demo Day",
   address: "L'Engrenage, 33000 Bordeaux, France",
   date: Date.parse("5 septembre 2025"),
-  description: "Présentation finale de 9 semaines de dures labeurs pour les élèves du Wagon, préparez votre meilleure tenue la soirée va être longue.",
-  details: "Dans une ambiance détendue et coniviviale, venez découvrir les projets tech du Wagon dans leurs locaux. Avant de partir pour une soirée de folie au coeur de l'Engrenage.",
+  description: "Après 9 semaines intensives de travail et de créativité, les élèves du Wagon sont enfin prêts à vous dévoiler leurs projets tech.
+          Rendez-vous dans les locaux du Wagon pour une soirée exceptionnelle, placée sous le signe de la convivialité et du partage.
+          Vous découvrirez en avant-première les applications et solutions innovantes imaginées et développées par nos élèves – le fruit de leur passion, de leur persévérance et de leur esprit d’équipe.",
+  details:"Après les démonstrations, place à la célébration : nous vous donnons rendez-vous au cœur de l’Engrenage, pour prolonger la fête autour de musique, de belles rencontres et de moments inoubliables. Une soirée unique pour s’inspirer, échanger et célébrer ensemble la créativité et l’audace des talents de demain.",
   tags: "Festif",
   image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1112&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 )

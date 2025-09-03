@@ -1,29 +1,4 @@
 
-/* ================= TITRE PRINCIPAL ================= */
-.event-show .event-title-wrapper {
-  display: flex;
-  align-items: center; // centre verticalement titre + cœur
-  gap: 0.5rem;
-}
-
-.event-show .event-title-wrapper__title {
-  text-align: left;
-  font-size: 60 rem;
-  margin-bottom: 1.5rem;
-  color: #fb8500;
-  padding: 0 24px;
-}
-
-.event-show .heart-icon {
-  font-size: 24px;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.event-show .heart-icon.filled {
-  color: red;
-}
-
 /* ================= HERO ================= */
 .event-hero {
   display: flex;
@@ -33,71 +8,81 @@
   margin: 3rem 0;
 }
 
-/* Image grande */
+/* Image grande à gauche */
+.event-hero__image {
+  flex: 1 1 55%;
+}
 .event-hero__image img {
   width: 100%;
-  max-width: 600px;
   height: auto;
   object-fit: cover;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
-/* Texte */
+/* Colonne texte à droite */
 .event-hero__content {
-  flex: 1;
-  max-width: 600px;
+  flex: 0 0 40%;
+  max-width: 560px;
 }
 
+/* Titre principal */
 .event-title {
-  font-size: 3.5rem;
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
   font-weight: 900;
   color: #fb8500;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
+  white-space: nowrap;
 }
 
+/* Badge (Festif) */
 .event-subtitle {
   display: inline-block;
   background: #fb8500;
   color: #fff;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
-.event-hero__content p {
+/* Infos (Lieu, Date, Heure) = du simple texte, sans carte blanche */
+.event-hero__content .event-card {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: 0 0 1.2rem 0; /* espace sous les infos */
+}
+.event-hero__content .event-card p {
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  margin: 0.4rem 0;
+  color: #333;
+}
+.event-hero__content .event-card p strong {
+  font-weight: 700;
+  color: #000;
 }
 
-/* CTA Favoris */
-.favorite-btn {
+/* CTA favoris = bouton texte avec bordure orange */
+.favorite-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.8rem 1.4rem;
-  border: 2px solid transparent;
-  border-radius: 50px;
-  font-weight: 700;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1rem;
+  border: 2px solid #fb8500;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
   color: #fb8500;
-  background: transparent;
-  cursor: pointer;
-  transition: border 0.2s, transform 0.2s;
   text-decoration: none;
-  margin-top: 1rem;
+  transition: background 0.2s, color 0.2s;
 }
-
-.favorite-btn:hover,
-.favorite-btn.active {
-  border-color: #fb8500;
+.favorite-link:hover {
+  background: #fb8500;
+  color: #fff;
 }
-
-.heart-icon {
-  font-size: 1.2rem;
-  transition: color 0.2s;
-}
-
-.heart-icon.filled {
+.favorite-link .heart-icon {
+  font-size: 1rem;
   color: red;
 }

@@ -1,85 +1,54 @@
-.event-show .event-suggestions .event-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
+.event-suggestion {
+  h1{
+font-size: clamp(1.5rem, 4vw, 2.5rem);
+white-space: nowrap;
 }
-.event-show .event-suggestions .event-card {
-  max-width: 380px; // ajustable selon l'écran
-  min-height: 300px; // moins haut
+.event-card {
   background: #fff;
-  border-radius: 1.5rem;
-  overflow: hidden;
+  border-radius: 0.0rem;
+  padding: 1rem;
+  text-align: center;
+  width: 220px; /* taille fixe pour les cards */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  border-top: 4px solid #FB8500;
-  transition: transform 0.3s, box-shadow 0.3s;
-  &:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-  }
-  /* IMAGE */
+  justify-content: space-between;
+
   img.event-card-image {
-    width: 380px !important;   // force la largeur
-    height: 300px !important;  // force la hauteur
-    object-fit: cover !important; // rempli le conteneur
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0.0rem;
+    margin-bottom: 0.5rem; // espace entre image et titre
+    display: block;
   }
-  /* ICÔNE */
-  .event-card-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #FB8500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 1.2rem;
-    margin: -25px auto 0 auto; // pour flotter sur le liseré
-    border: 3px solid #fff;
-    z-index: 2;
-  }
+
   h3 {
     font-size: 1rem;
     font-weight: 600;
-    margin: 0.5rem 1rem 0.25rem 1rem;
-    color: #333;
+    margin: 0.5rem 0; // espace entre titre et description
   }
+
   p {
-    font-size: 0.85rem;
-    color: #555;
-    margin: 0 1rem 0.5rem 1rem;
-    line-height: 1.4;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
   }
+
   .btn-secondary {
-    background: #FB8500;
+    display: inline-block;
+    background: #fb8500;
     color: #fff;
-    text-align: center;
-    margin: 0.5rem 1rem 1rem 1rem;
-    padding: 0.5rem 0;
-    border-radius: 1rem;
-    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
     text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: auto;
+    transition: background 0.2s;
+
     &:hover {
       background: darken(#FB8500, 10%);
     }
   }
 }
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .event-show .event-suggestions .event-card {
-    flex: 1 1 100%;
-    max-width: 100%;
-    min-height: 150px; // moins haut sur mobile
-  }
 }
-
-
-
-
-
-
