@@ -2,24 +2,18 @@ class EventsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+
     #double filtre commenter en attendant d'améliorer tags(table??)
     events_filtered_by_tag = Event.where(tags: params[:tags])
     #events_filtered_by_mood = Event.where(tags: params[:tags])
     #events_filtered_by_tag = events_filtered_by_mood .where(tags: params[:budget])
     #http://[::1]:3000/events?location=20&start_date=2025-08-29&end_date=2025-08-31
-    events_filtered_by_date = events_filtered_by_tag.where("date >= ? and date <= ?", Date.parse(params[:start_date]), Date.parse(params[:end_date]))
-    if current_user
+    if params[:start_date].present? && params[:end_date].present?
+      events_filtered_by_date = events_filtered_by_tag.where("date >= ? and date <= ?", Date.parse(params[:start_date]), Date.parse(params[:end_date]))
       @events = events_filtered_by_date.near(current_user.address, params[:location].to_i)
     else
-      @events = events_filtered_by_date
+      @events = events_filtered_by_tag.near(current_user.address, params[:location].to_i)
     end
-
-
-
-    # if current_user
-    #   if params[:start_date].present?
-    #   @events = @events.where("date >= ?", Date.parse(params[:start_date]))
-    # end
 
     @user_marker = [{
         lat: current_user.latitude,
