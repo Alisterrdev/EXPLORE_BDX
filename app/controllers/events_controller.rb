@@ -3,17 +3,16 @@ class EventsController < ApplicationController
 
   def index
     #double filtre commenter en attendant d'améliorer tags(table??)
-    events_filtered_by_tag = Event.where(tags: params[:tags])
+    events_filtered_by_tag = Event.where(tags: params[:tags]).order(:date)
     #events_filtered_by_mood = Event.where(tags: params[:tags])
     #events_filtered_by_tag = events_filtered_by_mood .where(tags: params[:budget])
     #http://[::1]:3000/events?location=20&start_date=2025-08-29&end_date=2025-08-31
     events_filtered_by_date = events_filtered_by_tag.where("date >= ? and date <= ?", Date.parse(params[:start_date]), Date.parse(params[:end_date]))
     if current_user
-      @events = events_filtered_by_date.near(current_user.address, params[:location].to_i)
+      @events = events_filtered_by_date.near(current_user.address, params[:location].to_i).reorder(date: :asc)
     else
       @events = events_filtered_by_date
     end
-
 
 
     # if current_user
@@ -46,7 +45,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    @events = Event.where(tags: @event.tags).where.not(id: @event.id)
+    @events = Event.where(tags: @event.tags).where.not(id: @event.id).order(:date)
 
     # @favorite = Favorite.new
   end
