@@ -20,7 +20,7 @@
 /* SECTION BUDGET */
 .budget-section {
   max-width: 1100px;
-  margin: 0 auto 80px;  // aucun espace au-dessus, 80px en dessous avant "Ta localisation"
+  margin: 0 auto 40px;  // aucun espace au-dessus, 80px en dessous avant "Ta localisation"
   padding: 0 24px;
 }
 
@@ -32,6 +32,7 @@
   justify-content: center; // centre les éléments quand la ligne n'est pas pleine
   width: 100%;
   margin: 0 auto;
+  margin-top: 25px;
 
   @media (max-width: 992px) {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -65,7 +66,6 @@
   align-items: center;
   justify-content: center;   // centré verticalement
   width: 160px;
-  height: 180px;
   cursor: pointer;
   padding: 15px;
   border-radius: 12px;

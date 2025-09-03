@@ -1,23 +1,20 @@
 .header {
   background-color: rgba(255, 255, 255, 0.5);
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid transparent;
   height: 80px;
   padding: 0 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  border-bottom: 1px solid transparent;
+  position: relative;
+  z-index: 1000;
 }
 
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
   height: 100%;
-  position: relative;      /* référence pour le centrage absolu */
   display: flex;
-  align-items: center;     /* centrage vertical */
+  align-items: center;
+  justify-content: center; // centre le logo
+  position: relative;
 }
 
 .logo-img {
@@ -29,14 +26,30 @@
   height: auto;
 }
 
-.user-icon-img {
+/* Conteneur pour user + cœur */
+.user-actions {
   position: absolute;
-  right: 40px;
-  top: 48%;
+  right: 20px;       // distance par rapport au bord droit
+  top: 50%;          // centre vertical
   transform: translateY(-50%);
-  border-radius: 50%;
-  width: 60px;
-  padding: 5px;
+  display: flex;
+  gap: 10px;         // espace entre user et cœur
+}
+
+/* Styles individuels */
+.user-icon-img,
+.favorites-link-img {
+  width: 40px;       // même taille pour user et cœur
+  height: 40px;
   cursor: pointer;
-  background: transparent;
+  display: block;
+}
+
+.favorites-link-img {
+  color: #fb8500;    // orange
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: darken(#fb8500, 10%);
+  }
 }
