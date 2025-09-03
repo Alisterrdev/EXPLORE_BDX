@@ -64,13 +64,13 @@ Event.create(
 )
 
 Event.create(
-  name: "Pique-nique musical au Jardin Public",
-  address: "Jardin Public, 33000 Bordeaux, France",
-  date: Date.parse("6 septembre 2025"),
-  details: "Venez vous joindre au groupe et partager un moment convivial avec les musiciens. Un moment à partager en famille ou entre amis sans modération.",
-  image: "https://images.unsplash.com/photo-1592753054398-9fa298d40e85?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  description: "Un midi tout doux dans l'herbe avec des musiciens acoustiques, des paniers pique-nique locaux et une ambiance détendue.",
-  tags: "Chill"
+  name: "Grand destockage au Comptoir des Quartiers",
+  address: "Le Comptoir des Quartiers – 1 rue Marc Gauthier, 33130 Villenave d'Ornon, France",
+  date: Date.parse("3 septembre 2025"),
+  description: "Ce déstockage à Villenave d’Ornon n’a rien d’une braderie classique : ici, chaque édition réserve son lot de surprises. On y déniche des vêtements de marques neuves, des accessoires tendance, des bijoux stylés et même des sandales parfaites pour l’été.",
+  details: "Avec des prix allant de 5 € à 50 € et des réductions jusqu’à -70 %, c’est le plan shopping idéal pour refaire sa garde-robe sans exploser son budget. Et comme les collections changent à chaque édition, impossible de repartir bredouille.",
+  tags: "Chill",
+  image: "https://images.unsplash.com/photo-1512663251984-863560ec3985?q=80&w=1122&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
 Event.create(
@@ -82,6 +82,125 @@ Event.create(
   image: "https://images.unsplash.com/photo-1506545733010-83bc7e37fcc2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   tags: "Nature"
 )
+
+event = Event.create(
+  name: "Demo Day",
+  address: "L'Engrenage, 33000 Bordeaux, France",
+  date: Date.parse("5 septembre 2025"),
+  description_title: "Le grand dévoilement",
+  description: "Après 9 semaines intensives de travail et de créativité, les élèves du Wagon sont enfin prêts à vous dévoiler leurs projets tech.
+          Rendez-vous dans les locaux du Wagon pour une soirée exceptionnelle, placée sous le signe de la convivialité et du partage.
+          Vous découvrirez en avant-première les applications et solutions innovantes imaginées et développées par nos élèves – le fruit de leur passion, de leur persévérance et de leur esprit d’équipe.",
+  details_title: "La fête continue",
+  details:"Après les démonstrations, place à la célébration : nous vous donnons rendez-vous au cœur de l’Engrenage, pour prolonger la fête autour de musique, de belles rencontres et de moments inoubliables. Une soirée unique pour s’inspirer, échanger et célébrer ensemble la créativité et l’audace des talents de demain.",
+
+  tags: "Festif",
+  image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1112&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+)
+
+4.times do |time|
+  file = "app/assets/images/mood-pic/#{event.tags.downcase}/#{event.name.split[0].downcase}/#{event.name.split[0].downcase}-#{time + 1}.jpg"
+  puts file
+  event.files.attach(io: File.open(file), filename: event.name, content_type: "image/jpg")
+end
+
+Event.create(
+  name: "Pique-nique musical au Jardin Public",
+  address: "Jardin Public, 33000 Bordeaux, France",
+  date: Date.parse("6 septembre 2025"),
+  details: "Venez vous joindre au groupe et partager un moment convivial avec les musiciens. Un moment à partager en famille ou entre amis sans modération.",
+  image: "https://images.unsplash.com/photo-1592753054398-9fa298d40e85?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description: "Un midi tout doux dans l'herbe avec des musiciens acoustiques, des paniers pique-nique locaux et une ambiance détendue.",
+  tags: "Chill"
+)
+
+Event.create(
+  name: "Improvisation théâtrale sous les étoiles",
+  address: "Parc Rivière, 33000 Bordeaux, France",
+  date: Date.parse("6 septembre 2025"),
+  details: "En compagnie de Jérôme et de la troupe Cosmorire, attachez vos ceintures pour un voyage intergalactique improbable où sciences et humour se combinent à la perfection.",
+  image: "https://images.unsplash.com/photo-1611956425642-d5a8169abd63?q=80&w=1211&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description: "Un spectacle unique où rien n’est écrit d’avance. Rires et surprises garantis dans un cadre verdoyant.",
+  tags: "Culturel"
+)
+
+Event.create(
+  name: "Danse libre au miroir d'eau",
+  address: "Place de la Bourse, 33000 Bordeaux, France",
+  date: Date.parse("7 septembre 2025"),
+  details: "Présents depuis de nombreuses années, le collectif DDE (Danse Des Eaux) revient encore plus fort avec un événement accès sur la découverte de soi par la danse ainsi que le tambour traditionnel malais.",
+  image: "https://images.unsplash.com/photo-1598976702854-b7130d73ca18?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description: "Rejoignez un cercle de danse spontanée, pieds nus sur le miroir d’eau. Musique live et liberté de mouvement au programme.",
+  tags: "Creatif"
+)
+
+Event.create(
+  name: "Sunset yoga et smoothies",
+  address: "Quai des Marques, 33300 Bordeaux, France",
+  date: Date.parse("8 septembre 2025"),
+  details: "Débutants ou confirmés sont les bienvenus pour faire profiter de ce moment détente revigorant.",
+  image: "https://images.unsplash.com/photo-1611458181521-5fafe4a31995?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description: "Une session de yoga face au coucher de soleil, suivie de smoothies frais et bio. Apportez votre tapis !",
+  tags: "Chill"
+)
+
+Event.create(
+  name: "Soirée salsa en plein air",
+  address: "Place des Quinconces, 33000 Bordeaux, France",
+  date: Date.parse("9 septembre 2025"),
+  details: "Juan et Linda vont vous aider à ambiancer votre soirée. Organisateurs emblématiques de l'événement, ils n'hésiteront pas à partager un petit verre en compagnie de leurs mouvements.",
+  image: "https://images.unsplash.com/photo-1575448913281-98e9e5d3f193?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description: "Ambiance caliente sous les étoiles avec initiation gratuite, danse libre et musique cubaine en live.",
+  tags: "Festif"
+)
+
+Event.create(
+  name: "Visite guidée de la ville de Bordeaux",
+  address: "Office du Tourisme de Bordeaux, 33000 Bordeaux, France",
+  date: Date.parse("9 septembre 2025"),
+  description: "Visiteurs de passage à Bordeaux, simple curieux ou connaisseurs de la région, venez découvrir Bordeaux.",
+  details: "Visites guidées classiques, présentant l’histoire et le patrimoine de la ville, visites insolites, ou en petit train, en tuk-tuk, mais aussi croisières fluviales… Trouvez la visite qui vous convient que vous soyez seul, en couple ou en famille.",
+  tags: "Culturel",
+  image: "https://www.bordeaux-tourisme.com/sites/bordeaux_tourisme/files/styles/sit_main_image/public/externals/f22840cf5b9f365f9bcaa505ec518134.jpg.webp?itok=pL_45h0g"
+)
+
+Event.create(
+  name: "Marche méditative au lever du jour",
+  address: "Parc Bordelais, 33000 Bordeaux, France",
+  date: Date.parse("10 septembre 2025"),
+  details: "Accompagnez Veronique dans sa quête spirituelle du bien-être ultime et laisser la vous guider vers l'éveil de nouveaux sens.",
+  image: "https://images.unsplash.com/reserve/YEc7WB6ASDydBTw6GDlF_antalya-beach-lulu.jpg?q=80&w=1301&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description: "Une expérience de reconnexion à soi dans le silence du matin. Respiration, pas lents et contemplation.",
+  tags: "Nature"
+)
+
+Event.create(
+  name: "Atelier de cuisine du monde",
+  address: "13 All. Jean Giono, 33100 Bordeaux, France",
+  date: Date.parse("11 septembre 2025"),
+  details: "Une cuisine riche, des épices savoureuses et une équipe aux petits oignons. Nos gourmets mettront à rude épreuve les talents culinaires de nos invités.",
+  image: "https://images.unsplash.com/photo-1661607775751-dc9efc8f3a9c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description: "Préparez et dégustez des recettes venues d'ailleurs dans une ambiance conviviale. Venez avec vos papilles !",
+  tags: "Foodies"
+)
+
+event = Event.create(
+  name: "Beer Fest Bordeaux",
+  address: "Place du Parlement, 33000 Bordeaux, France",
+  date: Date.parse("20 septembre 2025"),
+  description_title: "Le grand brassage",
+  description: "Pendant tout un week-end, partez à la rencontre de brasseurs venus d’ici et d’ailleurs et laissez-vous surprendre par la richesse de la bière artisanale. Blonde, ambrée ou IPA, chaque dégustation sera l’occasion de découvrir des saveurs nouvelles et des histoires passionnantes. Un moment unique pour explorer la diversité d’un savoir-faire authentique, porté par la passion et la créativité des artisans.",
+  details_title: "La soirée s’anime",
+  details: "Quand les verres se vident, la fête continue : concerts, ateliers de brassage et rencontres conviviales viendront rythmer la soirée. Venez partager un moment chaleureux autour de la bière, échanger avec d’autres passionnés et célébrer ensemble l’esprit festif et convivial de ce festival incontournable.",
+  tags: "Festif",
+  image: "https://images.unsplash.com/photo-1600788886242-5c96aabe3757?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  )
+
+  4.times do |time|
+  file = "app/assets/images/mood-pic/#{event.tags.downcase}/#{event.name.split[0].downcase}/#{event.name.split[0].downcase}-#{time + 1}.jpg"
+  puts file
+  event.files.attach(io: File.open(file), filename: event.name, content_type: "image/jpg")
+end
 
 Event.create(
   name: "Fête des couleurs indiennes",
@@ -144,84 +263,6 @@ Event.create(
 )
 
 Event.create(
-  name: "Improvisation théâtrale sous les étoiles",
-  address: "Parc Rivière, 33000 Bordeaux, France",
-  date: Date.parse("6 septembre 2025"),
-  details: "En compagnie de Jérôme et de la troupe Cosmorire, attachez vos ceintures pour un voyage intergalactique improbable où sciences et humour se combinent à la perfection.",
-  image: "https://images.unsplash.com/photo-1611956425642-d5a8169abd63?q=80&w=1211&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  description: "Un spectacle unique où rien n’est écrit d’avance. Rires et surprises garantis dans un cadre verdoyant.",
-  tags: "Culturel"
-)
-
-Event.create(
-  name: "Danse libre au miroir d'eau",
-  address: "Place de la Bourse, 33000 Bordeaux, France",
-  date: Date.parse("7 septembre 2025"),
-  details: "Présents depuis de nombreuses années, le collectif DDE (Danse Des Eaux) revient encore plus fort avec un événement accès sur la découverte de soi par la danse ainsi que le tambour traditionnel malais.",
-  image: "https://images.unsplash.com/photo-1598976702854-b7130d73ca18?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  description: "Rejoignez un cercle de danse spontanée, pieds nus sur le miroir d’eau. Musique live et liberté de mouvement au programme.",
-  tags: "Creatif"
-)
-
-Event.create(
-  name: "Sunset yoga et smoothies",
-  address: "Quai des Marques, 33300 Bordeaux, France",
-  date: Date.parse("8 septembre 2025"),
-  details: "Débutants ou confirmés sont les bienvenus pour faire profiter de ce moment détente revigorant.",
-  image: "https://images.unsplash.com/photo-1611458181521-5fafe4a31995?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  description: "Une session de yoga face au coucher de soleil, suivie de smoothies frais et bio. Apportez votre tapis !",
-  tags: "Chill"
-)
-
-Event.create(
-  name: "Soirée salsa en plein air",
-  address: "Place des Quinconces, 33000 Bordeaux, France",
-  date: Date.parse("9 septembre 2025"),
-  details: "Juan et Linda vont vous aider à ambiancer votre soirée. Organisateurs emblématiques de l'événement, ils n'hésiteront pas à partager un petit verre en compagnie de leurs mouvements.",
-  image: "https://images.unsplash.com/photo-1575448913281-98e9e5d3f193?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  description: "Ambiance caliente sous les étoiles avec initiation gratuite, danse libre et musique cubaine en live.",
-  tags: "Festif"
-)
-
-Event.create(
-  name: "Marche méditative au lever du jour",
-  address: "Parc Bordelais, 33000 Bordeaux, France",
-  date: Date.parse("10 septembre 2025"),
-  details: "Accompagnez Veronique dans sa quête spirituelle du bien-être ultime et laisser la vous guider vers l'éveil de nouveaux sens.",
-  image: "https://images.unsplash.com/reserve/YEc7WB6ASDydBTw6GDlF_antalya-beach-lulu.jpg?q=80&w=1301&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  description: "Une expérience de reconnexion à soi dans le silence du matin. Respiration, pas lents et contemplation.",
-  tags: "Nature"
-)
-
-Event.create(
-  name: "Atelier de cuisine du monde",
-  address: "13 All. Jean Giono, 33100 Bordeaux, France",
-  date: Date.parse("11 septembre 2025"),
-  details: "Une cuisine riche, des épices savoureuses et une équipe aux petits oignons. Nos gourmets mettront à rude épreuve les talents culinaires de nos invités.",
-  image: "https://images.unsplash.com/photo-1661607775751-dc9efc8f3a9c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  description: "Préparez et dégustez des recettes venues d'ailleurs dans une ambiance conviviale. Venez avec vos papilles !",
-  tags: "Foodies"
-)
-
-event = Event.create(
-  name: "Beer Fest Bordeaux",
-  address: "Place du Parlement, 33000 Bordeaux, France",
-  date: Date.parse("20 septembre 2025"),
-  description_title: "Le grand brassage",
-  description: "Pendant tout un week-end, partez à la rencontre de brasseurs venus d’ici et d’ailleurs et laissez-vous surprendre par la richesse de la bière artisanale. Blonde, ambrée ou IPA, chaque dégustation sera l’occasion de découvrir des saveurs nouvelles et des histoires passionnantes. Un moment unique pour explorer la diversité d’un savoir-faire authentique, porté par la passion et la créativité des artisans.",
-  details_title: "La soirée s’anime",
-  details: "Quand les verres se vident, la fête continue : concerts, ateliers de brassage et rencontres conviviales viendront rythmer la soirée. Venez partager un moment chaleureux autour de la bière, échanger avec d’autres passionnés et célébrer ensemble l’esprit festif et convivial de ce festival incontournable.",
-  tags: "Festif",
-  image: "https://images.unsplash.com/photo-1600788886242-5c96aabe3757?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  )
-
-  4.times do |time|
-  file = "app/assets/images/mood-pic/#{event.tags.downcase}/#{event.name.split[0].downcase}/#{event.name.split[0].downcase}-#{time + 1}.jpg"
-  puts file
-  event.files.attach(io: File.open(file), filename: event.name, content_type: "image/jpg")
-end
-
-Event.create(
   name: "Cours de cuisine végétarienne",
   address: "Au Comptoir Local, 33240 Saint-André-de-Cubzac, France",
   date: Date.parse("28 novembre 2025"),
@@ -281,47 +322,7 @@ Event.create(
   image: "https://images.unsplash.com/photo-1700931676493-1ea7739bd6aa?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
 
-event = Event.create(
-  name: "Demo Day",
-  address: "L'Engrenage, 33000 Bordeaux, France",
-  date: Date.parse("5 septembre 2025"),
-  description_title: "Le grand dévoilement",
-  description: "Après 9 semaines intensives de travail et de créativité, les élèves du Wagon sont enfin prêts à vous dévoiler leurs projets tech.
-          Rendez-vous dans les locaux du Wagon pour une soirée exceptionnelle, placée sous le signe de la convivialité et du partage.
-          Vous découvrirez en avant-première les applications et solutions innovantes imaginées et développées par nos élèves – le fruit de leur passion, de leur persévérance et de leur esprit d’équipe.",
-  details_title: "La fête continue",
-  details:"Après les démonstrations, place à la célébration : nous vous donnons rendez-vous au cœur de l’Engrenage, pour prolonger la fête autour de musique, de belles rencontres et de moments inoubliables. Une soirée unique pour s’inspirer, échanger et célébrer ensemble la créativité et l’audace des talents de demain.",
 
-  tags: "Festif",
-  image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1112&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-)
-
-4.times do |time|
-  file = "app/assets/images/mood-pic/#{event.tags.downcase}/#{event.name.split[0].downcase}/#{event.name.split[0].downcase}-#{time + 1}.jpg"
-  puts file
-  event.files.attach(io: File.open(file), filename: event.name, content_type: "image/jpg")
-end
-
-
-Event.create(
-  name: "Grand destockage au Comptoir des Quartiers",
-  address: "Le Comptoir des Quartiers – 1 rue Marc Gauthier, 33130 Villenave d'Ornon, France",
-  date: Date.parse("3 septembre 2025"),
-  description: "Ce déstockage à Villenave d’Ornon n’a rien d’une braderie classique : ici, chaque édition réserve son lot de surprises. On y déniche des vêtements de marques neuves, des accessoires tendance, des bijoux stylés et même des sandales parfaites pour l’été.",
-  details: "Avec des prix allant de 5 € à 50 € et des réductions jusqu’à -70 %, c’est le plan shopping idéal pour refaire sa garde-robe sans exploser son budget. Et comme les collections changent à chaque édition, impossible de repartir bredouille.",
-  tags: "Chill",
-  image: "https://images.unsplash.com/photo-1512663251984-863560ec3985?q=80&w=1122&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-)
-
-Event.create(
-  name: "Visite guidée de la ville de Bordeaux",
-  address: "Office du Tourisme de Bordeaux, 33000 Bordeaux, France",
-  date: Date.parse("9 septembre 2025"),
-  description: "Visiteurs de passage à Bordeaux, simple curieux ou connaisseurs de la région, venez découvrir Bordeaux.",
-  details: "Visites guidées classiques, présentant l’histoire et le patrimoine de la ville, visites insolites, ou en petit train, en tuk-tuk, mais aussi croisières fluviales… Trouvez la visite qui vous convient que vous soyez seul, en couple ou en famille.",
-  tags: "Culturel",
-  image: "https://www.bordeaux-tourisme.com/sites/bordeaux_tourisme/files/styles/sit_main_image/public/externals/f22840cf5b9f365f9bcaa505ec518134.jpg.webp?itok=pL_45h0g"
-)
 
 puts "Après création, nombre d'évenements : #{Event.count}"
 
