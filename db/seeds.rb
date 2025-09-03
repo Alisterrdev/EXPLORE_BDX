@@ -203,8 +203,8 @@ Event.create(
   tags: "Foodies"
 )
 
-Event.create(
-  name: "Fête de la Bière Artisanale",
+event = Event.create(
+  name: "Beer Fest Bordeaux",
   address: "Place du Parlement, 33000 Bordeaux, France",
   date: Date.parse("20 septembre 2025"),
   description_title: "Le grand brassage",
@@ -213,7 +213,13 @@ Event.create(
   details: "Quand les verres se vident, la fête continue : concerts, ateliers de brassage et rencontres conviviales viendront rythmer la soirée. Venez partager un moment chaleureux autour de la bière, échanger avec d’autres passionnés et célébrer ensemble l’esprit festif et convivial de ce festival incontournable.",
   tags: "Festif",
   image: "https://images.unsplash.com/photo-1600788886242-5c96aabe3757?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-)
+  )
+
+  4.times do |time|
+  file = "app/assets/images/mood-pic/#{event.tags.downcase}/#{event.name.split[0].downcase}/#{event.name.split[0].downcase}-#{time + 1}.jpg"
+  puts file
+  event.files.attach(io: File.open(file), filename: event.name, content_type: "image/jpg")
+end
 
 Event.create(
   name: "Cours de cuisine végétarienne",
