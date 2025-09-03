@@ -1,0 +1,151 @@
+/* ================= DESCRIPTION ================= */
+.event-show .event-description {
+  margin-bottom: 2rem;
+}
+
+.event-show .event-description h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #fb8500;
+}
+
+.event-show .event-description p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #000;
+}
+
+/* ================= GALLERY BLOCK ================= */
+.event-show .gallery-block {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.event-show .gallery-block .gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.event-show .gallery-block .gallery-images .image-container {
+  overflow: hidden;
+  border-radius: 0;
+  transition: transform 0.3s;
+}
+
+.event-show .gallery-block .gallery-images .image-container:hover {
+  transform: scale(1.05);
+}
+
+.event-show .gallery-block .gallery-images .image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.event-show .gallery-block .gallery-images .image-1 {
+  flex: 2 1 60%;
+}
+
+.event-show .gallery-block .gallery-images .image-2,
+.event-show .gallery-block .gallery-images .image-3 {
+  flex: 1 1 35%;
+}
+
+.event-show .gallery-block .gallery-images .image-4 {
+  flex: 2 1 60%;
+}
+
+.event-show .gallery-block .gallery-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.event-show .gallery-block .gallery-text h3 {
+  color: #fb8500
+}
+.event-show .gallery-block .gallery-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fb8500
+}
+
+.event-show .gallery-block .gallery-text p {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ================= RESPONSIVE GALLERY ================= */
+@media (max-width: 768px) {
+  .event-show .gallery-block {
+    flex-direction: column;
+  }
+
+  .event-show .gallery-block .gallery-images {
+    flex-wrap: nowrap;
+  }
+
+  .event-show .gallery-block .gallery-images .image-container {
+    flex: 1 1 100%;
+    transform: rotate(0deg) !important;
+  }
+}
+
+/* ================= GALLERY BLOCK ================= */
+/* Bloc global : texte à gauche, images à droite (inchangé si tu veux) */
+.event-show .gallery-block {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Zone IMAGES : grille 2 colonnes, espaces réguliers */
+.event-show .gallery-block .gallery-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
+  gap: 1.25rem;                           /* espacement comme sur le mockup */
+  flex: 1;                                /* prend la place disponible à droite */
+  align-content: start;                   /* colle la grille en haut */
+}
+
+/* Chaque case d’image : même taille visuelle */
+.event-show .gallery-block .gallery-images .image-container {
+  aspect-ratio: 16 / 10;  /* ratio proche du visuel (ajuste 16/9 ou 4/3 si tu préfères) */
+  overflow: hidden;
+  border-radius: 0;       /* angles droits comme sur le visuel */
+  background: #ddd;       /* gris de fond si l’image tarde à charger */
+  transition: transform 0.3s;
+}
+
+.event-show .gallery-block .gallery-images .image-container:hover {
+  transform: scale(1.02); /* léger zoom au survol (optionnel) */
+}
+
+/* L’image remplit sa case sans déformation */
+.event-show .gallery-block .gallery-images .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* ================= RESPONSIVE GALLERY ================= */
+@media (max-width: 768px) {
+  .event-show .gallery-block {
+    flex-direction: column;
+  }
+
+  .event-show .gallery-block .gallery-images {
+    flex-wrap: nowrap;
+  }
+
+  .event-show .gallery-block .gallery-images .image-container {
+    flex: 1 1 100%;
+    transform: rotate(0deg) !important;
+  }
+}

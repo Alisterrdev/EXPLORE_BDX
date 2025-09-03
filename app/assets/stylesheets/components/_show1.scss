@@ -1,0 +1,88 @@
+
+/* ================= HERO ================= */
+.event-hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+/* Image grande à gauche */
+.event-hero__image {
+  flex: 1 1 55%;
+}
+.event-hero__image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Colonne texte à droite */
+.event-hero__content {
+  flex: 0 0 40%;
+  max-width: 560px;
+}
+
+/* Titre principal */
+.event-title {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-weight: 900;
+  color: #fb8500;
+  margin-bottom: 0.6rem;
+  white-space: nowrap;
+}
+
+/* Badge (Festif) */
+.event-subtitle {
+  display: inline-block;
+  background: #fb8500;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+/* Infos (Lieu, Date, Heure) = du simple texte, sans carte blanche */
+.event-hero__content .event-card {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: 0 0 1.2rem 0; /* espace sous les infos */
+}
+.event-hero__content .event-card p {
+  font-size: 1.2rem;
+  margin: 0.4rem 0;
+  color: #333;
+}
+.event-hero__content .event-card p strong {
+  font-weight: 700;
+  color: #000;
+}
+
+/* CTA favoris = bouton texte avec bordure orange */
+.favorite-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1rem;
+  border: 2px solid #fb8500;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fb8500;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.favorite-link:hover {
+  background: #fb8500;
+  color: #fff;
+}
+.favorite-link .heart-icon {
+  font-size: 1rem;
+  color: red;
+}
