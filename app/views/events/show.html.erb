@@ -9,9 +9,9 @@
       <p class="event-subtitle"><%= @event.tags %></p> <!-- texte statique -->
 
       <div class="event-card">
-        <p><strong>📍 Lieu :</strong> <%= @event.address %></p>
-        <p><strong>📅 Date :</strong> <%= I18n.l(@event.date) %></p>
-        <p><strong>⏰ Heure :</strong> 20h00</p> <!-- texte statique -->
+        <p><strong>📍Lieu:</strong> <%= @event.address %></p>
+        <p><strong>📅 Date:</strong> <%= I18n.l(@event.date) %></p>
+        <p><strong>⏰ Heure:</strong> 20h00</p> <!-- texte statique -->
       </div>
       <%# <p><%= link_to "Ca m'intéresse", favorites_path, class: "btn btn-success" %></p>
       <%# <%= link_to "Ajouter un favori", event_favorites_path(@event), data: { turbo_method: :post } %>
