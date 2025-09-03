@@ -43,7 +43,14 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+
+  border-radius: 0;       /* angles droits comme sur le visuel */
+  background: #ffffff;       /* gris de fond si l’image tarde à charger */
+  transition: transform 0.3s;
 }
+
+.event-show .gallery-block .gallery-images .image-container:hover {
+  transform: scale(1.02); /* léger zoom au survol (optionnel) */
 
 /* L’image couvre entièrement sa cellule */
 .event-show .gallery-block .gallery-images .image-container img {
