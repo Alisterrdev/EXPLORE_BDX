@@ -11,15 +11,16 @@
     <!-- Icône utilisateur -->
     <div class="user-icon">
       <%= link_to root_path do %>
-        <%= image_tag "user-icon.png", alt: "picto", class: "user-icon-img" %>
+  <%= raw File.read(Rails.root.join("app/assets/images/user.svg")) %>
+</div>
       <% end %>
     </div>
 
     <!-- Coeur  -->
-    <div class="favorites-link ">
+    <div class="favorites-link">
       <%= link_to "/events/155/favorites" do %>
-        <%= image_tag "suit-heart.svg", alt: "picto-heart", class: "favorites-link-img" %>
-      <% end %>
+    <%= raw File.read(Rails.root.join("app/assets/images/heart.svg")) %>
+    <% end %>
     </div>
 </div>
 
@@ -29,4 +30,3 @@
     <% end %>
   </div>
   </div>
-</header>
