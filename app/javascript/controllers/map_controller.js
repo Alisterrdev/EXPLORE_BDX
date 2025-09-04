@@ -8,6 +8,7 @@ export default class extends Controller {
     markers: Array,
     userMarker: Array
   }
+ 
   connect() {
     mapboxgl.accessToken = this.apiKeyValue
     this.map = new mapboxgl.Map({
