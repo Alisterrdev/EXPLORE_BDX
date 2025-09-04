@@ -112,7 +112,7 @@
 
   .btn-secondary {
     display: inline-block;
-    background: #f4b63a;
+    background: #fb8500;
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
@@ -122,7 +122,8 @@
     transition: background 0.2s;
 
     &:hover {
-      background: darken(#567c67, 10%);
+     background: darken(#FB8500, 10%);
+      //darken(#567c67, 10%);
     }
   }
 }
@@ -331,7 +332,7 @@
 }
 .btn-secondary {
     display: inline-block;
-    background: #f4b63a;
+    background: #FB8500;
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
@@ -340,7 +341,7 @@
     margin-top: auto;
     transition: background 0.2s;
     &:hover {
-      background: darken(#567c67, 10%);
+      background: darken(#FB8500, 10%);
     }
   }
 

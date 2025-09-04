@@ -17,12 +17,11 @@
     </div>
 
     <!-- Coeur  -->
-    <div class="favorites-link">
-      <%= link_to "/events/155/favorites" do %>
-    <%= raw File.read(Rails.root.join("app/assets/images/heart.svg")) %>
-    <% end %>
+    <div class="favorites-link ">
+      <%= link_to favorites_path do %>
+        <%= raw File.read(Rails.root.join("app/assets/images/heart.svg")) %>
+      <% end %>
     </div>
-</div>
 
     <!-- Flash dans le header -->
     <% flash.each do |key, message| %>

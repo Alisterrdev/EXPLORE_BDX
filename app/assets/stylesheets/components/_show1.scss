@@ -40,7 +40,7 @@
 
 .event-hero__image img {
   width: 100%;
-  height: auto;
+  height: 450px;
   object-fit: cover;
   border-radius: 0;
 }
@@ -53,7 +53,7 @@
 }
 /* Titre principal */
 .event-title {
-  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-size: 58px;
   font-weight: 900;
   color: #fb8500;
   margin-bottom: 0.6rem;
@@ -61,7 +61,7 @@
 }
 
 /* Badge (Festif) */
-.event-subtitle { display: inline-block; 
+.event-subtitle { display: inline-block;
 background: #fb8500;
 color: #fff;
 padding: 0.4rem 1rem;
@@ -73,10 +73,13 @@ margin-bottom: 1.2rem;
 
 /* Infos (Lieu, Date, Heure) = du simple texte, sans carte blanche */
 .event-hero__content .event-card {
-  background: transparent;
-  box-shadow: none;
-  padding: 0;
-  margin: 0 0 1.2rem 0;
+  font-size: 1.2rem;
+  margin: 0.4rem 0;
+  color: #333;
+  text-align: left;         /* ← pas justifié pour éviter les grands espaces */
+  line-height: 1.4;         /* réduit l’espacement vertical entre lignes */
+  word-break: break-word;   /* force le retour correct si trop long */
+  white-space: normal;
   /* espace sous les infos */
 }
 
