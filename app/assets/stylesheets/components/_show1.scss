@@ -4,11 +4,12 @@
   display: flex;
   align-items: center; // centre verticalement titre + cœur
   gap: 0.5rem;
+  background-color: #fff;
 }
 
 .event-show .event-title-wrapper__title {
   text-align: left;
-  font-size: 60 rem;
+  font-size: 30 rem;
   margin-bottom: 1.5rem;
   color: #fb8500;
   padding: 0 24px;
@@ -31,16 +32,17 @@
   justify-content: space-between;
   gap: 3rem;
   margin: 3rem 0;
-
+  background-color:#fff;
+}
 
 /* Image grande à gauche */
 .event-hero__image {
-  flex: 1 1 55%;
+flex: 1 1 500px;  /* largeur fixe */
+padding: 20px;
 }
-
 .event-hero__image img {
   width: 100%;
-  height: 450px;
+  height: 550px;
   object-fit: cover;
   border-radius: 0;
 }
@@ -50,7 +52,7 @@
   flex: 0 0 40%;
   max-width: 560px;
 }
-}
+
 /* Titre principal */
 .event-title {
   font-size: 58px;
@@ -75,7 +77,6 @@ margin-bottom: 1.2rem;
 .event-hero__content .event-card {
   font-size: 1.2rem;
   margin: 0.4rem 0;
-  color: #333;
   text-align: left;         /* ← pas justifié pour éviter les grands espaces */
   line-height: 1.4;         /* réduit l’espacement vertical entre lignes */
   word-break: break-word;   /* force le retour correct si trop long */
@@ -95,7 +96,8 @@ margin-bottom: 1.2rem;
 }
 
 /* CTA favoris = bouton texte avec bordure orange */
-.favorite-link { display: inline-flex;
+.favorite-link {
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   margin-top: 0.5rem;
@@ -103,17 +105,29 @@ margin-bottom: 1.2rem;
   border: 2px solid #fb8500;
   border-radius: 8px;
   font-size: 1rem;
-  font-weight: 600; color: #fb8500;
+  font-weight: 600;
+  color: #fb8500;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  cursor: pointer;
 }
 
-  .favorite-link:hover {
+/* Icône cœur par défaut (vide) */
+.favorite-link .heart-icon {
+  font-size: 1rem;
+  color: red;
+}
+
+/* État actif = après clic */
+.favorite-link.active {
   background: #fb8500;
   color: #fff;
+  border-color: #fb8500;
 }
 
-  .favorite-link .heart-icon {
-  font-size: 1rem;
+/* Cœur rempli quand actif */
+.favorite-link.active .heart-icon {
+  font-family: "Font Awesome 6 Free"; /* style solid */
+  font-weight: 900;                   /* solid */
   color: red;
 }

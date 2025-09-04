@@ -27,3 +27,20 @@ document.addEventListener("turbo:load", () => {
     }, { passive: false });
   });
 });
+
+document.addEventListener("turbo:load", () => {
+  document.querySelectorAll(".favorite-link").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+
+      const heart = btn.querySelector(".heart-icon");
+      if (btn.classList.contains("active")) {
+        heart.classList.remove("fa-regular");
+        heart.classList.add("fa-solid");
+      } else {
+        heart.classList.remove("fa-solid");
+        heart.classList.add("fa-regular");
+      }
+    });
+  });
+});
