@@ -8,10 +8,10 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   resources :events, only: [:show, :create, :new, :index] do
-    resources :favorites, only: [:index, :create, :destroy] do
-      resources :messages, only: [:new, :create, :destroy]
-    end
+    resources :favorites, only: [:create, :destroy]
   end
+    resources :favorites, only: [:index]
+
 
   # resources :favorites, only: [:index, :create]
 
