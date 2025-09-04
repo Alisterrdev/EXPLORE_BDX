@@ -2,30 +2,26 @@ class EventsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-
-    events_filtered_by_tag = Event.where(tags: params[:tags]).order(:date)
-    if params[:date].present?
-      start_date = params[:date].first(10)
-      end_date = params[:date].last(10)
-      events_filtered_by_date = events_filtered_by_tag.where("date >= ? and date <= ?", Date.parse(start_date), Date.parse(end_date))
-      @events = events_filtered_by_date.near(current_user.address, params[:location].to_i).reorder(date: :asc)
     if params[:tags].present?
       events_filtered_by_tag = Event.where(tags: params[:tags]).order(:date)
     else
       events_filtered_by_tag = Event.all
     end
 
-    if params[:location].present?
-      events_filtered_by_location = events_filtered_by_tag.near(current_user.address, params[:location].to_i)
+    if params[:date].present?
+      start_date = params[:date].first(10)
+      end_date = params[:date].last(10)
+      events_filtered_by_date = events_filtered_by_tag.where("date >= ? and date <= ?", Date.parse(start_date), Date.parse(end_date))
+      # @events = events_filtered_by_date.near(current_user.address, params[:location].to_i).reorder(date: :asc)
     else
-      events_filtered_by_location = events_filtered_by_tag
-
+      events_filtered_by_date = events_filtered_by_tag
     end
 
-    if params[:start_date].present? && params[:end_date].present?
-      @events = events_filtered_by_location.where("date >= ? and date <= ?", Date.parse(params[:start_date]), Date.parse(params[:end_date]))
+
+    if params[:location].present?
+      @events = events_filtered_by_date.near(current_user.address, params[:location].to_i)
     else
-      @events = events_filtered_by_location
+      @events = events_filtered_by_date
     end
 
     @user_marker = [{
@@ -57,5 +53,4 @@ class EventsController < ApplicationController
 
     # @favorite = Favorite.new
   end
-end
 end
