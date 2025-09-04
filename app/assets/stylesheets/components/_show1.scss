@@ -4,7 +4,7 @@
   display: flex;
   align-items: center; // centre verticalement titre + cœur
   gap: 0.5rem;
-  background-color: #fff;
+
 }
 
 .event-show .event-title-wrapper__title {
@@ -32,7 +32,6 @@
   justify-content: space-between;
   gap: 3rem;
   margin: 3rem 0;
-  background-color:#fff;
 }
 
 /* Image grande à gauche */
@@ -42,6 +41,7 @@ padding: 20px;
 }
 .event-hero__image img {
   width: 100%;
+  height: auto;
   height: 550px;
   object-fit: cover;
   border-radius: 0;

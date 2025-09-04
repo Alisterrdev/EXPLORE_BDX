@@ -2,6 +2,7 @@
 /* TITRES & TEXTES */
 .event-description .gallery-text {
   padding: 0 1.5rem; /* espace interne */
+  margin-left: 2.0rem;
 }
 
 .event-description .gallery-text h2 {
@@ -41,6 +42,7 @@
   grid-template-rows: 1fr 1fr;
   gap: 1rem;
   height: 100%;
+  margin-right: 2.8rem;
 }
 .event-description .gallery-block .gallery-images .image-container {
   width: 100%;
@@ -61,6 +63,7 @@
   .event-description .gallery-block .gallery-images {
     grid-template-rows: none;
     height: auto;
+    padding-right: 1.5rem;
   }
   .event-description .gallery-block .gallery-images .image-container {
     height: 150px;
