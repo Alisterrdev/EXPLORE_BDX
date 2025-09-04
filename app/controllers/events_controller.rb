@@ -58,3 +58,4 @@ class EventsController < ApplicationController
     # @favorite = Favorite.new
   end
 end
+end
