@@ -57,11 +57,11 @@
   font-weight: 900;
   color: #fb8500;
   margin-bottom: 0.6rem;
-  white-space: nowrap;
+  white-space: pre-line;
 }
 
 /* Badge (Festif) */
-.event-subtitle { display: inline-block; 
+.event-subtitle { display: inline-block;
 background: #fb8500;
 color: #fff;
 padding: 0.4rem 1rem;
