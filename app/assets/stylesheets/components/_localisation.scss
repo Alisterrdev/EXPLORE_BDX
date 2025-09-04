@@ -9,73 +9,119 @@
   margin: 0 auto 1.5rem;
 }
 
-.localisation .container {
-  padding-top: 4rem;
-  display: block;
+/* Variables d’alignement du slider */
+.localisation {
+  --thumb-size: 32px;          /* largeur/hauteur CSS du pouce */
+  --thumb-border: 2px;         /* épaisseur de la bordure du pouce */
+  --thumb-visual: calc(var(--thumb-size) + 2 * var(--thumb-border)); /* diamètre visuel réel */
+  --half-thumb: calc(var(--thumb-visual) / 2); /* compensation exacte des bords */
 }
 
-/* Le div qui contient slider + labels (celui avec style="text-align:center;") */
+/* Wrapper, inchangé */
 .localisation .container > div {
-  max-width: 600px;          /* largeur de la réglette */
-  margin: 0 auto;            /* centre le bloc */
-  text-align: center;        /* ton inline est ok, on l’assume ici aussi */
+  margin: 0 auto;
+  text-align: center;
 }
 
-/* SLIDER */
-.localisation__range {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 6px;
-  border-radius: 3px;
-  outline: none;
-  margin: 1rem 0;
-  background: linear-gradient(to right, #fb8500 50%, #ccc 50%); /* fixe à 50% */
-  transition: background 0.2s ease;
+/* Mets les variables SUR l'input pour que ::-webkit-slider-thumb / ::-moz-range-thumb y aient accès */
+.localisation__range{
+  --thumb-size: 50px;     /* ⇦ change juste cette valeur pour la taille */
+  --thumb-border: 3px;
 
+  --thumb-visual: calc(var(--thumb-size) + 2 * var(--thumb-border));
+  --half-thumb: calc(var(--thumb-visual) / 2);
 }
 
-/* Chrome / Safari - barre */
-.localisation__range::-webkit-slider-runnable-track {
-  height: 6px;
-  border-radius: 3px;
-  background: linear-gradient(to right, #fb8500 50%, #ccc 50%);
-}
-/* Chrome / Safari - pouce */
+/* WebKit (Chrome/Safari/Edge) */
 .localisation__range::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 24px; height: 24px;
+  width: var(--thumb-size);
+  height: var(--thumb-size);
   border-radius: 50%;
   background: #fff;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+  border: var(--thumb-border) solid #fb8500;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
   cursor: pointer;
-  margin-top: -9px; /* centre verticalement sur la piste */
+  /* centré verticalement sur une piste de 6px */
+  margin-top: calc((var(--thumb-visual) / -2) + 3px);
 }
 
-/* Firefox - barre */
+/* Firefox */
+.localisation__range::-moz-range-thumb {
+  width: var(--thumb-size);
+  height: var(--thumb-size);
+  border-radius: 50%;
+  background: #fb8500;
+  border: var(--thumb-border) solid #fb8500;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+  cursor: pointer;
+}
+
+
+/* Firefox */
 .localisation__range::-moz-range-track {
   height: 6px;
   border-radius: 3px;
-  background: #ccc; /* pas de gradient dynamique sans JS */
+  background: #ccc;
 }
-/* Firefox - pouce */
+.localisation__range::-moz-range-progress {
+  height: 6px;
+  border-radius: 3px;
+  background: #fb8500;
+}
 .localisation__range::-moz-range-thumb {
-  width: 24px; height: 24px;
+  width: var(--thumb-size);
+  height: var(--thumb-size);
   border-radius: 50%;
-  background: #fff;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+  background: #fb8500;
+  border: var(--thumb-border) solid #fb8500;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
   cursor: pointer;
 }
 
-/* LABELS */
+/* ===== Labels parfaitement alignés sur la piste ===== */
 .localisation__labels {
-  display: flex;
-  justify-content: space-between; /* 10 | 20 | 30 */
-  max-width: 600px;                /* égale à la réglette */
-  margin: .5rem auto 0;
-  font-weight: 500;
-  margin: 0 auto 80px;
+  position: relative;
+  padding: 6px var(--half-thumb) 0;  /* bord gauche/droit = moitié du diamètre visuel */
+  height: 1.6rem;                    /* réserve la place pour le texte */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.localisation__labels span {
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* 10 km -> début exact de piste */
+.localisation__labels span:nth-child(1) {
+  left: 0%;
+  transform: translateX(0);
+  text-align: left;
+  color: #fb8500;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* 20 km -> milieu exact de piste */
+.localisation__labels span:nth-child(2) {
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color:#fb8500;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* 30 km -> fin exact de piste */
+.localisation__labels span:nth-child(3) {
+  left: 100%;
+  transform: translateX(-100%);
+  text-align: right;
+  color: #fb8500;
+  font-weight: 700;
+  font-size: 20px;
 }

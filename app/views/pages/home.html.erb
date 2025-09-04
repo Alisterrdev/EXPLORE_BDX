@@ -45,64 +45,37 @@
 </section>
 
 <script>
-  (function () {
-    var v = document.querySelector('.hero .hero__bg');
-    var img = document.querySelector('.hero .hero__fallback');
-    if (!v || !img) return;
-
-    function showFallback() {
-      v.style.display = 'none';
-      img.style.display = 'block';
-    }
-
-    // Fallback uniquement si vraie erreur de lecture
-    v.addEventListener('error', showFallback, { once: true });
-
-    // Booster autoplay post-login / Turbo / iOS
-    function tryPlay() {
-      // s'assurer des flags avant play()
-      v.muted = true;
-      v.autoplay = true;
-      v.playsInline = true;
-
-      var p = v.play && v.play();
-      if (p && p.catch) {
-        // si la policy bloque l'autoplay, bascule image
-        p.catch(showFallback);
-      }
-    }
-
-    // essais immédiats et quand la vidéo est prête
-    tryPlay();
-    v.addEventListener('canplay', tryPlay, { once: true });
-
-    // si la page redevient visible
-    document.addEventListener('visibilitychange', function () {
-      if (!document.hidden && v.paused) tryPlay();
-    });
-
-    // compat Turbo/Hotwire
-    document.addEventListener('turbo:load', tryPlay);
-    document.addEventListener('turbo:render', tryPlay);
-    document.addEventListener('turbo:before-cache', function () {
-      try { v.pause(); v.currentTime = 0; } catch(e){}
-    });
-
-    // quelques relances dans la première seconde (réseaux lents)
-    var n = 0, id = setInterval(function () {
-      if (!v.paused || n++ >= 3) return clearInterval(id);
-      tryPlay();
-    }, 300);
-
-    // Assure la boucle si l'attribut loop est ignoré
-    v.addEventListener('ended', function () {
-      try { v.currentTime = 0; v.play(); } catch(e){}
-    });
-  })();
+document.querySelector('.hero__button').addEventListener('click', () => {
+  document.querySelector('.filters-title-mood').scrollIntoView({ behavior: 'smooth' });
+});
 </script>
 
+<!-- Bloc process -->
+<section class="process">
+  <div class="step">
+    <div class="step-number">1</div>
+    <div class="step-text">
+      <h2>Choisis ton mood</h2>
+      <p>Festif ou plutôt chill ?</p>
+    </div>
+  </div>
 
+  <div class="step">
+    <div class="step-number">2</div>
+    <div class="step-text">
+      <h2>Ton budget</h2>
+      <p>Il n'est jamais loin.</p>
+    </div>
+  </div>
 
+  <div class="step">
+    <div class="step-number">3</div>
+    <div class="step-text">
+      <h2>Ta localisation & ta date</h2>
+      <p>Ou pas, à toi de voir.</p>
+    </div>
+  </div>
+</section>
 <% moods = {
   "Nature"   => "moods/nature.jpg",
   "Creatif"  => "moods/creatif.jpg",
@@ -122,7 +95,7 @@
 
   <!-- MOODS -->
     <h2 class="filters-title-mood">Ton mood</h2>
-    <p class="filters-subtitle">On adapte les suggestions à ton humeur.</p>
+    <p class="filters-subtitle">On adapte les suggestions en fonction de ton humeur.</p>
 <section class="mood-section">
     <div class="mood-grid">
       <% moods.each do |tag, img| %>
@@ -143,7 +116,7 @@
 
   <!-- BUDGET -->
     <h2 class="filters-title-budget">Ton budget</h2>
-    <p class="filters-subtitle">Ton portefeuille aussi a son mot à dire 😉</p>
+    <p class="filters-subtitle">Ton portefeuille aussi à son mot à dire 😉</p>
   <section class="budget-section">
     <div class="budget-grid">
       <% budgets.each do |label, img| %>
@@ -156,29 +129,87 @@
 
         <label for="<%= id %>" class="budget-card">
           <span class="budget-card__title">
-            <%= label.gsub("_", " ").gsub("euros","€") %>
+            <%= label.gsub("_", " ").gsub("euros","€").capitalize %>
           </span>
         </label>
       <% end %>
     </div>
   </section>
+<h2 class="localisation__title">Ta localisation</h2>
+<p class="filters-subtitle">On te propose les spots près de toi.</p>
 
-    <h2 class="localisation__title">Ta localisation</h2>
-    <p class="filters-subtitle">On te propose les spots près de toi.</p>
-    <section class="localisation">
-      <div class="container">
-        <div style="text-align: center;">
-          <input type="range" name="location" min="10" max="30" step="10" value="20" class="localisation__range">
-          <div class="localisation__labels">
-            <span>10 km</span>
-            <span>20 km</span>
-            <span>30 km</span>
-          </div>
+<section class="localisation">
+  <div class="container">
+    <div style="text-align: center;">
+      <input type="range" name="location" min="10" max="30" step="10" value="20" class="localisation__range">
 
+      <!-- Les labels DOIVENT être DANS ce div -->
+      <div class="localisation__labels">
+        <span>10 km</span>
+        <span>20 km</span>
+        <span>30 km</span>
       </div>
     </div>
-    </section>
-    <section class="choose-date">
+  </div>
+</section>
+
+<script>
+(function(){
+  const range = document.querySelector('.localisation__range');
+  if(!range) return;
+
+  // Optionnels (alignement sur la grille budget si elle existe)
+  const grid = document.querySelector('.budget-grid');
+  const wrap = document.querySelector('.localisation .container > div');
+  const wrapOuter = document.querySelector('.localisation .container');
+
+  function syncSliderToBudgetRow(){
+    if(!grid || !wrap || !wrapOuter) return;
+    const cards = Array.from(grid.querySelectorAll('.budget-card'));
+    if(!cards.length) return;
+
+    const rects = cards.map(el=>el.getBoundingClientRect());
+    const minTop = Math.min(...rects.map(r=>r.top));
+    const row = rects.filter(r=>Math.abs(r.top - minTop) < 1);
+    if(!row.length) return;
+
+    const left  = Math.min(...row.map(r=>r.left));
+    const right = Math.max(...row.map(r=>r.right));
+    const width = Math.round(right - left);
+
+    const parentLeft = wrapOuter.getBoundingClientRect().left;
+    const offsetLeft = Math.round(left - parentLeft);
+
+    wrap.style.width = width+'px';
+    wrap.style.maxWidth = width+'px';
+    wrap.style.marginLeft = offsetLeft+'px';
+    wrap.style.marginRight = 'auto';
+  }
+
+  function paint(){
+    const min = +range.min || 0;
+    const max = +range.max || 100;
+    const val = +range.value || min;
+    const percent = ((val - min) * 100) / (max - min); // 10->0%, 20->50%, 30->100%
+    // pour Chrome: variable CSS
+    range.style.setProperty('--fill', percent + '%');
+  }
+
+  function init(){ syncSliderToBudgetRow(); paint(); }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  }else{
+    init();
+  }
+
+  window.addEventListener('resize', ()=>{ syncSliderToBudgetRow(); paint(); });
+  range.addEventListener('input', paint);
+  range.addEventListener('change', paint);
+})();
+</script>
+
+  <section class="choose-date">
   <div class="container">
     <h2 class="choose-date__title">Ta date</h2>
     <p class="filters-subtitle">Sélectionne ton moment.</p>
