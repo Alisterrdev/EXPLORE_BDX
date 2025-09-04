@@ -1,21 +1,9 @@
-.header {
-  background-color: rgba(255, 255, 255, 0.5);
-  height: 80px;
-  padding: 0 20px;
-  border-bottom: 1px solid transparent;
-  position: relative;
-  z-index: 1000;
-}
-
 .header-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  position: relative;
   height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center; // centre le logo
-  position: relative;
-}
+  align-items: center;
 
 .logo-img {
   position: absolute;
@@ -26,30 +14,48 @@
   height: auto;
 }
 
-/* Conteneur pour user + cœur */
-.user-actions {
-  position: absolute;
-  right: 20px;       // distance par rapport au bord droit
-  top: 50%;          // centre vertical
-  transform: translateY(-50%);
-  display: flex;
-  gap: 10px;         // espace entre user et cœur
-}
 
-/* Styles individuels */
-.user-icon-img,
-.favorites-link-img {
-  width: 40px;       // même taille pour user et cœur
-  height: 40px;
-  cursor: pointer;
-  display: block;
-}
+  .user-icon {
+    position: absolute;
+    right: 80px; // distance depuis le bord droit
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 
-.favorites-link-img {
-  color: #fb8500;    // orange
-  transition: color 0.2s ease;
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: #262626;
+      transition: fill 0.3s ease, transform 0.3s ease;
+    }
 
-  &:hover {
-    color: darken(#fb8500, 10%);
+    &:hover svg {
+      fill: #fb8500;
+      transform: scale(1.1);
+    }
+  }
+
+  .favorites-link {
+    position: absolute;
+    right: 20px; // plus proche du bord droit que le user
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: #262626;
+      transition: fill 0.3s ease, transform 0.3s ease;
+    }
+
+    &:hover svg {
+      fill: #fb8500;
+      transform: scale(1.1);
+    }
   }
 }
