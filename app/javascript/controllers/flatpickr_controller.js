@@ -5,8 +5,11 @@ import flatpickr from "flatpickr";
 export default class extends Controller {
   connect() {
     flatpickr(this.element, {
-  altInput: true,
-});
-
+        mode: "range",
+        minDate: "today",
+        altInput: true,
+        altFormat: "d-m-Y",
+        dateFormat: "Y-m-d",
+    });
   }
 }
