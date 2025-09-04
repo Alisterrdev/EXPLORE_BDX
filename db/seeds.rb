@@ -85,7 +85,7 @@ Event.create(
 
 event = Event.create(
   name: "Demo Day",
-  address: "107 Cr Balguerie Stuttenberg, 33300 Bordeaux",
+  address: "107 Cr Balguerie Stuttenberg, 33300 Bordeaux, France",
   date: Date.parse("5 septembre 2025"),
   description_title: "Le grand dévoilement",
   description: "Après 9 semaines intensives de travail et de créativité, les élèves du Wagon sont enfin prêts à vous dévoiler leurs projets tech.
@@ -187,7 +187,7 @@ Event.create(
 event = Event.create(
   name: "Beer Fest Bordeaux",
   address: "Place du Parlement, 33000 Bordeaux, France",
-  date: Date.parse("20 septembre 2025"),
+  date: Date.parse("5 septembre 2025"),
   description_title: "Le grand brassage",
   description: "Pendant tout un week-end, partez à la rencontre de brasseurs venus d’ici et d’ailleurs et laissez-vous surprendre par la richesse de la bière artisanale. Blonde, ambrée ou IPA, chaque dégustation sera l’occasion de découvrir des saveurs nouvelles et des histoires passionnantes. Un moment unique pour explorer la diversité d’un savoir-faire authentique, porté par la passion et la créativité des artisans.",
   details_title: "La soirée s’anime",
