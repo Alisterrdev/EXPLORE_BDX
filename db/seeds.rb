@@ -55,7 +55,7 @@ User.create(
 
 Event.create(
   name: "Atelier peinture intuitive",
-  address: "Espace 29, 33000 Bordeaux, France",
+  address: " 29 Rue Fernand Marin, 33000 Bordeaux, France",
   date: Date.parse("2 septembre 2025"),
   details: "Jonathan Parcelare est artiste-peintre ainsi qu'éducateur spécialisé, il décide de partager sa passion et laisser les curieux s'exprimer sur la toile.",
   image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=758&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -75,7 +75,7 @@ Event.create(
 
 Event.create(
   name: "Randonnée contée au bois de Bordeaux",
-  address: "Bois de Bordeaux, 33000 Bordeaux, France",
+  address: "All. du Bois, 33300 Bordeaux, 33000 Bordeaux, France",
   date: Date.parse("4 septembre 2025"),
   description: "Une promenade forestière ponctuée d'histoires racontées par des conteurs passionnés. Une immersion nature & légendes.",
   details: "Existant depuis cinq ans, plongez au coeur des nombreuses légendes bordelaises. Cet évènement revient pour faire rêver les petits comme les grands",
@@ -264,7 +264,7 @@ Event.create(
 
 Event.create(
   name: "Cours de cuisine végétarienne",
-  address: "Au Comptoir Local, 33240 Saint-André-de-Cubzac, France",
+  address: "Pl. des Capucins, 33800 Bordeaux, France",
   date: Date.parse("28 novembre 2025"),
   description: "Apprenez à cuisiner des plats végétariens savoureux et équilibrés.",
   details: "Un chef vous guidera dans la préparation de recettes végétariennes simples, mais gourmandes. Parfait pour ceux qui veulent explorer la cuisine végétarienne tout en découvrant des ingrédients de saison.",
@@ -321,7 +321,6 @@ Event.create(
   tags: "Festif",
   image: "https://images.unsplash.com/photo-1700931676493-1ea7739bd6aa?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 )
-
 
 
 puts "Après création, nombre d'évenements : #{Event.count}"
