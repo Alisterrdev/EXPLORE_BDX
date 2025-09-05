@@ -160,6 +160,22 @@
   }
 }
 
+// Flatpickr colors //
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected.inRange,
+.flatpickr-day.startRange.inRange,
+.flatpickr-day.endRange.inRange {
+  background: orange !important;
+  border-color: orange !important;
+  color: white !important;
+}
+
+.flatpickr-day:hover {
+  background: #ffa50033 !important;
+}
+
 /* BLOC TESTIMONIALS */
 .testimonials {
   padding: 64px 24px;
