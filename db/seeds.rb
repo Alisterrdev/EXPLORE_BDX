@@ -193,8 +193,8 @@ event = Event.create(
   details_title: "La soirée s’anime",
   details: "Quand les verres se vident, la fête continue : concerts, ateliers de brassage et rencontres conviviales viendront rythmer la soirée. Venez partager un moment chaleureux autour de la bière, échanger avec d’autres passionnés et célébrer ensemble l’esprit festif et convivial de ce festival incontournable.",
   tags: "Festif",
-  image: "beeru.jpg"
-  )
+  image: "https://images.unsplash.com/photo-1649798558791-bf0edbc98e6b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+)
 
   4.times do |time|
   file = "app/assets/images/mood-pic/#{event.tags.downcase}/#{event.name.split[0].downcase}/#{event.name.split[0].downcase}-#{time + 1}.jpg"
