@@ -1,3 +1,4 @@
+/* ================== TITRE ================== */
 .localisation__title {
   padding-top: 4rem;
   color: #fb8500;
@@ -5,61 +6,80 @@
   font-size: 3.38rem;
   max-width: 1100px;
   padding: 0 24px;
-  margin-bottom: 0.5rem;
   margin: 0 auto 1.5rem;
+  margin-bottom: 2rem;
 }
 
-/* Variables d’alignement du slider */
+.filters-subtitle {
+  margin-bottom: 4 rem !important;; /* espace supplémentaire avant le slider */
+}
+
+/* ================== VARIABLES SLIDER ================== */
 .localisation {
-  --thumb-size: 32px;          /* largeur/hauteur CSS du pouce */
-  --thumb-border: 2px;         /* épaisseur de la bordure du pouce */
-  --thumb-visual: calc(var(--thumb-size) + 2 * var(--thumb-border)); /* diamètre visuel réel */
-  --half-thumb: calc(var(--thumb-visual) / 2); /* compensation exacte des bords */
+  --thumb-size: 40px;         /* taille du curseur */
+  --thumb-border: 3px;        /* épaisseur bordure si utilisée */
+  --thumb-visual: calc(var(--thumb-size) + 2 * var(--thumb-border));
 }
 
-/* Wrapper, inchangé */
+/* Wrapper centré (ne touche pas aux largeurs, le JS peut les ajuster) */
 .localisation .container > div {
   margin: 0 auto;
   text-align: center;
+  max-width: 700px;         /* <-- largeur max du slider */
+  width: 100%;
+  margin-top: 4 rem !important;;
+
 }
 
-/* Mets les variables SUR l'input pour que ::-webkit-slider-thumb / ::-moz-range-thumb y aient accès */
-.localisation__range{
-  --thumb-size: 50px;     /* ⇦ change juste cette valeur pour la taille */
-  --thumb-border: 3px;
+/* ================== SLIDER (input range) ================== */
+.localisation__range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  outline: none;
+  margin: 1rem auto;        /* <-- auto pour le centrer */
+  display: block;
 
-  --thumb-visual: calc(var(--thumb-size) + 2 * var(--thumb-border));
-  --half-thumb: calc(var(--thumb-visual) / 2);
+
+  /* Remplissage piloté par le JS via --fill (Chrome/Edge/Safari) */
+  background: linear-gradient(
+    to right,
+    #fb8500 0%,
+    #fb8500 var(--fill, 0%),
+    #ccc    var(--fill, 0%),
+    #ccc    100%
+  );
+  transition: background 0.2s ease;
 }
 
-/* WebKit (Chrome/Safari/Edge) */
+/* Piste WebKit transparente pour laisser passer le gradient ci-dessus */
+.localisation__range::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 3px;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Curseur WebKit (Chrome/Safari/Edge) */
 .localisation__range::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: var(--thumb-size);
   height: var(--thumb-size);
   border-radius: 50%;
-  background: #fff;
-  border: var(--thumb-border) solid #fb8500;
+  background: #fb8500;         /* curseur orange plein */
+  border: none;                /* pas de liseré */
   box-shadow: 0 2px 6px rgba(0,0,0,.15);
   cursor: pointer;
-  /* centré verticalement sur une piste de 6px */
+
+  /* centre vertical sur une piste de 6px */
   margin-top: calc((var(--thumb-visual) / -2) + 3px);
 }
 
-/* Firefox */
-.localisation__range::-moz-range-thumb {
-  width: var(--thumb-size);
-  height: var(--thumb-size);
-  border-radius: 50%;
-  background: #fb8500;
-  border: var(--thumb-border) solid #fb8500;
-  box-shadow: 0 2px 6px rgba(0,0,0,.15);
-  cursor: pointer;
-}
-
-
-/* Firefox */
+/* ===== Firefox ===== */
 .localisation__range::-moz-range-track {
   height: 6px;
   border-radius: 3px;
@@ -68,60 +88,48 @@
 .localisation__range::-moz-range-progress {
   height: 6px;
   border-radius: 3px;
-  background: #fb8500;
+  background: #fb8500; /* la partie “remplie” en orange */
 }
 .localisation__range::-moz-range-thumb {
   width: var(--thumb-size);
   height: var(--thumb-size);
   border-radius: 50%;
-  background: #fb8500;
-  border: var(--thumb-border) solid #fb8500;
+  background: #fb8500;         /* curseur orange plein */
+  border: none;
   box-shadow: 0 2px 6px rgba(0,0,0,.15);
   cursor: pointer;
 }
 
-/* ===== Labels parfaitement alignés sur la piste ===== */
+/* ================== LABELS 10 / 20 / 30 ================== */
+/* Le JS place précisément les 3 spans en pixels (début/milieu/fin de la piste) */
 .localisation__labels {
   position: relative;
-  padding: 6px var(--half-thumb) 0;  /* bord gauche/droit = moitié du diamètre visuel */
-  height: 1.6rem;                    /* réserve la place pour le texte */
-  font-weight: 400;
-  font-size: 16px;
+  width: 100%;
+  padding-top: 8px;            /* espace sous la piste */
+  height: 1.6rem;              /* réserve la place du texte */
+  font-size: 20px;
   line-height: 1.2;
+  color: #050505;
 }
 .localisation__labels span {
   position: absolute;
   top: 0;
   white-space: nowrap;
   pointer-events: none;
+     /* le JS ajustera 0 / -50% / -100% */
 }
 
-/* 10 km -> début exact de piste */
 .localisation__labels span:nth-child(1) {
-  left: 0%;
-  transform: translateX(0);
-  text-align: left;
-  color: #fb8500;
-  font-weight: 700;
-  font-size: 20px;
+  left: -5%;
+  transform: translateX(-10px);   /* décale le 10 km un peu plus à gauche */
 }
 
-/* 20 km -> milieu exact de piste */
 .localisation__labels span:nth-child(2) {
   left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  color:#fb8500;
-  font-weight: 700;
-  font-size: 20px;
+  transform: translateX(-50%);    /* centre parfait pour le 20 km */
 }
 
-/* 30 km -> fin exact de piste */
 .localisation__labels span:nth-child(3) {
   left: 100%;
-  transform: translateX(-100%);
-  text-align: right;
-  color: #fb8500;
-  font-weight: 700;
-  font-size: 20px;
+  transform: translateX(-120%);    /* décale le 30 km un peu plus à gauche */
 }

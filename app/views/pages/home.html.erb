@@ -156,54 +156,91 @@ document.querySelector('.hero__button').addEventListener('click', () => {
 <script>
 (function(){
   const range = document.querySelector('.localisation__range');
-  if(!range) return;
+  if (!range) return;
 
-  // Optionnels (alignement sur la grille budget si elle existe)
-  const grid = document.querySelector('.budget-grid');
-  const wrap = document.querySelector('.localisation .container > div');
-  const wrapOuter = document.querySelector('.localisation .container');
+  const labelsWrap = document.querySelector('.localisation__labels');
+  const spans = labelsWrap ? labelsWrap.querySelectorAll('span') : [];
+  const ro = new ResizeObserver(() => { layout(); });
 
-  function syncSliderToBudgetRow(){
-    if(!grid || !wrap || !wrapOuter) return;
-    const cards = Array.from(grid.querySelectorAll('.budget-card'));
-    if(!cards.length) return;
-
-    const rects = cards.map(el=>el.getBoundingClientRect());
-    const minTop = Math.min(...rects.map(r=>r.top));
-    const row = rects.filter(r=>Math.abs(r.top - minTop) < 1);
-    if(!row.length) return;
-
-    const left  = Math.min(...row.map(r=>r.left));
-    const right = Math.max(...row.map(r=>r.right));
-    const width = Math.round(right - left);
-
-    const parentLeft = wrapOuter.getBoundingClientRect().left;
-    const offsetLeft = Math.round(left - parentLeft);
-
-    wrap.style.width = width+'px';
-    wrap.style.maxWidth = width+'px';
-    wrap.style.marginLeft = offsetLeft+'px';
-    wrap.style.marginRight = 'auto';
+  function halfThumbPx(){
+    const cs = getComputedStyle(range);
+    const s  = parseFloat(cs.getPropertyValue('--thumb-size'))   || 0;
+    const b  = parseFloat(cs.getPropertyValue('--thumb-border')) || 0;
+    return s/2 + b; // débord visuel réel
   }
 
   function paint(){
-    const min = +range.min || 0;
-    const max = +range.max || 100;
-    const val = +range.value || min;
-    const percent = ((val - min) * 100) / (max - min); // 10->0%, 20->50%, 30->100%
-    // pour Chrome: variable CSS
-    range.style.setProperty('--fill', percent + '%');
+    const min = +range.min || 0, max = +range.max || 100, val = +range.value || min;
+    const p = ((val - min) * 100) / (max - min); // 10->0, 20->50, 30->100
+    range.style.setProperty('--fill', p + '%');
   }
 
-  function init(){ syncSliderToBudgetRow(); paint(); }
+  function layout(){
+    if (!labelsWrap) return;
+    // aligne la largeur + position du bloc labels sur l'input
+    const rRect  = range.getBoundingClientRect();
+    const pRect  = labelsWrap.parentElement.getBoundingClientRect();
+    labelsWrap.style.width = Math.round(rRect.width) + 'px';
+    labelsWrap.style.marginLeft = Math.round(rRect.left - pRect.left) + 'px';
+    labelsWrap.style.marginRight = 'auto';
 
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', init);
-  }else{
-    init();
+    // positions x = 0% / 50% / 100% de la piste utile
+    const h = halfThumbPx();
+    const track = rRect.width - 2*h;
+    if (spans[0]) { spans[0].style.left = h + 'px';                spans[0].style.transform = 'translateX(0)'; }
+    if (spans[1]) { spans[1].style.left = (h + track/2) + 'px';    spans[1].style.transform = 'translateX(-50%)'; }
+    if (spans[2]) { spans[2].style.left = (h + track) + 'px';      spans[2].style.transform = 'translateX(-100%)'; }
+  }
+  function positionLabels() {
+  const labelsWrap = document.querySelector('.localisation__labels');
+  if (!labelsWrap) return;
+  const spans = labelsWrap.querySelectorAll('span');
+  if (spans.length < 3) return;
+
+  // 1) Caler la largeur + position du bloc labels sur l'input
+  const rRect  = range.getBoundingClientRect();
+  const pRect  = labelsWrap.parentElement.getBoundingClientRect();
+  labelsWrap.style.width = Math.round(rRect.width) + 'px';
+  labelsWrap.style.marginLeft = Math.round(rRect.left - pRect.left) + 'px';
+  labelsWrap.style.marginRight = 'auto';
+
+  // 2) Piste utile = largeur input - 2 * halfThumb
+  const cs = getComputedStyle(range);
+  const thumbSize   = parseFloat(cs.getPropertyValue('--thumb-size'))   || 0;
+  const thumbBorder = parseFloat(cs.getPropertyValue('--thumb-border')) || 0;
+  const halfThumb   = thumbSize/2 + thumbBorder;
+  const trackWidth  = rRect.width - 2 * halfThumb;
+
+  // 3) Offsets personnalisables depuis le CSS du bloc labels
+  const csLabels = getComputedStyle(labelsWrap);
+  const startOffset = parseFloat(csLabels.getPropertyValue('--label-start-offset')) || 0;
+  const endOffset   = parseFloat(csLabels.getPropertyValue('--label-end-offset'))   || 0;
+
+  // 4) Positions pixel-parfait
+  const x0 = halfThumb + startOffset;          // début + offset
+  const x1 = halfThumb + trackWidth/2;         // milieu
+  const x2 = halfThumb + trackWidth + endOffset; // fin + offset
+
+  spans[0].style.left = x0 + 'px';
+  spans[0].style.transform = 'translateX(0)';
+
+  spans[1].style.left = x1 + 'px';
+  spans[1].style.transform = 'translateX(-50%)';
+
+  spans[2].style.left = x2 + 'px';
+  spans[2].style.transform = 'translateX(-100%)';
+}
+
+  function init(){
+    paint();
+    layout();
+    ro.observe(range); // suit les changements de taille (responsive)
   }
 
-  window.addEventListener('resize', ()=>{ syncSliderToBudgetRow(); paint(); });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+
+  window.addEventListener('resize', layout);
   range.addEventListener('input', paint);
   range.addEventListener('change', paint);
 })();
