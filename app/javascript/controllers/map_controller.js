@@ -8,7 +8,7 @@ export default class extends Controller {
     markers: Array,
     userMarker: Array
   }
- 
+
   connect() {
     mapboxgl.accessToken = this.apiKeyValue
     this.map = new mapboxgl.Map({
@@ -51,7 +51,7 @@ export default class extends Controller {
   }
   #addUserMarkersToMap() {
     this.userMarkerValue.forEach((marker) => {
-      new mapboxgl.Marker()
+      new mapboxgl.Marker({ color: 'black'})
         .setLngLat([marker.lng, marker.lat])
         .addTo(this.map)
     })
